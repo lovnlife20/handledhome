@@ -4,28 +4,23 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Handled Home | Point. Fix. Handled.</title>
-  <meta
-    name="description"
-    content="Handled Home provides reliable handyman services in the Pittsburgh area. Call or text 412-353-5341 for a fast quote."
-  />
+  <meta name="description" content="Handled Home provides reliable handyman services in the Pittsburgh area. Call or text 412-353-5341 for a fast quote." />
   <style>
     :root {
       --blue: #1F5DAA;
-      --blue-dark: #164A88;
-      --blue-soft: #EEF5FF;
+      --blue-dark: #174A87;
+      --blue-soft: #EEF4FB;
       --orange: #F58220;
       --orange-dark: #D96E12;
-      --orange-soft: #FFF4E9;
+      --orange-soft: #FFF3E8;
       --text: #1F2937;
       --muted: #667085;
-      --line: #E6ECF5;
-      --white: #FFFFFF;
+      --line: #E6ECF2;
       --bg: #F8FAFC;
-      --shadow: 0 14px 40px rgba(19, 45, 89, 0.08);
-      --shadow-soft: 0 8px 24px rgba(19, 45, 89, 0.06);
-      --radius: 18px;
-      --radius-sm: 12px;
-      --max: 1180px;
+      --white: #FFFFFF;
+      --shadow: 0 10px 30px rgba(15, 23, 42, 0.06);
+      --radius: 20px;
+      --max: 1160px;
     }
 
     * {
@@ -44,14 +39,14 @@
       line-height: 1.55;
     }
 
-    img {
-      max-width: 100%;
-      display: block;
-    }
-
     a {
       color: inherit;
       text-decoration: none;
+    }
+
+    img {
+      max-width: 100%;
+      display: block;
     }
 
     .container {
@@ -61,16 +56,15 @@
 
     .topbar {
       background: var(--blue-dark);
-      color: var(--white);
+      color: white;
       font-size: 14px;
-      border-bottom: 1px solid rgba(255,255,255,0.12);
     }
 
     .topbar-inner {
-      min-height: 48px;
+      min-height: 46px;
       display: flex;
-      align-items: center;
       justify-content: center;
+      align-items: center;
       gap: 18px;
       flex-wrap: wrap;
       text-align: center;
@@ -83,101 +77,100 @@
 
     .hero-wrap {
       background:
-        radial-gradient(circle at top left, rgba(31, 93, 170, 0.10), transparent 30%),
-        radial-gradient(circle at top right, rgba(245, 130, 32, 0.10), transparent 28%),
-        linear-gradient(180deg, #ffffff 0%, #f8fbff 100%);
+        radial-gradient(circle at top left, rgba(31,93,170,0.08), transparent 28%),
+        radial-gradient(circle at top right, rgba(245,130,32,0.08), transparent 25%),
+        linear-gradient(180deg, #ffffff 0%, #f9fbfe 100%);
       border-bottom: 1px solid var(--line);
     }
 
     .hero {
-      padding: 34px 0 56px;
+      padding: 34px 0 64px;
     }
 
     .hero-card {
       background: rgba(255,255,255,0.92);
-      backdrop-filter: blur(4px);
-      border: 1px solid rgba(31, 93, 170, 0.10);
+      border: 1px solid rgba(31,93,170,0.08);
       border-radius: 28px;
       box-shadow: var(--shadow);
-      padding: 30px 28px 36px;
-      overflow: hidden;
-      position: relative;
+      padding: 28px;
     }
 
-    .hero-card::before {
-      content: "";
-      position: absolute;
-      inset: 0 auto auto 0;
-      width: 100%;
-      height: 6px;
-      background: linear-gradient(90deg, var(--blue), var(--orange));
+    .logo-wrap {
+      display: flex;
+      justify-content: center;
+      margin-bottom: 18px;
+    }
+
+    .logo-card {
+      background: white;
+      border: 1px solid var(--line);
+      border-radius: 18px;
+      box-shadow: 0 6px 18px rgba(15,23,42,0.04);
+      padding: 18px 24px;
+    }
+
+    .logo-card img {
+      width: min(360px, 100%);
+      height: auto;
+    }
+
+    .pill-row {
+      display: flex;
+      justify-content: center;
+      gap: 10px;
+      flex-wrap: wrap;
+      margin-bottom: 18px;
+    }
+
+    .pill {
+      display: inline-flex;
+      align-items: center;
+      padding: 9px 14px;
+      border-radius: 999px;
+      font-size: 14px;
+      font-weight: 700;
+    }
+
+    .pill-blue {
+      background: var(--blue-soft);
+      color: var(--blue-dark);
+      border: 1px solid #d8e5f6;
+    }
+
+    .pill-orange {
+      background: var(--orange-soft);
+      color: #9b5412;
+      border: 1px solid #ffd8b8;
     }
 
     .hero-grid {
       display: grid;
-      grid-template-columns: 1.15fr 0.85fr;
-      gap: 26px;
+      grid-template-columns: 1.1fr 0.9fr;
+      gap: 24px;
       align-items: center;
-    }
-
-    .brand-mark {
-      background: var(--white);
-      border: 1px solid var(--line);
-      border-radius: 22px;
-      padding: 18px;
-      box-shadow: var(--shadow-soft);
-      display: inline-block;
-      margin-bottom: 14px;
-    }
-
-    .brand-mark img {
-      width: min(430px, 100%);
-      height: auto;
-    }
-
-    .tagline {
-      display: inline-block;
-      background: var(--blue-soft);
-      color: var(--blue-dark);
-      border: 1px solid #d9e8ff;
-      padding: 8px 14px;
-      border-radius: 999px;
-      font-weight: 700;
-      letter-spacing: 0.2px;
-      margin-bottom: 16px;
-    }
-
-    .insured-badge {
-      display: inline-block;
-      margin-left: 10px;
-      background: var(--orange-soft);
-      color: #9a4f10;
-      border: 1px solid #ffd8b6;
-      padding: 8px 14px;
-      border-radius: 999px;
-      font-weight: 700;
+      margin-top: 8px;
     }
 
     h1 {
-      margin: 0 0 14px;
-      font-size: clamp(34px, 5vw, 58px);
-      line-height: 1.04;
-      color: var(--blue-dark);
+      margin: 0 0 16px;
+      font-size: clamp(36px, 5vw, 62px);
+      line-height: 1.03;
       letter-spacing: -0.03em;
+      color: var(--blue-dark);
     }
 
-    .hero p.lead {
-      margin: 0 0 22px;
-      max-width: 700px;
+    .lead {
+      margin: 0 0 24px;
+      max-width: 680px;
       color: var(--muted);
-      font-size: 18px;
+      font-size: 19px;
     }
 
     .button-row {
       display: flex;
-      flex-wrap: wrap;
       gap: 12px;
-      margin-bottom: 16px;
+      flex-wrap: wrap;
+      margin-bottom: 14px;
     }
 
     .btn {
@@ -187,8 +180,7 @@
       padding: 14px 20px;
       border-radius: 12px;
       font-weight: 700;
-      transition: transform 0.18s ease, box-shadow 0.18s ease, background 0.18s ease;
-      box-shadow: var(--shadow-soft);
+      transition: transform 0.18s ease, background 0.18s ease;
     }
 
     .btn:hover {
@@ -197,7 +189,7 @@
 
     .btn-primary {
       background: var(--orange);
-      color: var(--white);
+      color: white;
     }
 
     .btn-primary:hover {
@@ -205,7 +197,7 @@
     }
 
     .btn-secondary {
-      background: var(--white);
+      background: white;
       color: var(--blue-dark);
       border: 1px solid var(--line);
     }
@@ -216,78 +208,52 @@
       font-weight: 600;
     }
 
-    .hero-panel {
-      background: linear-gradient(180deg, var(--blue-dark) 0%, var(--blue) 100%);
-      color: var(--white);
-      border-radius: 24px;
-      padding: 26px;
-      box-shadow: var(--shadow);
-      position: relative;
-      overflow: hidden;
+    .quote-card {
+      background: linear-gradient(180deg, #ffffff 0%, #f6f9fd 100%);
+      border: 1px solid var(--line);
+      border-radius: 22px;
+      padding: 24px;
+      box-shadow: 0 8px 24px rgba(15,23,42,0.05);
     }
 
-    .hero-panel::after {
-      content: "";
-      position: absolute;
-      width: 180px;
-      height: 180px;
-      border-radius: 50%;
-      background: rgba(255,255,255,0.08);
-      top: -40px;
-      right: -40px;
+    .quote-card h3 {
+      margin: 0 0 10px;
+      color: var(--blue-dark);
+      font-size: 28px;
+      line-height: 1.15;
     }
 
-    .hero-panel h3 {
-      margin: 0 0 8px;
-      font-size: 24px;
-      position: relative;
-      z-index: 1;
-    }
-
-    .hero-panel p {
+    .quote-card p {
       margin: 0 0 18px;
-      color: rgba(255,255,255,0.88);
-      position: relative;
-      z-index: 1;
+      color: var(--muted);
     }
 
-    .quick-list {
-      position: relative;
-      z-index: 1;
+    .mini-list {
       display: grid;
       gap: 12px;
-      margin: 0 0 18px;
     }
 
-    .quick-item {
-      background: rgba(255,255,255,0.10);
-      border: 1px solid rgba(255,255,255,0.14);
+    .mini-item {
+      background: white;
+      border: 1px solid var(--line);
       border-radius: 14px;
-      padding: 14px 14px;
-      font-weight: 700;
+      padding: 14px 16px;
     }
 
-    .quick-item span {
+    .mini-item strong {
       display: block;
-      font-weight: 400;
-      opacity: 0.9;
-      margin-top: 3px;
+      color: var(--blue-dark);
+      margin-bottom: 4px;
+    }
+
+    .mini-item span {
+      color: var(--muted);
       font-size: 14px;
     }
 
-    .panel-callout {
-      position: relative;
-      z-index: 1;
-      background: rgba(245,130,32,0.14);
-      border: 1px solid rgba(245,130,32,0.36);
-      border-radius: 14px;
-      padding: 14px;
-      font-weight: 700;
-    }
-
     .text-strip {
-      background: linear-gradient(90deg, var(--orange), #ff9b45);
-      color: var(--white);
+      background: linear-gradient(90deg, var(--orange), #ff9a43);
+      color: white;
       text-align: center;
       padding: 16px 18px;
       font-size: 17px;
@@ -310,16 +276,16 @@
 
     .eyebrow {
       display: inline-block;
-      color: var(--orange-dark);
-      background: var(--orange-soft);
-      border: 1px solid #ffd8b6;
-      border-radius: 999px;
+      margin-bottom: 12px;
       padding: 7px 12px;
+      border-radius: 999px;
       font-size: 13px;
       font-weight: 700;
-      margin-bottom: 12px;
       letter-spacing: 0.04em;
       text-transform: uppercase;
+      background: var(--orange-soft);
+      color: #9b5412;
+      border: 1px solid #ffd8b8;
     }
 
     h2 {
@@ -336,24 +302,27 @@
       font-size: 17px;
     }
 
-    .steps {
-      background: var(--white);
-    }
-
-    .steps-grid {
+    .steps-grid,
+    .services-grid,
+    .reviews-grid,
+    .trust-grid {
       display: grid;
-      grid-template-columns: repeat(3, 1fr);
       gap: 22px;
     }
 
-    .step-card {
-      background: linear-gradient(180deg, #ffffff 0%, #f9fbff 100%);
+    .steps-grid {
+      grid-template-columns: repeat(3, 1fr);
+    }
+
+    .step-card,
+    .service-card,
+    .review-card,
+    .trust-card {
+      background: white;
       border: 1px solid var(--line);
       border-radius: var(--radius);
-      padding: 28px 24px;
-      box-shadow: var(--shadow-soft);
-      text-align: center;
-      position: relative;
+      box-shadow: var(--shadow);
+      padding: 24px;
     }
 
     .step-number {
@@ -363,44 +332,13 @@
       display: inline-flex;
       align-items: center;
       justify-content: center;
-      font-weight: 700;
-      color: var(--white);
       margin-bottom: 14px;
+      color: white;
+      font-weight: 700;
       background: linear-gradient(135deg, var(--blue), var(--orange));
     }
 
-    .step-card h3 {
-      margin: 0 0 8px;
-      color: var(--blue-dark);
-      font-size: 24px;
-    }
-
-    .step-card p {
-      margin: 0;
-      color: var(--muted);
-    }
-
-    .services-grid,
-    .reviews-grid,
-    .trust-grid {
-      display: grid;
-      gap: 22px;
-    }
-
-    .services-grid {
-      grid-template-columns: repeat(3, 1fr);
-    }
-
-    .service-card,
-    .review-card,
-    .trust-card {
-      background: var(--white);
-      border: 1px solid var(--line);
-      border-radius: var(--radius);
-      padding: 24px;
-      box-shadow: var(--shadow-soft);
-    }
-
+    .step-card h3,
     .service-card h3,
     .review-card h3,
     .trust-card h3 {
@@ -409,6 +347,7 @@
       font-size: 22px;
     }
 
+    .step-card p,
     .service-card p,
     .review-card p,
     .trust-card p {
@@ -416,27 +355,29 @@
       color: var(--muted);
     }
 
+    .services-grid,
+    .reviews-grid,
+    .trust-grid {
+      grid-template-columns: repeat(3, 1fr);
+    }
+
     .service-icon {
       width: 44px;
       height: 44px;
       border-radius: 12px;
-      background: linear-gradient(135deg, var(--blue-soft), var(--orange-soft));
       display: flex;
       align-items: center;
       justify-content: center;
-      color: var(--blue-dark);
-      font-weight: 700;
       margin-bottom: 14px;
+      font-weight: 700;
+      color: var(--blue-dark);
+      background: linear-gradient(135deg, var(--blue-soft), var(--orange-soft));
     }
 
     .reviews-wrap {
       background: linear-gradient(180deg, #f5f9ff 0%, #ffffff 100%);
       border-top: 1px solid var(--line);
       border-bottom: 1px solid var(--line);
-    }
-
-    .reviews-grid {
-      grid-template-columns: repeat(3, 1fr);
     }
 
     .stars {
@@ -454,10 +395,10 @@
 
     .google-card {
       margin-top: 22px;
-      background: var(--white);
+      background: white;
       border: 1px solid var(--line);
       border-radius: var(--radius);
-      box-shadow: var(--shadow-soft);
+      box-shadow: var(--shadow);
       padding: 24px;
       text-align: center;
     }
@@ -465,19 +406,11 @@
     .google-card a {
       display: inline-block;
       margin-top: 12px;
-      background: var(--blue);
-      color: var(--white);
       padding: 13px 18px;
       border-radius: 12px;
+      background: var(--blue);
+      color: white;
       font-weight: 700;
-    }
-
-    .trust-grid {
-      grid-template-columns: repeat(3, 1fr);
-    }
-
-    .trust-card {
-      background: linear-gradient(180deg, #ffffff 0%, #fbfcfe 100%);
     }
 
     .cta-wrap {
@@ -486,61 +419,30 @@
 
     .cta-box {
       background: linear-gradient(135deg, var(--blue-dark) 0%, var(--blue) 100%);
-      color: var(--white);
+      color: white;
       border-radius: 28px;
+      box-shadow: 0 16px 40px rgba(23,74,135,0.22);
       padding: 40px 28px;
-      box-shadow: var(--shadow);
       text-align: center;
-      position: relative;
-      overflow: hidden;
-    }
-
-    .cta-box::before,
-    .cta-box::after {
-      content: "";
-      position: absolute;
-      border-radius: 50%;
-      background: rgba(255,255,255,0.08);
-    }
-
-    .cta-box::before {
-      width: 160px;
-      height: 160px;
-      left: -40px;
-      bottom: -40px;
-    }
-
-    .cta-box::after {
-      width: 220px;
-      height: 220px;
-      right: -70px;
-      top: -70px;
-    }
-
-    .cta-box h2,
-    .cta-box p,
-    .cta-box .button-row {
-      position: relative;
-      z-index: 1;
     }
 
     .cta-box h2 {
-      color: var(--white);
+      color: white;
       margin-bottom: 10px;
     }
 
     .cta-box p {
       margin: 0 auto 22px;
-      max-width: 700px;
+      max-width: 680px;
       color: rgba(255,255,255,0.88);
       font-size: 17px;
     }
 
     footer {
       background: #0f3563;
-      color: var(--white);
-      padding: 24px 0;
+      color: white;
       text-align: center;
+      padding: 24px 0;
     }
 
     footer p {
@@ -561,14 +463,10 @@
       }
 
       .hero-card {
-        padding: 24px 20px 28px;
+        padding: 22px;
       }
 
-      h1 {
-        font-size: 42px;
-      }
-
-      .hero-panel {
+      .quote-card {
         padding: 22px;
       }
     }
@@ -579,44 +477,27 @@
       }
 
       .hero {
-        padding: 22px 0 44px;
-      }
-
-      .brand-mark {
-        padding: 14px;
-      }
-
-      .tagline,
-      .insured-badge {
-        display: block;
-        margin-left: 0;
-        margin-right: 0;
-      }
-
-      .insured-badge {
-        margin-top: 10px;
+        padding: 24px 0 48px;
       }
 
       h1 {
-        font-size: 34px;
+        font-size: 38px;
       }
 
-      .hero p.lead,
-      .section-head p,
-      .cta-box p {
-        font-size: 16px;
+      .lead {
+        font-size: 17px;
       }
 
-      section {
-        padding: 58px 0;
+      .button-row {
+        flex-direction: column;
       }
 
       .btn {
         width: 100%;
       }
 
-      .button-row {
-        flex-direction: column;
+      section {
+        padding: 58px 0;
       }
     }
   </style>
@@ -633,20 +514,22 @@
   <div class="hero-wrap">
     <div class="container hero">
       <div class="hero-card">
+        <div class="logo-wrap">
+          <div class="logo-card">
+            <img src="handled_home_front_logo.svg" alt="Handled Home logo" />
+          </div>
+        </div>
+
+        <div class="pill-row">
+          <span class="pill pill-blue">Point. Fix. Handled.</span>
+          <span class="pill pill-orange">Fully Insured</span>
+        </div>
+
         <div class="hero-grid">
           <div>
-            <div class="brand-mark">
-              <img src="handled_home_front_logo.svg" alt="Handled Home logo" />
-            </div>
-
-            <div>
-              <span class="tagline">Point. Fix. Handled.</span>
-              <span class="insured-badge">Fully Insured</span>
-            </div>
-
             <h1>Reliable handyman work without the runaround.</h1>
             <p class="lead">
-              Quality repairs, honest service, and dependable work for homeowners in the Pittsburgh area.
+              Honest service, clear communication, and quality repairs for homeowners in the Pittsburgh area.
               From drywall and doors to trim, flooring, and outdoor projects, we handle it.
             </p>
 
@@ -660,32 +543,31 @@
             </div>
           </div>
 
-          <div class="hero-panel">
-            <h3>Fast quote. Clear communication. Solid work.</h3>
-            <p>
-              We keep it simple for homeowners who just want the job done right.
-            </p>
+          <div>
+            <div class="quote-card">
+              <h3>Fast quote. Clear communication. Solid work.</h3>
+              <p>
+                We keep it simple for homeowners who just want the job done right.
+              </p>
 
-            <div class="quick-list">
-              <div class="quick-item">
-                Text photos for a fast quote
-                <span>Skip the back and forth and show us what needs fixed.</span>
+              <div class="mini-list">
+                <div class="mini-item">
+                  <strong>Text photos for a fast quote</strong>
+                  <span>Show us what needs fixed without a bunch of back and forth.</span>
+                </div>
+                <div class="mini-item">
+                  <strong>Straightforward service</strong>
+                  <span>No fluff, no mystery, and no disappearing act.</span>
+                </div>
+                <div class="mini-item">
+                  <strong>Local and dependable</strong>
+                  <span>Serving Pittsburgh-area homeowners with practical repair help.</span>
+                </div>
               </div>
-              <div class="quick-item">
-                Straightforward service
-                <span>No fluff, no mystery, no disappearing act.</span>
-              </div>
-              <div class="quick-item">
-                Local and dependable
-                <span>Serving Pittsburgh-area homeowners with practical repair help.</span>
-              </div>
-            </div>
-
-            <div class="panel-callout">
-              Text your project photos to 412-353-5341
             </div>
           </div>
         </div>
+
       </div>
     </div>
   </div>
@@ -695,7 +577,7 @@
     <a href="tel:14123535341">412-353-5341</a>
   </div>
 
-  <section class="steps">
+  <section>
     <div class="container">
       <div class="section-head">
         <div class="eyebrow">How it works</div>
@@ -709,12 +591,12 @@
         <div class="step-card">
           <div class="step-number">1</div>
           <h3>Point</h3>
-          <p>Show us the issue. Text photos or reach out with the details.</p>
+          <p>Show us the issue. Text photos or send over the details.</p>
         </div>
         <div class="step-card">
           <div class="step-number">2</div>
           <h3>Fix</h3>
-          <p>We take care of the work with clear communication and quality execution.</p>
+          <p>We handle the work with clear communication and solid execution.</p>
         </div>
         <div class="step-card">
           <div class="step-number">3</div>
@@ -754,17 +636,17 @@
         <div class="service-card">
           <div class="service-icon">04</div>
           <h3>Shed & Outdoor Work</h3>
-          <p>Shed assembly, outdoor repairs, and project help where an extra set of skilled hands matters.</p>
+          <p>Shed assembly, outdoor repairs, and practical project help.</p>
         </div>
         <div class="service-card">
           <div class="service-icon">05</div>
           <h3>Trim & Flooring</h3>
-          <p>Interior updates that sharpen up the look and feel of your home.</p>
+          <p>Interior updates that sharpen the look and feel of your home.</p>
         </div>
         <div class="service-card">
           <div class="service-icon">06</div>
           <h3>Installations</h3>
-          <p>Basic install work and project support for homeowners who need it handled cleanly.</p>
+          <p>Basic install work and project support for homeowners who want it handled cleanly.</p>
         </div>
       </div>
     </div>
@@ -783,23 +665,17 @@
       <div class="reviews-grid">
         <div class="review-card">
           <div class="stars">★★★★★</div>
-          <p>
-            Showed up on time, did exactly what was promised, and cleaned up after. Solid work and easy to deal with.
-          </p>
+          <p>Showed up on time, did exactly what was promised, and cleaned up after. Solid work and easy to deal with.</p>
           <div class="review-name">Mike R.</div>
         </div>
         <div class="review-card">
           <div class="stars">★★★★★</div>
-          <p>
-            Fair price, quick turnaround, and everything looked great when the job was done.
-          </p>
+          <p>Fair price, quick turnaround, and everything looked great when the job was done.</p>
           <div class="review-name">Sarah L.</div>
         </div>
         <div class="review-card">
           <div class="stars">★★★★★</div>
-          <p>
-            Reliable, straightforward, and professional. I’d absolutely call Handled Home again.
-          </p>
+          <p>Reliable, straightforward, and professional. I’d absolutely call Handled Home again.</p>
           <div class="review-name">James T.</div>
         </div>
       </div>
