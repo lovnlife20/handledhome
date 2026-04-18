@@ -17,10 +17,6 @@
   --soft:#EEF3F9;
 }
 
-* {
-  box-sizing:border-box;
-}
-
 body {
   margin:0;
   font-family:Arial, sans-serif;
@@ -54,7 +50,7 @@ body {
 .topbar a {
   color:#fff;
   text-decoration:none;
-  font-weight:600;
+  font-weight:400; /* removed bold */
 }
 
 .topbar-right {
@@ -63,9 +59,9 @@ body {
   opacity:0.95;
 }
 
-/* BRAND BLOCK */
+/* HERO */
 .hero {
-  padding:20px 20px 8px;
+  padding:18px 20px 6px;
 }
 
 .hero-inner {
@@ -74,24 +70,23 @@ body {
   text-align:center;
 }
 
-.logo {
-  display:flex;
-  justify-content:center;
-}
-
 .logo img {
   width:350px;
   max-width:92%;
 }
 
-.brand-line {
-  margin-top:8px;
-  font-size:19px;
-  font-weight:600;
+/* 🔥 STRONGER TAGLINE */
+.tagline {
+  margin-top:10px;
+  font-size:22px;
+  font-weight:700;
   color:var(--blue-dark);
+  letter-spacing:0.5px;
 }
 
-.brand-line .insured {
+.insured {
+  margin-top:4px;
+  font-size:16px;
   color:var(--orange);
   font-weight:700;
 }
@@ -99,7 +94,7 @@ body {
 /* MAIN HERO */
 .hero-content {
   max-width:1000px;
-  margin:14px auto 0;
+  margin:12px auto 0;
   background:var(--card);
   border-radius:18px;
   padding:36px;
@@ -159,25 +154,13 @@ body {
   margin:0 0 14px;
   color:var(--blue-dark);
   font-size:20px;
-  line-height:1.35;
 }
 
 .card {
   background:#fff;
-  padding:14px 15px;
+  padding:14px;
   border-radius:10px;
   margin-bottom:12px;
-}
-
-.card strong {
-  display:block;
-  margin-bottom:3px;
-  color:var(--text);
-}
-
-.card span {
-  color:var(--muted);
-  font-size:15px;
 }
 
 /* SECTION */
@@ -190,12 +173,6 @@ body {
   font-size:32px;
   color:var(--blue-dark);
   margin-bottom:10px;
-}
-
-.section p {
-  color:var(--muted);
-  max-width:700px;
-  margin:0 auto 30px;
 }
 
 /* GRID */
@@ -236,7 +213,6 @@ body {
   color:#fff;
   border-radius:8px;
   text-decoration:none;
-  font-weight:bold;
 }
 
 /* FOOTER */
@@ -250,7 +226,6 @@ body {
 @media(max-width:800px){
   .hero-content {
     grid-template-columns:1fr;
-    padding:28px;
   }
 
   .topbar-inner {
@@ -260,12 +235,7 @@ body {
   }
 
   .hero-left h1 {
-    font-size:34px;
-  }
-
-  .brand-line {
-    font-size:17px;
-    line-height:1.4;
+    font-size:32px;
   }
 }
 </style>
@@ -287,13 +257,19 @@ body {
 
 <div class="hero">
   <div class="hero-inner">
+
     <div class="logo">
       <img src="handled_home_front_logo.svg" alt="Handled Home Logo">
     </div>
 
-    <div class="brand-line">
-      Point. Fix. Handled. <span class="insured">• Fully Insured</span>
+    <div class="tagline">
+      Point. Fix. Handled.
     </div>
+
+    <div class="insured">
+      Fully Insured
+    </div>
+
   </div>
 </div>
 
@@ -320,17 +296,14 @@ body {
 
     <div class="card">
       <strong>Text photos for a fast quote</strong>
-      <span>Skip the back and forth.</span>
     </div>
 
     <div class="card">
       <strong>Straightforward service</strong>
-      <span>No fluff, no mystery.</span>
     </div>
 
     <div class="card">
       <strong>Local and dependable</strong>
-      <span>Pittsburgh area service.</span>
     </div>
   </div>
 
@@ -361,7 +334,6 @@ body {
 
 <div class="cta">
   <h2>Need something fixed?</h2>
-  <p>Call or text today</p>
   <a href="tel:14123535341">Call Now</a>
 </div>
 
