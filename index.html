@@ -41,7 +41,12 @@ body {
 /* HERO */
 .hero {
   text-align:center;
-  padding:50px 20px 40px;
+  padding:50px 20px 20px;
+}
+
+.logo {
+  display:flex;
+  justify-content:center;
 }
 
 .logo img {
@@ -50,24 +55,23 @@ body {
 }
 
 .tagline {
-  margin-top:15px;
+  margin-top:18px;
   font-size:20px;
-  color:#444;
-}
-
-.tagline strong {
-  color:var(--blue-dark);
+  font-weight:600;
+  color:#333;
 }
 
 .insured {
+  margin-top:6px;
+  font-size:18px;
   color:var(--orange);
   font-weight:bold;
 }
 
-/* MAIN HERO CONTENT */
+/* MAIN HERO */
 .hero-content {
   max-width:1100px;
-  margin:40px auto;
+  margin:30px auto;
   background:#fff;
   border-radius:18px;
   padding:40px;
@@ -78,7 +82,7 @@ body {
 }
 
 .hero-left h1 {
-  font-size:44px;
+  font-size:42px;
   color:var(--blue-dark);
   margin-bottom:20px;
 }
@@ -114,7 +118,7 @@ body {
   font-size:14px;
 }
 
-/* RIGHT CARD */
+/* RIGHT SIDE */
 .hero-right {
   background:#eef3f9;
   padding:25px;
@@ -131,15 +135,6 @@ body {
   padding:15px;
   border-radius:10px;
   margin-bottom:12px;
-}
-
-/* TEXT STRIP */
-.text-strip {
-  background:var(--orange);
-  color:#fff;
-  text-align:center;
-  padding:14px;
-  font-weight:bold;
 }
 
 /* SECTION */
@@ -226,14 +221,19 @@ Serving Pittsburgh Area
 </div>
 
 <div class="hero">
+
   <div class="logo">
     <img src="handled_home_front_logo.svg">
   </div>
 
   <div class="tagline">
-    <strong>Point. Fix. Handled.</strong> • 
-    <span class="insured">Fully Insured</span>
+    Point. Fix. Handled.
   </div>
+
+  <div class="insured">
+    Fully Insured
+  </div>
+
 </div>
 
 <div class="hero-content">
@@ -276,10 +276,6 @@ Serving Pittsburgh Area
 
 </div>
 
-<div class="text-strip">
-📱 Text photos for a fast quote: 412-353-5341
-</div>
-
 <div class="section">
   <h2>What we help with</h2>
   <p>Practical handyman services for real homeowner problems.</p>
@@ -297,12 +293,12 @@ Serving Pittsburgh Area
   <h2>Reviews</h2>
 
   <div class="grid">
-    <div class="box"><div class="stars">★★★★★</div>Great work and reliable.</div>
-    <div class="box"><div class="stars">★★★★★</div>Easy to work with.</div>
-    <div class="box"><div class="stars">★★★★★</div>Would hire again.</div>
-    <div class="box"><div class="stars">★★★★★</div>Showed up on time.</div>
-    <div class="box"><div class="stars">★★★★★</div>Fair pricing.</div>
-    <div class="box"><div class="stars">★★★★★</div>Quality work.</div>
+    <div class="box"><div class="stars">★★★★★</div>Great work and very reliable.<br><strong>- Mike R.</strong></div>
+    <div class="box"><div class="stars">★★★★★</div>Easy to work with and responsive.<br><strong>- Sarah L.</strong></div>
+    <div class="box"><div class="stars">★★★★★</div>Would hire again without hesitation.<br><strong>- James T.</strong></div>
+    <div class="box"><div class="stars">★★★★★</div>Showed up on time and did great work.<br><strong>- Lisa M.</strong></div>
+    <div class="box"><div class="stars">★★★★★</div>Fair pricing and clean finish.<br><strong>- Tom B.</strong></div>
+    <div class="box"><div class="stars">★★★★★</div>Professional and reliable service.<br><strong>- Karen D.</strong></div>
   </div>
 </div>
 
