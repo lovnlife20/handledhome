@@ -2,397 +2,206 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Handled Home | Reliable Handyman Services</title>
-  <meta name="description" content="Handled Home offers reliable handyman services in the Pittsburgh area. Call or text 412-353-5341 for an estimate." />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Handled Home</title>
+
   <style>
     :root {
       --blue: #1F5DAA;
       --orange: #F58220;
-      --blue-dark: #174a87;
-      --orange-dark: #d96f16;
-      --text: #24323a;
-      --muted: #5f6f78;
-      --bg: #f7f9fc;
-      --white: #ffffff;
-      --border: #d9e4ef;
-      --light-blue: #eef5ff;
-      --light-orange: #fff4ea;
+      --dark: #1a1a1a;
+      --light: #f5f7fb;
     }
-
-    * { box-sizing: border-box; }
 
     body {
       margin: 0;
-      font-family: Arial, Helvetica, sans-serif;
-      color: var(--text);
-      background: var(--bg);
-      line-height: 1.5;
-    }
-
-    a {
-      color: inherit;
-      text-decoration: none;
-    }
-
-    .container {
-      width: min(1100px, 92%);
-      margin: 0 auto;
+      font-family: Arial, sans-serif;
+      background: #ffffff;
+      color: var(--dark);
     }
 
     .topbar {
-      background: var(--blue-dark);
-      color: var(--white);
-      font-size: 15px;
-    }
-
-    .topbar-inner {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 18px;
-      padding: 12px 0;
+      background: var(--blue);
+      color: white;
       text-align: center;
-    }
-
-    .hero {
-      background: linear-gradient(135deg, var(--blue-dark), var(--blue));
-      color: var(--white);
-      padding: 56px 0 56px;
-      text-align: center;
-    }
-
-    .logo-wrap {
-      display: flex;
-      justify-content: center;
-      margin-bottom: 18px;
-    }
-
-    .logo-svg {
-      width: min(560px, 92%);
-      height: auto;
-      display: block;
-      background: transparent;
-    }
-
-    .insured-badge {
-      display: inline-block;
-      margin-bottom: 18px;
-      background: rgba(245, 130, 32, 0.15);
-      border: 1px solid rgba(245, 130, 32, 0.4);
-      color: #fff;
-      padding: 8px 14px;
-      border-radius: 999px;
-      font-weight: 700;
+      padding: 10px;
       font-size: 14px;
     }
 
-    .hero h1 {
-      font-size: clamp(30px, 5vw, 50px);
-      line-height: 1.1;
-      margin: 0 0 14px;
+    .topbar a {
+      color: white;
+      text-decoration: none;
+      margin: 0 10px;
     }
 
-    .hero p {
-      max-width: 760px;
-      margin: 0 auto 24px;
+    .hero {
+      background: #ffffff;
+      text-align: center;
+      padding: 40px 20px 50px;
+      border-bottom: 1px solid #eee;
+    }
+
+    .logo {
+      font-size: 48px;
+      font-weight: bold;
+    }
+
+    .logo span:first-child {
+      color: var(--orange);
+    }
+
+    .logo span:last-child {
+      color: var(--blue);
+    }
+
+    .tagline {
+      margin-top: 10px;
+      font-size: 20px;
+      color: var(--blue);
+      font-weight: bold;
+      letter-spacing: 1px;
+    }
+
+    .headline {
+      font-size: 42px;
+      margin-top: 30px;
+      color: var(--blue);
+    }
+
+    .subtext {
+      max-width: 700px;
+      margin: 20px auto;
       font-size: 18px;
-      opacity: 0.98;
+      color: #555;
     }
 
-    .hero-buttons {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 14px;
-      margin-top: 18px;
+    .buttons {
+      margin-top: 25px;
     }
 
     .btn {
-      display: inline-block;
       padding: 14px 22px;
-      border-radius: 10px;
-      font-weight: 700;
-      transition: 0.2s ease;
+      margin: 8px;
+      border-radius: 6px;
+      font-weight: bold;
+      text-decoration: none;
+      display: inline-block;
     }
 
     .btn-primary {
       background: var(--orange);
-      color: #fff;
-    }
-
-    .btn-primary:hover {
-      background: var(--orange-dark);
+      color: white;
     }
 
     .btn-secondary {
-      background: #fff;
-      color: var(--blue-dark);
-    }
-
-    .btn-secondary:hover {
-      background: #f2f6fb;
+      border: 2px solid var(--blue);
+      color: var(--blue);
     }
 
     .section {
-      padding: 56px 0;
-    }
-
-    .section-title {
+      padding: 50px 20px;
       text-align: center;
-      margin: 0 0 12px;
-      font-size: 34px;
-      color: var(--blue-dark);
     }
 
-    .section-subtitle {
-      text-align: center;
-      max-width: 760px;
-      margin: 0 auto 34px;
-      color: var(--muted);
-      font-size: 17px;
+    .section h2 {
+      color: var(--blue);
+      font-size: 32px;
+      margin-bottom: 20px;
     }
 
-    .grid {
-      display: grid;
+    .services, .reviews {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
       gap: 20px;
-    }
-
-    .services-grid {
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      max-width: 1000px;
+      margin: auto;
     }
 
     .card {
-      background: var(--white);
-      border: 1px solid var(--border);
-      border-radius: 16px;
-      padding: 24px;
-      box-shadow: 0 6px 18px rgba(20, 50, 90, 0.06);
-    }
-
-    .card h3 {
-      margin-top: 0;
-      margin-bottom: 10px;
-      color: var(--blue-dark);
-      font-size: 20px;
-    }
-
-    .card p {
-      margin: 0;
-      color: var(--muted);
-    }
-
-    .reviews {
-      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-    }
-
-    .reviews-section {
-      background: var(--light-blue);
-    }
-
-    .stars {
-      color: var(--orange);
-      font-size: 18px;
-      margin-bottom: 10px;
-    }
-
-    .review-name {
-      margin-top: 14px;
-      font-weight: 700;
-      color: var(--blue-dark);
-    }
-
-    .checklist {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-      gap: 14px;
-      margin-top: 28px;
-    }
-
-    .check-item {
-      background: var(--white);
-      border: 1px solid var(--border);
-      border-radius: 12px;
-      padding: 16px 18px;
-      font-weight: 600;
+      background: var(--light);
+      padding: 20px;
+      border-radius: 10px;
+      width: 260px;
     }
 
     .cta {
-      background: var(--light-orange);
+      background: var(--orange);
+      color: white;
+      padding: 50px 20px;
       text-align: center;
-      border-top: 1px solid #f1d4bb;
-      border-bottom: 1px solid #f1d4bb;
     }
 
-    .cta h2 {
-      margin-top: 0;
-      color: var(--blue-dark);
-      font-size: 34px;
-    }
-
-    .cta p {
-      max-width: 720px;
-      margin: 0 auto 22px;
-      color: var(--muted);
-      font-size: 17px;
-    }
-
-    footer {
-      background: var(--blue-dark);
-      color: var(--white);
+    .footer {
+      background: var(--blue);
+      color: white;
       text-align: center;
-      padding: 28px 0;
+      padding: 20px;
     }
 
-    footer p {
-      margin: 6px 0;
-    }
-
-    @media (max-width: 640px) {
-      .hero { padding: 46px 0; }
-      .section { padding: 44px 0; }
-    }
   </style>
 </head>
+
 <body>
-  <div class="topbar">
-    <div class="container topbar-inner">
-      <div><strong>Call or Text:</strong> <a href="tel:14123535341">412-353-5341</a></div>
-      <div><strong>Email:</strong> <a href="mailto:info@handledhome.net">info@handledhome.net</a></div>
-      <div>Serving Pittsburgh and surrounding areas</div>
-    </div>
+
+<div class="topbar">
+  📞 <a href="tel:14123535341">412-353-5341</a> |
+  📧 <a href="mailto:info@handledhome.net">info@handledhome.net</a> |
+  Serving Pittsburgh Area
+</div>
+
+<div class="hero">
+  <div class="logo">
+    <span>Handled</span> <span>Home</span>
   </div>
 
-  <section class="hero">
-    <div class="container">
-      <div class="insured-badge">Fully Insured</div>
+  <div class="tagline">
+    Point. Fix. Handled.
+  </div>
 
-      <div class="logo-wrap">
-        <svg class="logo-svg" viewBox="0 0 1800 800" xmlns="http://www.w3.org/2000/svg" aria-label="Handled Home logo">
-          <g transform="translate(100,150)" fill="none" stroke-linecap="round" stroke-linejoin="round">
-            <path d="M100 250 L100 120 L260 20 L420 120 L420 360 L100 360 Z"
-                  stroke="#1F5DAA" stroke-width="24"/>
-            <path d="M100 120 L260 20 L420 120 L420 360"
-                  stroke="#F58220" stroke-width="24"/>
-            <path d="M190 260 L260 320 L360 200"
-                  stroke="#1F5DAA" stroke-width="24"/>
-          </g>
-          <text x="600" y="330" font-family="Arial, Helvetica, sans-serif" font-size="160" fill="#F58220" font-weight="bold">
-            Handled
-          </text>
-          <text x="600" y="520" font-family="Arial, Helvetica, sans-serif" font-size="160" fill="#1F5DAA" font-weight="bold">
-            Home
-          </text>
-        </svg>
-      </div>
+  <div class="headline">
+    Reliable Handyman Services You Can Trust
+  </div>
 
-      <h1>Reliable Handyman Services You Can Trust</h1>
-      <p>
-        Quality repairs, honest service, and dependable work for homeowners in the Pittsburgh area.
-        From drywall and doors to trim, flooring, and outdoor projects, we handle it.
-      </p>
-      <div class="hero-buttons">
-        <a class="btn btn-primary" href="tel:14123535341">Call Now</a>
-        <a class="btn btn-secondary" href="mailto:info@handledhome.net?subject=Request%20an%20Estimate">Request an Estimate</a>
-      </div>
-    </div>
-  </section>
+  <div class="subtext">
+    Quality repairs, honest service, and dependable work for homeowners in the Pittsburgh area.
+  </div>
 
-  <section class="section">
-    <div class="container">
-      <h2 class="section-title">Our Services</h2>
-      <p class="section-subtitle">
-        We help with the repairs and projects that keep your home looking good and working right.
-      </p>
-      <div class="grid services-grid">
-        <div class="card">
-          <h3>General Home Repairs</h3>
-          <p>Small fixes, punch-list items, and everyday repair work done right.</p>
-        </div>
-        <div class="card">
-          <h3>Drywall & Painting</h3>
-          <p>Patching, finishing, touch-ups, and refresh work for damaged or dated spaces.</p>
-        </div>
-        <div class="card">
-          <h3>Doors & Windows</h3>
-          <p>Adjustments, repairs, trim fixes, hardware replacement, and problem-solving.</p>
-        </div>
-        <div class="card">
-          <h3>Shed & Outdoor Work</h3>
-          <p>Shed assembly, exterior repairs, and practical outdoor project help.</p>
-        </div>
-        <div class="card">
-          <h3>Trim & Finish Work</h3>
-          <p>Baseboards, molding, finishing details, and interior updates that clean up a space.</p>
-        </div>
-        <div class="card">
-          <h3>Flooring & Installations</h3>
-          <p>Basic flooring installs, fixture swaps, and other home improvement projects.</p>
-        </div>
-      </div>
-    </div>
-  </section>
+  <div class="buttons">
+    <a class="btn btn-primary" href="tel:14123535341">Call Now</a>
+    <a class="btn btn-secondary" href="mailto:info@handledhome.net">Request Estimate</a>
+  </div>
+</div>
 
-  <section class="section reviews-section">
-    <div class="container">
-      <h2 class="section-title">Customer Reviews</h2>
-      <p class="section-subtitle">
-        Replace these with your real reviews when you’re ready.
-      </p>
-      <div class="grid reviews">
-        <div class="card">
-          <div class="stars">★★★★★</div>
-          <p>Showed up on time, did exactly what was promised, and cleaned up after. Solid work and easy to deal with.</p>
-          <div class="review-name">Mike R.</div>
-        </div>
-        <div class="card">
-          <div class="stars">★★★★★</div>
-          <p>Had them fix a door and some drywall. Fair price, quick turnaround, and everything looked great when they were done.</p>
-          <div class="review-name">Sarah L.</div>
-        </div>
-        <div class="card">
-          <div class="stars">★★★★★</div>
-          <p>Reliable, straightforward, and professional. I’d absolutely call Handled Home again for future projects.</p>
-          <div class="review-name">James T.</div>
-        </div>
-      </div>
-    </div>
-  </section>
+<div class="section">
+  <h2>Our Services</h2>
+  <div class="services">
+    <div class="card">General Home Repairs</div>
+    <div class="card">Drywall & Painting</div>
+    <div class="card">Doors & Windows</div>
+    <div class="card">Shed & Outdoor Work</div>
+    <div class="card">Trim & Flooring</div>
+  </div>
+</div>
 
-  <section class="section">
-    <div class="container">
-      <h2 class="section-title">Why Homeowners Choose Handled Home</h2>
-      <p class="section-subtitle">
-        We keep it simple: show up, do quality work, and treat people right.
-      </p>
-      <div class="checklist">
-        <div class="check-item">Fully Insured</div>
-        <div class="check-item">Reliable and On Time</div>
-        <div class="check-item">Honest, Straightforward Pricing</div>
-        <div class="check-item">Quality Work Without Shortcuts</div>
-        <div class="check-item">Local to the Pittsburgh Area</div>
-        <div class="check-item">Easy to Contact by Phone or Email</div>
-      </div>
-    </div>
-  </section>
+<div class="section">
+  <h2>Customer Reviews</h2>
+  <div class="reviews">
+    <div class="card">★★★★★<br>Great work and very reliable.<br>- Mike</div>
+    <div class="card">★★★★★<br>Quick and fair pricing.<br>- Sarah</div>
+    <div class="card">★★★★★<br>Will definitely hire again.<br>- James</div>
+  </div>
+</div>
 
-  <section class="section cta">
-    <div class="container">
-      <h2>Need Something Fixed?</h2>
-      <p>Call, text, or email us for an estimate.</p>
-      <div class="hero-buttons">
-        <a class="btn btn-primary" href="tel:14123535341">Call 412-353-5341</a>
-        <a class="btn btn-secondary" href="mailto:info@handledhome.net?subject=Request%20an%20Estimate">Email Us</a>
-      </div>
-    </div>
-  </section>
+<div class="cta">
+  <h2>Need Something Fixed?</h2>
+  <p>Call, text, or email us today.</p>
+  <a class="btn btn-primary" href="tel:14123535341">Call Now</a>
+</div>
 
-  <footer>
-    <div class="container">
-      <p><strong>Handled Home</strong></p>
-      <p>Serving Pittsburgh and surrounding areas</p>
-      <p><a href="tel:14123535341">412-353-5341</a> | <a href="mailto:info@handledhome.net">info@handledhome.net</a></p>
-    </div>
-  </footer>
+<div class="footer">
+  Handled Home | 412-353-5341
+</div>
+
 </body>
 </html>
