@@ -1,206 +1,262 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Handled Home</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Handled Home</title>
 
-  <style>
-    :root {
-      --blue: #1F5DAA;
-      --orange: #F58220;
-      --dark: #1a1a1a;
-      --light: #f5f7fb;
-    }
+<style>
+:root {
+  --blue:#1F5DAA;
+  --orange:#F58220;
+  --light:#f4f7fb;
+}
 
-    body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-      background: #ffffff;
-      color: var(--dark);
-    }
+body {
+  margin:0;
+  font-family:Arial, sans-serif;
+  color:#222;
+}
 
-    .topbar {
-      background: var(--blue);
-      color: white;
-      text-align: center;
-      padding: 10px;
-      font-size: 14px;
-    }
+/* TOP BAR */
+.topbar {
+  background:var(--blue);
+  color:#fff;
+  text-align:center;
+  padding:10px;
+  font-size:14px;
+}
 
-    .topbar a {
-      color: white;
-      text-decoration: none;
-      margin: 0 10px;
-    }
+.topbar a { color:#fff; text-decoration:none; margin:0 10px; }
 
-    .hero {
-      background: #ffffff;
-      text-align: center;
-      padding: 40px 20px 50px;
-      border-bottom: 1px solid #eee;
-    }
+/* HERO */
+.hero {
+  background:#fff;
+  text-align:center;
+  padding:50px 20px 40px;
+}
 
-    .logo {
-      font-size: 48px;
-      font-weight: bold;
-    }
+.logo img {
+  max-width:420px;
+  width:100%;
+}
 
-    .logo span:first-child {
-      color: var(--orange);
-    }
+.tagline {
+  margin-top:10px;
+  font-size:20px;
+  font-weight:bold;
+  color:var(--blue);
+}
 
-    .logo span:last-child {
-      color: var(--blue);
-    }
+.headline {
+  font-size:40px;
+  margin-top:30px;
+  color:var(--blue);
+}
 
-    .tagline {
-      margin-top: 10px;
-      font-size: 20px;
-      color: var(--blue);
-      font-weight: bold;
-      letter-spacing: 1px;
-    }
+.subtext {
+  max-width:700px;
+  margin:20px auto;
+  color:#555;
+  font-size:18px;
+}
 
-    .headline {
-      font-size: 42px;
-      margin-top: 30px;
-      color: var(--blue);
-    }
+.buttons a {
+  display:inline-block;
+  margin:8px;
+  padding:14px 22px;
+  border-radius:6px;
+  font-weight:bold;
+  text-decoration:none;
+}
 
-    .subtext {
-      max-width: 700px;
-      margin: 20px auto;
-      font-size: 18px;
-      color: #555;
-    }
+.call {
+  background:var(--orange);
+  color:#fff;
+}
 
-    .buttons {
-      margin-top: 25px;
-    }
+.email {
+  border:2px solid var(--blue);
+  color:var(--blue);
+}
 
-    .btn {
-      padding: 14px 22px;
-      margin: 8px;
-      border-radius: 6px;
-      font-weight: bold;
-      text-decoration: none;
-      display: inline-block;
-    }
+/* TEXT CTA STRIP */
+.text-strip {
+  background:var(--orange);
+  color:#fff;
+  text-align:center;
+  padding:18px;
+  font-size:18px;
+  font-weight:bold;
+}
 
-    .btn-primary {
-      background: var(--orange);
-      color: white;
-    }
+/* POINT FIX HANDLED */
+.steps {
+  background:var(--light);
+  padding:40px 20px;
+  display:flex;
+  justify-content:center;
+  gap:40px;
+  text-align:center;
+  flex-wrap:wrap;
+}
 
-    .btn-secondary {
-      border: 2px solid var(--blue);
-      color: var(--blue);
-    }
+.step {
+  max-width:200px;
+}
 
-    .section {
-      padding: 50px 20px;
-      text-align: center;
-    }
+.step h3 {
+  color:var(--blue);
+}
 
-    .section h2 {
-      color: var(--blue);
-      font-size: 32px;
-      margin-bottom: 20px;
-    }
+/* SERVICES */
+.section {
+  padding:50px 20px;
+  text-align:center;
+}
 
-    .services, .reviews {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 20px;
-      max-width: 1000px;
-      margin: auto;
-    }
+.services {
+  display:flex;
+  flex-wrap:wrap;
+  justify-content:center;
+  gap:20px;
+  max-width:1000px;
+  margin:auto;
+}
 
-    .card {
-      background: var(--light);
-      padding: 20px;
-      border-radius: 10px;
-      width: 260px;
-    }
+.card {
+  background:#fff;
+  padding:20px;
+  border-radius:10px;
+  width:260px;
+  box-shadow:0 5px 15px rgba(0,0,0,0.08);
+}
 
-    .cta {
-      background: var(--orange);
-      color: white;
-      padding: 50px 20px;
-      text-align: center;
-    }
+/* REVIEWS */
+.reviews .card {
+  background:var(--light);
+}
 
-    .footer {
-      background: var(--blue);
-      color: white;
-      text-align: center;
-      padding: 20px;
-    }
+/* GOOGLE REVIEWS */
+.google {
+  background:#fff;
+  padding:40px 20px;
+  text-align:center;
+}
 
-  </style>
+.google a {
+  display:inline-block;
+  margin-top:15px;
+  color:#fff;
+  background:var(--blue);
+  padding:12px 18px;
+  border-radius:6px;
+  text-decoration:none;
+}
+
+/* CTA */
+.cta {
+  background:var(--orange);
+  color:#fff;
+  text-align:center;
+  padding:50px 20px;
+}
+
+/* FOOTER */
+.footer {
+  background:var(--blue);
+  color:#fff;
+  text-align:center;
+  padding:20px;
+}
+</style>
 </head>
 
 <body>
 
 <div class="topbar">
-  📞 <a href="tel:14123535341">412-353-5341</a> |
-  📧 <a href="mailto:info@handledhome.net">info@handledhome.net</a> |
-  Serving Pittsburgh Area
+📞 <a href="tel:14123535341">412-353-5341</a> |
+📧 <a href="mailto:info@handledhome.net">info@handledhome.net</a>
 </div>
 
 <div class="hero">
-  <div class="logo">
-    <span>Handled</span> <span>Home</span>
-  </div>
 
-  <div class="tagline">
-    Point. Fix. Handled.
-  </div>
-
-  <div class="headline">
-    Reliable Handyman Services You Can Trust
-  </div>
-
-  <div class="subtext">
-    Quality repairs, honest service, and dependable work for homeowners in the Pittsburgh area.
-  </div>
-
-  <div class="buttons">
-    <a class="btn btn-primary" href="tel:14123535341">Call Now</a>
-    <a class="btn btn-secondary" href="mailto:info@handledhome.net">Request Estimate</a>
-  </div>
+<div class="logo">
+<img src="handled_home_front_logo.svg" alt="Handled Home Logo">
 </div>
 
+<div class="tagline">
+Point. Fix. Handled.
+</div>
+
+<div class="headline">
+Reliable Handyman Services You Can Trust
+</div>
+
+<div class="subtext">
+Quality repairs, honest service, and dependable work across the Pittsburgh area.
+</div>
+
+<div class="buttons">
+<a class="call" href="tel:14123535341">Call Now</a>
+<a class="email" href="mailto:info@handledhome.net">Request Estimate</a>
+</div>
+
+</div>
+
+<!-- TEXT CTA -->
+<div class="text-strip">
+📱 Text us photos of your project for a fast quote: 412-353-5341
+</div>
+
+<!-- POINT FIX HANDLED -->
+<div class="steps">
+<div class="step"><h3>Point</h3><p>Show us the issue</p></div>
+<div class="step"><h3>Fix</h3><p>We handle the work</p></div>
+<div class="step"><h3>Handled</h3><p>Done right the first time</p></div>
+</div>
+
+<!-- SERVICES -->
 <div class="section">
-  <h2>Our Services</h2>
-  <div class="services">
-    <div class="card">General Home Repairs</div>
-    <div class="card">Drywall & Painting</div>
-    <div class="card">Doors & Windows</div>
-    <div class="card">Shed & Outdoor Work</div>
-    <div class="card">Trim & Flooring</div>
-  </div>
+<h2>Our Services</h2>
+<div class="services">
+<div class="card">General Repairs</div>
+<div class="card">Drywall & Painting</div>
+<div class="card">Doors & Windows</div>
+<div class="card">Shed & Outdoor Work</div>
+<div class="card">Trim & Flooring</div>
+</div>
 </div>
 
-<div class="section">
-  <h2>Customer Reviews</h2>
-  <div class="reviews">
-    <div class="card">★★★★★<br>Great work and very reliable.<br>- Mike</div>
-    <div class="card">★★★★★<br>Quick and fair pricing.<br>- Sarah</div>
-    <div class="card">★★★★★<br>Will definitely hire again.<br>- James</div>
-  </div>
+<!-- REVIEWS -->
+<div class="section reviews">
+<h2>Customer Reviews</h2>
+<div class="services">
+<div class="card">★★★★★<br>Reliable and easy to work with</div>
+<div class="card">★★★★★<br>Great work and fair pricing</div>
+<div class="card">★★★★★<br>Will definitely hire again</div>
+</div>
 </div>
 
+<!-- GOOGLE REVIEWS -->
+<div class="google">
+<h2>See Our Reviews on Google</h2>
+<p>Check out what customers are saying about us.</p>
+
+<a href="https://www.google.com/search?q=handled+home+pittsburgh" target="_blank">
+View Google Reviews
+</a>
+</div>
+
+<!-- CTA -->
 <div class="cta">
-  <h2>Need Something Fixed?</h2>
-  <p>Call, text, or email us today.</p>
-  <a class="btn btn-primary" href="tel:14123535341">Call Now</a>
+<h2>Need Something Fixed?</h2>
+<p>Call or text us today</p>
+<a class="call" href="tel:14123535341">Call Now</a>
 </div>
 
 <div class="footer">
-  Handled Home | 412-353-5341
+Handled Home | Pittsburgh Area
 </div>
 
 </body>
