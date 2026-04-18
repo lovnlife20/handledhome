@@ -13,6 +13,12 @@
   --text:#1F2937;
   --muted:#6B7280;
   --bg:#F7F9FC;
+  --card:#FFFFFF;
+  --soft:#EEF3F9;
+}
+
+* {
+  box-sizing:border-box;
 }
 
 body {
@@ -54,62 +60,66 @@ body {
 .topbar-right {
   white-space:nowrap;
   font-size:13px;
-  opacity:0.9;
+  opacity:0.95;
 }
 
-/* HERO */
+/* BRAND BLOCK */
 .hero {
-  padding:35px 20px 5px;
+  padding:20px 20px 8px;
 }
 
 .hero-inner {
   max-width:1100px;
   margin:auto;
+  text-align:center;
+}
+
+.logo {
+  display:flex;
+  justify-content:center;
 }
 
 .logo img {
-  width:300px;
+  width:350px;
+  max-width:92%;
 }
 
-/* 🔥 TIGHTENED + RECOLORED */
-.tagline {
-  margin-top:6px;
-  font-size:18px;
+.brand-line {
+  margin-top:8px;
+  font-size:19px;
   font-weight:600;
   color:var(--blue-dark);
-  letter-spacing:0.3px;
 }
 
-.insured {
-  margin-top:2px;
-  font-size:15px;
+.brand-line .insured {
   color:var(--orange);
   font-weight:700;
 }
 
 /* MAIN HERO */
 .hero-content {
-  max-width:1100px;
-  margin:20px auto;
-  background:#fff;
+  max-width:1000px;
+  margin:14px auto 0;
+  background:var(--card);
   border-radius:18px;
-  padding:40px;
+  padding:36px;
   display:grid;
-  grid-template-columns:1fr 1fr;
-  gap:30px;
+  grid-template-columns:1.15fr 0.85fr;
+  gap:28px;
   box-shadow:0 10px 30px rgba(0,0,0,0.05);
 }
 
 .hero-left h1 {
-  font-size:42px;
+  font-size:38px;
+  line-height:1.08;
   color:var(--blue-dark);
-  margin-bottom:20px;
+  margin:0 0 18px;
 }
 
 .hero-left p {
   color:var(--muted);
   font-size:18px;
-  margin-bottom:20px;
+  margin:0 0 20px;
 }
 
 .buttons a {
@@ -129,36 +139,50 @@ body {
 .email {
   border:2px solid var(--blue);
   color:var(--blue);
+  background:#fff;
 }
 
 .note {
-  margin-top:12px;
+  margin-top:14px;
   color:var(--muted);
   font-size:14px;
 }
 
 /* RIGHT SIDE */
 .hero-right {
-  background:#eef3f9;
-  padding:25px;
+  background:var(--soft);
+  padding:22px;
   border-radius:14px;
 }
 
 .hero-right h3 {
-  margin-bottom:15px;
+  margin:0 0 14px;
   color:var(--blue-dark);
+  font-size:20px;
+  line-height:1.35;
 }
 
 .card {
   background:#fff;
-  padding:15px;
+  padding:14px 15px;
   border-radius:10px;
   margin-bottom:12px;
 }
 
+.card strong {
+  display:block;
+  margin-bottom:3px;
+  color:var(--text);
+}
+
+.card span {
+  color:var(--muted);
+  font-size:15px;
+}
+
 /* SECTION */
 .section {
-  padding:60px 20px;
+  padding:56px 20px;
   text-align:center;
 }
 
@@ -212,6 +236,7 @@ body {
   color:#fff;
   border-radius:8px;
   text-decoration:none;
+  font-weight:bold;
 }
 
 /* FOOTER */
@@ -222,16 +247,25 @@ body {
   padding:20px;
 }
 
-/* MOBILE */
 @media(max-width:800px){
   .hero-content {
     grid-template-columns:1fr;
+    padding:28px;
   }
 
   .topbar-inner {
     flex-direction:column;
     gap:6px;
     text-align:center;
+  }
+
+  .hero-left h1 {
+    font-size:34px;
+  }
+
+  .brand-line {
+    font-size:17px;
+    line-height:1.4;
   }
 }
 </style>
@@ -253,19 +287,13 @@ body {
 
 <div class="hero">
   <div class="hero-inner">
-
     <div class="logo">
-      <img src="handled_home_front_logo.svg">
+      <img src="handled_home_front_logo.svg" alt="Handled Home Logo">
     </div>
 
-    <div class="tagline">
-      Point. Fix. Handled.
+    <div class="brand-line">
+      Point. Fix. Handled. <span class="insured">• Fully Insured</span>
     </div>
-
-    <div class="insured">
-      Fully Insured
-    </div>
-
   </div>
 </div>
 
@@ -291,20 +319,19 @@ body {
     <h3>Fast quote. Clear communication. Solid work.</h3>
 
     <div class="card">
-      <strong>Text photos for a fast quote</strong><br>
-      Skip the back and forth.
+      <strong>Text photos for a fast quote</strong>
+      <span>Skip the back and forth.</span>
     </div>
 
     <div class="card">
-      <strong>Straightforward service</strong><br>
-      No fluff, no mystery.
+      <strong>Straightforward service</strong>
+      <span>No fluff, no mystery.</span>
     </div>
 
     <div class="card">
-      <strong>Local and dependable</strong><br>
-      Pittsburgh area service.
+      <strong>Local and dependable</strong>
+      <span>Pittsburgh area service.</span>
     </div>
-
   </div>
 
 </div>
