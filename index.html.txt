@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Handled Home</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      color: #333;
+    }
+    header {
+      background: #0f4c5c;
+      color: white;
+      text-align: center;
+      padding: 40px 20px;
+    }
+    header h1 {
+      margin: 10px 0;
+    }
+    .btn {
+      display: inline-block;
+      margin: 10px;
+      padding: 12px 20px;
+      background: #2ec4b6;
+      color: white;
+      text-decoration: none;
+      border-radius: 5px;
+      font-weight: bold;
+    }
+    .section {
+      padding: 30px 20px;
+      max-width: 900px;
+      margin: auto;
+    }
+    .services li {
+      margin: 8px 0;
+    }
+    .reviews {
+      background: #f5f5f5;
+      padding: 20px;
+      border-radius: 8px;
+      margin-bottom: 15px;
+    }
+    footer {
+      background: #0f4c5c;
+      color: white;
+      text-align: center;
+      padding: 20px;
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+  <h1>Handled Home</h1>
+  <p>Reliable Handyman Services You Can Trust</p>
+
+  <a class="btn" href="tel:14123535341">📞 Call Now</a>
+  <a class="btn" href="mailto:info@handledhome.net">📧 Request Estimate</a>
+
+  <p>Call or Text: <strong>412-353-5341</strong></p>
+</header>
+
+<div class="section">
+  <h2>Our Services</h2>
+  <ul class="services">
+    <li>General Home Repairs</li>
+    <li>Drywall & Painting</li>
+    <li>Door & Window Repairs</li>
+    <li>Shed Assembly & Outdoor Work</li>
+    <li>Trim, Flooring & Installations</li>
+  </ul>
+</div>
+
+<div class="section">
+  <h2>Customer Reviews</h2>
+
+  <div class="reviews">
+    ⭐⭐⭐⭐⭐<br>
+    “Showed up on time, did exactly what was promised, and cleaned up after.”  
+    <br><strong>— Mike R.</strong>
+  </div>
+
+  <div class="reviews">
+    ⭐⭐⭐⭐⭐<br>
+    “Quick, fair price, and solid work. Would hire again.”  
+    <br><strong>— Sarah L.</strong>
+  </div>
+
+  <div class="reviews">
+    ⭐⭐⭐⭐⭐<br>
+    “Reliable and easy to work with.”  
+    <br><strong>— James T.</strong>
+  </div>
+
+</div>
+
+<div class="section">
+  <h2>Why Choose Us?</h2>
+  <ul>
+    <li>Fully <strong>Insured</strong></li>
+    <li>Shows up on time</li>
+    <li>Honest pricing</li>
+    <li>Quality work</li>
+    <li>Local to Pittsburgh</li>
+  </ul>
+</div>
+
+<div class="section" style="text-align:center;">
+  <h2>Need Something Fixed?</h2>
+  <p>Let’s handle it.</p>
+  <a class="btn" href="mailto:info@handledhome.net">📧 Email Us</a>
+</div>
+
+<footer>
+  <p>Handled Home</p>
+  <p>Serving Pittsburgh and surrounding areas</p>
+  <p>📞 412-353-5341</p>
+</footer>
+
+</body>
+</html>
