@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="1800" height="800" viewBox="0 0 1800 800" xmlns="http://www.w3.org/2000/svg">
+
+  <!-- House icon -->
+  <g transform="translate(100,150)" fill="none" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M100 250 L100 120 L260 20 L420 120 L420 360 L100 360 Z"
+          stroke="#1F5DAA" stroke-width="24"/>
+    <path d="M100 120 L260 20 L420 120 L420 360"
+          stroke="#F58220" stroke-width="24"/>
+    <path d="M190 260 L260 320 L360 200"
+          stroke="#1F5DAA" stroke-width="24"/>
+  </g>
+
+  <!-- Text -->
+  <text x="600" y="330" font-family="Arial, Helvetica, sans-serif" font-size="160" fill="#F58220" font-weight="bold">
+    Handled
+  </text>
+  <text x="600" y="520" font-family="Arial, Helvetica, sans-serif" font-size="160" fill="#1F5DAA" font-weight="bold">
+    Home
+  </text>
+
+</svg>
