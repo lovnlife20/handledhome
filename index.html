@@ -9,26 +9,21 @@
     :root {
       --blue: #1F5DAA;
       --blue-dark: #174A87;
-      --blue-soft: #EEF4FB;
+      --blue-soft: #F3F7FC;
       --orange: #F58220;
-      --orange-dark: #D96E12;
-      --orange-soft: #FFF3E8;
+      --orange-soft: #FFF4EA;
       --text: #1F2937;
       --muted: #667085;
-      --line: #E6ECF2;
+      --line: #E7EDF4;
       --bg: #F8FAFC;
       --white: #FFFFFF;
-      --shadow: 0 10px 30px rgba(15, 23, 42, 0.06);
+      --shadow: 0 10px 30px rgba(15, 23, 42, 0.05);
       --radius: 20px;
       --max: 1160px;
     }
 
     * {
       box-sizing: border-box;
-    }
-
-    html {
-      scroll-behavior: smooth;
     }
 
     body {
@@ -76,23 +71,20 @@
     }
 
     .hero-wrap {
-      background:
-        radial-gradient(circle at top left, rgba(31,93,170,0.08), transparent 28%),
-        radial-gradient(circle at top right, rgba(245,130,32,0.08), transparent 25%),
-        linear-gradient(180deg, #ffffff 0%, #f9fbfe 100%);
+      background: linear-gradient(180deg, #ffffff 0%, #f8fbff 100%);
       border-bottom: 1px solid var(--line);
     }
 
     .hero {
-      padding: 34px 0 64px;
+      padding: 34px 0 56px;
     }
 
     .hero-card {
-      background: rgba(255,255,255,0.92);
-      border: 1px solid rgba(31,93,170,0.08);
+      background: white;
+      border: 1px solid var(--line);
       border-radius: 28px;
       box-shadow: var(--shadow);
-      padding: 28px;
+      padding: 30px;
     }
 
     .logo-wrap {
@@ -105,8 +97,8 @@
       background: white;
       border: 1px solid var(--line);
       border-radius: 18px;
-      box-shadow: 0 6px 18px rgba(15,23,42,0.04);
       padding: 18px 24px;
+      box-shadow: 0 6px 18px rgba(15, 23, 42, 0.04);
     }
 
     .logo-card img {
@@ -119,7 +111,7 @@
       justify-content: center;
       gap: 10px;
       flex-wrap: wrap;
-      margin-bottom: 18px;
+      margin-bottom: 22px;
     }
 
     .pill {
@@ -134,7 +126,7 @@
     .pill-blue {
       background: var(--blue-soft);
       color: var(--blue-dark);
-      border: 1px solid #d8e5f6;
+      border: 1px solid #dce7f4;
     }
 
     .pill-orange {
@@ -147,13 +139,12 @@
       display: grid;
       grid-template-columns: 1.1fr 0.9fr;
       gap: 24px;
-      align-items: center;
-      margin-top: 8px;
+      align-items: start;
     }
 
     h1 {
       margin: 0 0 16px;
-      font-size: clamp(36px, 5vw, 62px);
+      font-size: clamp(36px, 5vw, 60px);
       line-height: 1.03;
       letter-spacing: -0.03em;
       color: var(--blue-dark);
@@ -192,10 +183,6 @@
       color: white;
     }
 
-    .btn-primary:hover {
-      background: var(--orange-dark);
-    }
-
     .btn-secondary {
       background: white;
       color: var(--blue-dark);
@@ -209,11 +196,11 @@
     }
 
     .quote-card {
-      background: linear-gradient(180deg, #ffffff 0%, #f6f9fd 100%);
-      border: 1px solid var(--line);
+      background: var(--blue-soft);
+      border: 1px solid #dce7f4;
       border-radius: 22px;
       padding: 24px;
-      box-shadow: 0 8px 24px rgba(15,23,42,0.05);
+      box-shadow: 0 8px 24px rgba(15, 23, 42, 0.04);
     }
 
     .quote-card h3 {
@@ -252,10 +239,10 @@
     }
 
     .text-strip {
-      background: linear-gradient(90deg, var(--orange), #ff9a43);
+      background: var(--orange);
       color: white;
       text-align: center;
-      padding: 16px 18px;
+      padding: 15px 18px;
       font-size: 17px;
       font-weight: 700;
     }
@@ -314,6 +301,18 @@
       grid-template-columns: repeat(3, 1fr);
     }
 
+    .services-grid {
+      grid-template-columns: repeat(3, 1fr);
+    }
+
+    .reviews-grid {
+      grid-template-columns: repeat(3, 1fr);
+    }
+
+    .trust-grid {
+      grid-template-columns: repeat(3, 1fr);
+    }
+
     .step-card,
     .service-card,
     .review-card,
@@ -355,12 +354,6 @@
       color: var(--muted);
     }
 
-    .services-grid,
-    .reviews-grid,
-    .trust-grid {
-      grid-template-columns: repeat(3, 1fr);
-    }
-
     .service-icon {
       width: 44px;
       height: 44px;
@@ -375,7 +368,7 @@
     }
 
     .reviews-wrap {
-      background: linear-gradient(180deg, #f5f9ff 0%, #ffffff 100%);
+      background: #f7fbff;
       border-top: 1px solid var(--line);
       border-bottom: 1px solid var(--line);
     }
@@ -418,10 +411,10 @@
     }
 
     .cta-box {
-      background: linear-gradient(135deg, var(--blue-dark) 0%, var(--blue) 100%);
+      background: var(--blue-dark);
       color: white;
       border-radius: 28px;
-      box-shadow: 0 16px 40px rgba(23,74,135,0.22);
+      box-shadow: 0 16px 40px rgba(23,74,135,0.18);
       padding: 40px 28px;
       text-align: center;
     }
@@ -677,6 +670,21 @@
           <div class="stars">★★★★★</div>
           <p>Reliable, straightforward, and professional. I’d absolutely call Handled Home again.</p>
           <div class="review-name">James T.</div>
+        </div>
+        <div class="review-card">
+          <div class="stars">★★★★★</div>
+          <p>They communicated well, showed up when they said they would, and made the whole thing easy.</p>
+          <div class="review-name">Lisa M.</div>
+        </div>
+        <div class="review-card">
+          <div class="stars">★★★★★</div>
+          <p>The work was clean, the price was fair, and I felt like they actually cared about doing it right.</p>
+          <div class="review-name">Tom B.</div>
+        </div>
+        <div class="review-card">
+          <div class="stars">★★★★★</div>
+          <p>Hard to find people who are both responsive and reliable. I’d hire them again without hesitation.</p>
+          <div class="review-name">Karen D.</div>
         </div>
       </div>
 
