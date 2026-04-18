@@ -1,263 +1,868 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Handled Home</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Handled Home | Point. Fix. Handled.</title>
+  <meta
+    name="description"
+    content="Handled Home provides reliable handyman services in the Pittsburgh area. Call or text 412-353-5341 for a fast quote."
+  />
+  <style>
+    :root {
+      --blue: #1F5DAA;
+      --blue-dark: #164A88;
+      --blue-soft: #EEF5FF;
+      --orange: #F58220;
+      --orange-dark: #D96E12;
+      --orange-soft: #FFF4E9;
+      --text: #1F2937;
+      --muted: #667085;
+      --line: #E6ECF5;
+      --white: #FFFFFF;
+      --bg: #F8FAFC;
+      --shadow: 0 14px 40px rgba(19, 45, 89, 0.08);
+      --shadow-soft: 0 8px 24px rgba(19, 45, 89, 0.06);
+      --radius: 18px;
+      --radius-sm: 12px;
+      --max: 1180px;
+    }
 
-<style>
-:root {
-  --blue:#1F5DAA;
-  --orange:#F58220;
-  --light:#f4f7fb;
-}
+    * {
+      box-sizing: border-box;
+    }
 
-body {
-  margin:0;
-  font-family:Arial, sans-serif;
-  color:#222;
-}
+    html {
+      scroll-behavior: smooth;
+    }
 
-/* TOP BAR */
-.topbar {
-  background:var(--blue);
-  color:#fff;
-  text-align:center;
-  padding:10px;
-  font-size:14px;
-}
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      color: var(--text);
+      background: var(--bg);
+      line-height: 1.55;
+    }
 
-.topbar a { color:#fff; text-decoration:none; margin:0 10px; }
+    img {
+      max-width: 100%;
+      display: block;
+    }
 
-/* HERO */
-.hero {
-  background:#fff;
-  text-align:center;
-  padding:50px 20px 40px;
-}
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
 
-.logo img {
-  max-width:420px;
-  width:100%;
-}
+    .container {
+      width: min(var(--max), calc(100% - 32px));
+      margin: 0 auto;
+    }
 
-.tagline {
-  margin-top:10px;
-  font-size:20px;
-  font-weight:bold;
-  color:var(--blue);
-}
+    .topbar {
+      background: var(--blue-dark);
+      color: var(--white);
+      font-size: 14px;
+      border-bottom: 1px solid rgba(255,255,255,0.12);
+    }
 
-.headline {
-  font-size:40px;
-  margin-top:30px;
-  color:var(--blue);
-}
+    .topbar-inner {
+      min-height: 48px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 18px;
+      flex-wrap: wrap;
+      text-align: center;
+      padding: 8px 0;
+    }
 
-.subtext {
-  max-width:700px;
-  margin:20px auto;
-  color:#555;
-  font-size:18px;
-}
+    .topbar a {
+      font-weight: 700;
+    }
 
-.buttons a {
-  display:inline-block;
-  margin:8px;
-  padding:14px 22px;
-  border-radius:6px;
-  font-weight:bold;
-  text-decoration:none;
-}
+    .hero-wrap {
+      background:
+        radial-gradient(circle at top left, rgba(31, 93, 170, 0.10), transparent 30%),
+        radial-gradient(circle at top right, rgba(245, 130, 32, 0.10), transparent 28%),
+        linear-gradient(180deg, #ffffff 0%, #f8fbff 100%);
+      border-bottom: 1px solid var(--line);
+    }
 
-.call {
-  background:var(--orange);
-  color:#fff;
-}
+    .hero {
+      padding: 34px 0 56px;
+    }
 
-.email {
-  border:2px solid var(--blue);
-  color:var(--blue);
-}
+    .hero-card {
+      background: rgba(255,255,255,0.92);
+      backdrop-filter: blur(4px);
+      border: 1px solid rgba(31, 93, 170, 0.10);
+      border-radius: 28px;
+      box-shadow: var(--shadow);
+      padding: 30px 28px 36px;
+      overflow: hidden;
+      position: relative;
+    }
 
-/* TEXT CTA STRIP */
-.text-strip {
-  background:var(--orange);
-  color:#fff;
-  text-align:center;
-  padding:18px;
-  font-size:18px;
-  font-weight:bold;
-}
+    .hero-card::before {
+      content: "";
+      position: absolute;
+      inset: 0 auto auto 0;
+      width: 100%;
+      height: 6px;
+      background: linear-gradient(90deg, var(--blue), var(--orange));
+    }
 
-/* POINT FIX HANDLED */
-.steps {
-  background:var(--light);
-  padding:40px 20px;
-  display:flex;
-  justify-content:center;
-  gap:40px;
-  text-align:center;
-  flex-wrap:wrap;
-}
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.15fr 0.85fr;
+      gap: 26px;
+      align-items: center;
+    }
 
-.step {
-  max-width:200px;
-}
+    .brand-mark {
+      background: var(--white);
+      border: 1px solid var(--line);
+      border-radius: 22px;
+      padding: 18px;
+      box-shadow: var(--shadow-soft);
+      display: inline-block;
+      margin-bottom: 14px;
+    }
 
-.step h3 {
-  color:var(--blue);
-}
+    .brand-mark img {
+      width: min(430px, 100%);
+      height: auto;
+    }
 
-/* SERVICES */
-.section {
-  padding:50px 20px;
-  text-align:center;
-}
+    .tagline {
+      display: inline-block;
+      background: var(--blue-soft);
+      color: var(--blue-dark);
+      border: 1px solid #d9e8ff;
+      padding: 8px 14px;
+      border-radius: 999px;
+      font-weight: 700;
+      letter-spacing: 0.2px;
+      margin-bottom: 16px;
+    }
 
-.services {
-  display:flex;
-  flex-wrap:wrap;
-  justify-content:center;
-  gap:20px;
-  max-width:1000px;
-  margin:auto;
-}
+    .insured-badge {
+      display: inline-block;
+      margin-left: 10px;
+      background: var(--orange-soft);
+      color: #9a4f10;
+      border: 1px solid #ffd8b6;
+      padding: 8px 14px;
+      border-radius: 999px;
+      font-weight: 700;
+    }
 
-.card {
-  background:#fff;
-  padding:20px;
-  border-radius:10px;
-  width:260px;
-  box-shadow:0 5px 15px rgba(0,0,0,0.08);
-}
+    h1 {
+      margin: 0 0 14px;
+      font-size: clamp(34px, 5vw, 58px);
+      line-height: 1.04;
+      color: var(--blue-dark);
+      letter-spacing: -0.03em;
+    }
 
-/* REVIEWS */
-.reviews .card {
-  background:var(--light);
-}
+    .hero p.lead {
+      margin: 0 0 22px;
+      max-width: 700px;
+      color: var(--muted);
+      font-size: 18px;
+    }
 
-/* GOOGLE REVIEWS */
-.google {
-  background:#fff;
-  padding:40px 20px;
-  text-align:center;
-}
+    .button-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-bottom: 16px;
+    }
 
-.google a {
-  display:inline-block;
-  margin-top:15px;
-  color:#fff;
-  background:var(--blue);
-  padding:12px 18px;
-  border-radius:6px;
-  text-decoration:none;
-}
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 14px 20px;
+      border-radius: 12px;
+      font-weight: 700;
+      transition: transform 0.18s ease, box-shadow 0.18s ease, background 0.18s ease;
+      box-shadow: var(--shadow-soft);
+    }
 
-/* CTA */
-.cta {
-  background:var(--orange);
-  color:#fff;
-  text-align:center;
-  padding:50px 20px;
-}
+    .btn:hover {
+      transform: translateY(-1px);
+    }
 
-/* FOOTER */
-.footer {
-  background:var(--blue);
-  color:#fff;
-  text-align:center;
-  padding:20px;
-}
-</style>
+    .btn-primary {
+      background: var(--orange);
+      color: var(--white);
+    }
+
+    .btn-primary:hover {
+      background: var(--orange-dark);
+    }
+
+    .btn-secondary {
+      background: var(--white);
+      color: var(--blue-dark);
+      border: 1px solid var(--line);
+    }
+
+    .hero-note {
+      color: var(--muted);
+      font-size: 15px;
+      font-weight: 600;
+    }
+
+    .hero-panel {
+      background: linear-gradient(180deg, var(--blue-dark) 0%, var(--blue) 100%);
+      color: var(--white);
+      border-radius: 24px;
+      padding: 26px;
+      box-shadow: var(--shadow);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero-panel::after {
+      content: "";
+      position: absolute;
+      width: 180px;
+      height: 180px;
+      border-radius: 50%;
+      background: rgba(255,255,255,0.08);
+      top: -40px;
+      right: -40px;
+    }
+
+    .hero-panel h3 {
+      margin: 0 0 8px;
+      font-size: 24px;
+      position: relative;
+      z-index: 1;
+    }
+
+    .hero-panel p {
+      margin: 0 0 18px;
+      color: rgba(255,255,255,0.88);
+      position: relative;
+      z-index: 1;
+    }
+
+    .quick-list {
+      position: relative;
+      z-index: 1;
+      display: grid;
+      gap: 12px;
+      margin: 0 0 18px;
+    }
+
+    .quick-item {
+      background: rgba(255,255,255,0.10);
+      border: 1px solid rgba(255,255,255,0.14);
+      border-radius: 14px;
+      padding: 14px 14px;
+      font-weight: 700;
+    }
+
+    .quick-item span {
+      display: block;
+      font-weight: 400;
+      opacity: 0.9;
+      margin-top: 3px;
+      font-size: 14px;
+    }
+
+    .panel-callout {
+      position: relative;
+      z-index: 1;
+      background: rgba(245,130,32,0.14);
+      border: 1px solid rgba(245,130,32,0.36);
+      border-radius: 14px;
+      padding: 14px;
+      font-weight: 700;
+    }
+
+    .text-strip {
+      background: linear-gradient(90deg, var(--orange), #ff9b45);
+      color: var(--white);
+      text-align: center;
+      padding: 16px 18px;
+      font-size: 17px;
+      font-weight: 700;
+    }
+
+    .text-strip a {
+      text-decoration: underline;
+      text-underline-offset: 2px;
+    }
+
+    section {
+      padding: 72px 0;
+    }
+
+    .section-head {
+      text-align: center;
+      margin-bottom: 34px;
+    }
+
+    .eyebrow {
+      display: inline-block;
+      color: var(--orange-dark);
+      background: var(--orange-soft);
+      border: 1px solid #ffd8b6;
+      border-radius: 999px;
+      padding: 7px 12px;
+      font-size: 13px;
+      font-weight: 700;
+      margin-bottom: 12px;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+    }
+
+    h2 {
+      margin: 0 0 10px;
+      font-size: clamp(30px, 4vw, 42px);
+      color: var(--blue-dark);
+      letter-spacing: -0.02em;
+    }
+
+    .section-head p {
+      margin: 0 auto;
+      max-width: 760px;
+      color: var(--muted);
+      font-size: 17px;
+    }
+
+    .steps {
+      background: var(--white);
+    }
+
+    .steps-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 22px;
+    }
+
+    .step-card {
+      background: linear-gradient(180deg, #ffffff 0%, #f9fbff 100%);
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      padding: 28px 24px;
+      box-shadow: var(--shadow-soft);
+      text-align: center;
+      position: relative;
+    }
+
+    .step-number {
+      width: 46px;
+      height: 46px;
+      border-radius: 50%;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 700;
+      color: var(--white);
+      margin-bottom: 14px;
+      background: linear-gradient(135deg, var(--blue), var(--orange));
+    }
+
+    .step-card h3 {
+      margin: 0 0 8px;
+      color: var(--blue-dark);
+      font-size: 24px;
+    }
+
+    .step-card p {
+      margin: 0;
+      color: var(--muted);
+    }
+
+    .services-grid,
+    .reviews-grid,
+    .trust-grid {
+      display: grid;
+      gap: 22px;
+    }
+
+    .services-grid {
+      grid-template-columns: repeat(3, 1fr);
+    }
+
+    .service-card,
+    .review-card,
+    .trust-card {
+      background: var(--white);
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      padding: 24px;
+      box-shadow: var(--shadow-soft);
+    }
+
+    .service-card h3,
+    .review-card h3,
+    .trust-card h3 {
+      margin: 0 0 10px;
+      color: var(--blue-dark);
+      font-size: 22px;
+    }
+
+    .service-card p,
+    .review-card p,
+    .trust-card p {
+      margin: 0;
+      color: var(--muted);
+    }
+
+    .service-icon {
+      width: 44px;
+      height: 44px;
+      border-radius: 12px;
+      background: linear-gradient(135deg, var(--blue-soft), var(--orange-soft));
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--blue-dark);
+      font-weight: 700;
+      margin-bottom: 14px;
+    }
+
+    .reviews-wrap {
+      background: linear-gradient(180deg, #f5f9ff 0%, #ffffff 100%);
+      border-top: 1px solid var(--line);
+      border-bottom: 1px solid var(--line);
+    }
+
+    .reviews-grid {
+      grid-template-columns: repeat(3, 1fr);
+    }
+
+    .stars {
+      color: var(--orange);
+      letter-spacing: 2px;
+      font-size: 18px;
+      margin-bottom: 12px;
+    }
+
+    .review-name {
+      margin-top: 16px;
+      font-weight: 700;
+      color: var(--blue-dark);
+    }
+
+    .google-card {
+      margin-top: 22px;
+      background: var(--white);
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow-soft);
+      padding: 24px;
+      text-align: center;
+    }
+
+    .google-card a {
+      display: inline-block;
+      margin-top: 12px;
+      background: var(--blue);
+      color: var(--white);
+      padding: 13px 18px;
+      border-radius: 12px;
+      font-weight: 700;
+    }
+
+    .trust-grid {
+      grid-template-columns: repeat(3, 1fr);
+    }
+
+    .trust-card {
+      background: linear-gradient(180deg, #ffffff 0%, #fbfcfe 100%);
+    }
+
+    .cta-wrap {
+      padding: 0 0 72px;
+    }
+
+    .cta-box {
+      background: linear-gradient(135deg, var(--blue-dark) 0%, var(--blue) 100%);
+      color: var(--white);
+      border-radius: 28px;
+      padding: 40px 28px;
+      box-shadow: var(--shadow);
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .cta-box::before,
+    .cta-box::after {
+      content: "";
+      position: absolute;
+      border-radius: 50%;
+      background: rgba(255,255,255,0.08);
+    }
+
+    .cta-box::before {
+      width: 160px;
+      height: 160px;
+      left: -40px;
+      bottom: -40px;
+    }
+
+    .cta-box::after {
+      width: 220px;
+      height: 220px;
+      right: -70px;
+      top: -70px;
+    }
+
+    .cta-box h2,
+    .cta-box p,
+    .cta-box .button-row {
+      position: relative;
+      z-index: 1;
+    }
+
+    .cta-box h2 {
+      color: var(--white);
+      margin-bottom: 10px;
+    }
+
+    .cta-box p {
+      margin: 0 auto 22px;
+      max-width: 700px;
+      color: rgba(255,255,255,0.88);
+      font-size: 17px;
+    }
+
+    footer {
+      background: #0f3563;
+      color: var(--white);
+      padding: 24px 0;
+      text-align: center;
+    }
+
+    footer p {
+      margin: 6px 0;
+    }
+
+    footer a {
+      font-weight: 700;
+    }
+
+    @media (max-width: 980px) {
+      .hero-grid,
+      .steps-grid,
+      .services-grid,
+      .reviews-grid,
+      .trust-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .hero-card {
+        padding: 24px 20px 28px;
+      }
+
+      h1 {
+        font-size: 42px;
+      }
+
+      .hero-panel {
+        padding: 22px;
+      }
+    }
+
+    @media (max-width: 640px) {
+      .topbar-inner {
+        gap: 8px;
+      }
+
+      .hero {
+        padding: 22px 0 44px;
+      }
+
+      .brand-mark {
+        padding: 14px;
+      }
+
+      .tagline,
+      .insured-badge {
+        display: block;
+        margin-left: 0;
+        margin-right: 0;
+      }
+
+      .insured-badge {
+        margin-top: 10px;
+      }
+
+      h1 {
+        font-size: 34px;
+      }
+
+      .hero p.lead,
+      .section-head p,
+      .cta-box p {
+        font-size: 16px;
+      }
+
+      section {
+        padding: 58px 0;
+      }
+
+      .btn {
+        width: 100%;
+      }
+
+      .button-row {
+        flex-direction: column;
+      }
+    }
+  </style>
 </head>
-
 <body>
+  <div class="topbar">
+    <div class="container topbar-inner">
+      <div>📞 <a href="tel:14123535341">412-353-5341</a></div>
+      <div>📧 <a href="mailto:info@handledhome.net">info@handledhome.net</a></div>
+      <div>Serving Pittsburgh and surrounding areas</div>
+    </div>
+  </div>
 
-<div class="topbar">
-📞 <a href="tel:14123535341">412-353-5341</a> |
-📧 <a href="mailto:info@handledhome.net">info@handledhome.net</a>
-</div>
+  <div class="hero-wrap">
+    <div class="container hero">
+      <div class="hero-card">
+        <div class="hero-grid">
+          <div>
+            <div class="brand-mark">
+              <img src="handled_home_front_logo.svg" alt="Handled Home logo" />
+            </div>
 
-<div class="hero">
+            <div>
+              <span class="tagline">Point. Fix. Handled.</span>
+              <span class="insured-badge">Fully Insured</span>
+            </div>
 
-<div class="logo">
-<img src="handled_home_front_logo.svg" alt="Handled Home Logo">
-</div>
+            <h1>Reliable handyman work without the runaround.</h1>
+            <p class="lead">
+              Quality repairs, honest service, and dependable work for homeowners in the Pittsburgh area.
+              From drywall and doors to trim, flooring, and outdoor projects, we handle it.
+            </p>
 
-<div class="tagline">
-Point. Fix. Handled.
-</div>
+            <div class="button-row">
+              <a class="btn btn-primary" href="tel:14123535341">Call Now</a>
+              <a class="btn btn-secondary" href="mailto:info@handledhome.net?subject=Request%20an%20Estimate">Request Estimate</a>
+            </div>
 
-<div class="headline">
-Reliable Handyman Services You Can Trust
-</div>
+            <div class="hero-note">
+              Fastest way to get a quote: text us photos of the project.
+            </div>
+          </div>
 
-<div class="subtext">
-Quality repairs, honest service, and dependable work across the Pittsburgh area.
-</div>
+          <div class="hero-panel">
+            <h3>Fast quote. Clear communication. Solid work.</h3>
+            <p>
+              We keep it simple for homeowners who just want the job done right.
+            </p>
 
-<div class="buttons">
-<a class="call" href="tel:14123535341">Call Now</a>
-<a class="email" href="mailto:info@handledhome.net">Request Estimate</a>
-</div>
+            <div class="quick-list">
+              <div class="quick-item">
+                Text photos for a fast quote
+                <span>Skip the back and forth and show us what needs fixed.</span>
+              </div>
+              <div class="quick-item">
+                Straightforward service
+                <span>No fluff, no mystery, no disappearing act.</span>
+              </div>
+              <div class="quick-item">
+                Local and dependable
+                <span>Serving Pittsburgh-area homeowners with practical repair help.</span>
+              </div>
+            </div>
 
-</div>
+            <div class="panel-callout">
+              Text your project photos to 412-353-5341
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 
-<!-- TEXT CTA -->
-<div class="text-strip">
-📱 Text us photos of your project for a fast quote: 412-353-5341
-</div>
+  <div class="text-strip">
+    📱 Text us photos of your project for a fast quote:
+    <a href="tel:14123535341">412-353-5341</a>
+  </div>
 
-<!-- POINT FIX HANDLED -->
-<div class="steps">
-<div class="step"><h3>Point</h3><p>Show us the issue</p></div>
-<div class="step"><h3>Fix</h3><p>We handle the work</p></div>
-<div class="step"><h3>Handled</h3><p>Done right the first time</p></div>
-</div>
+  <section class="steps">
+    <div class="container">
+      <div class="section-head">
+        <div class="eyebrow">How it works</div>
+        <h2>Point. Fix. Handled.</h2>
+        <p>
+          A simple process that makes it easy to get help without chasing people down.
+        </p>
+      </div>
 
-<!-- SERVICES -->
-<div class="section">
-<h2>Our Services</h2>
-<div class="services">
-<div class="card">General Repairs</div>
-<div class="card">Drywall & Painting</div>
-<div class="card">Doors & Windows</div>
-<div class="card">Shed & Outdoor Work</div>
-<div class="card">Trim & Flooring</div>
-</div>
-</div>
+      <div class="steps-grid">
+        <div class="step-card">
+          <div class="step-number">1</div>
+          <h3>Point</h3>
+          <p>Show us the issue. Text photos or reach out with the details.</p>
+        </div>
+        <div class="step-card">
+          <div class="step-number">2</div>
+          <h3>Fix</h3>
+          <p>We take care of the work with clear communication and quality execution.</p>
+        </div>
+        <div class="step-card">
+          <div class="step-number">3</div>
+          <h3>Handled</h3>
+          <p>The job gets wrapped up cleanly so you can move on.</p>
+        </div>
+      </div>
+    </div>
+  </section>
 
-<!-- REVIEWS -->
-<div class="section reviews">
-<h2>Customer Reviews</h2>
-<div class="services">
-<div class="card">★★★★★<br>Reliable and easy to work with</div>
-<div class="card">★★★★★<br>Great work and fair pricing</div>
-<div class="card">★★★★★<br>Will definitely hire again</div>
-</div>
-</div>
+  <section>
+    <div class="container">
+      <div class="section-head">
+        <div class="eyebrow">Services</div>
+        <h2>What we help with</h2>
+        <p>
+          Practical handyman services for the repairs and projects that keep your home in shape.
+        </p>
+      </div>
 
-<!-- GOOGLE REVIEWS -->
-<div class="google">
-<h2>See Our Reviews on Google</h2>
-<p>Check out what customers are saying about us.</p>
+      <div class="services-grid">
+        <div class="service-card">
+          <div class="service-icon">01</div>
+          <h3>General Repairs</h3>
+          <p>Small fixes, punch-list items, and everyday repair work handled the right way.</p>
+        </div>
+        <div class="service-card">
+          <div class="service-icon">02</div>
+          <h3>Drywall & Painting</h3>
+          <p>Patching, finishing, touch-ups, and cleanups for worn or damaged spaces.</p>
+        </div>
+        <div class="service-card">
+          <div class="service-icon">03</div>
+          <h3>Doors & Windows</h3>
+          <p>Adjustments, repairs, trim fixes, and hardware swaps that solve real problems.</p>
+        </div>
+        <div class="service-card">
+          <div class="service-icon">04</div>
+          <h3>Shed & Outdoor Work</h3>
+          <p>Shed assembly, outdoor repairs, and project help where an extra set of skilled hands matters.</p>
+        </div>
+        <div class="service-card">
+          <div class="service-icon">05</div>
+          <h3>Trim & Flooring</h3>
+          <p>Interior updates that sharpen up the look and feel of your home.</p>
+        </div>
+        <div class="service-card">
+          <div class="service-icon">06</div>
+          <h3>Installations</h3>
+          <p>Basic install work and project support for homeowners who need it handled cleanly.</p>
+        </div>
+      </div>
+    </div>
+  </section>
 
-<a href="https://www.google.com/search?q=handled+home+pittsburgh" target="_blank">
-View Google Reviews
-</a>
-</div>
+  <section class="reviews-wrap">
+    <div class="container">
+      <div class="section-head">
+        <div class="eyebrow">Reviews</div>
+        <h2>What customers are saying</h2>
+        <p>
+          Replace these placeholders with your real reviews as soon as you can.
+        </p>
+      </div>
 
-<!-- CTA -->
-<div class="cta">
-<h2>Need Something Fixed?</h2>
-<p>Call or text us today</p>
-<a class="call" href="tel:14123535341">Call Now</a>
-</div>
+      <div class="reviews-grid">
+        <div class="review-card">
+          <div class="stars">★★★★★</div>
+          <p>
+            Showed up on time, did exactly what was promised, and cleaned up after. Solid work and easy to deal with.
+          </p>
+          <div class="review-name">Mike R.</div>
+        </div>
+        <div class="review-card">
+          <div class="stars">★★★★★</div>
+          <p>
+            Fair price, quick turnaround, and everything looked great when the job was done.
+          </p>
+          <div class="review-name">Sarah L.</div>
+        </div>
+        <div class="review-card">
+          <div class="stars">★★★★★</div>
+          <p>
+            Reliable, straightforward, and professional. I’d absolutely call Handled Home again.
+          </p>
+          <div class="review-name">James T.</div>
+        </div>
+      </div>
 
-<div class="footer">
-Handled Home | Pittsburgh Area
-</div>
+      <div class="google-card">
+        <h3>See our reviews on Google</h3>
+        <p>Use your real Google Business profile link here once it’s ready.</p>
+        <a href="https://www.google.com/search?q=handled+home+pittsburgh" target="_blank" rel="noopener noreferrer">View Google Reviews</a>
+      </div>
+    </div>
+  </section>
 
+  <section>
+    <div class="container">
+      <div class="section-head">
+        <div class="eyebrow">Why choose us</div>
+        <h2>Built to feel easy for homeowners</h2>
+        <p>
+          The goal is simple: make it easy to reach us, easy to understand the process, and easy to trust the work.
+        </p>
+      </div>
+
+      <div class="trust-grid">
+        <div class="trust-card">
+          <h3>Fully insured</h3>
+          <p>That matters. It signals professionalism and helps customers feel safer hiring you.</p>
+        </div>
+        <div class="trust-card">
+          <h3>Responsive and clear</h3>
+          <p>Fast replies and straightforward communication beat fancy marketing every time.</p>
+        </div>
+        <div class="trust-card">
+          <h3>Local and practical</h3>
+          <p>You’re helping real homeowners with real issues, not selling fluff.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="cta-wrap">
+    <div class="container">
+      <div class="cta-box">
+        <h2>Need something fixed?</h2>
+        <p>
+          Call, text, or email today. Texting photos is the fastest way to get the conversation started.
+        </p>
+        <div class="button-row" style="justify-content:center;">
+          <a class="btn btn-primary" href="tel:14123535341">Call 412-353-5341</a>
+          <a class="btn btn-secondary" href="mailto:info@handledhome.net?subject=Request%20an%20Estimate">Email Us</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    <div class="container">
+      <p><strong>Handled Home</strong></p>
+      <p>Serving Pittsburgh and surrounding areas</p>
+      <p>
+        <a href="tel:14123535341">412-353-5341</a> |
+        <a href="mailto:info@handledhome.net">info@handledhome.net</a>
+      </p>
+    </div>
+  </footer>
 </body>
 </html>
