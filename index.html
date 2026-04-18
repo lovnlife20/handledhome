@@ -7,15 +7,17 @@
   <meta name="description" content="Handled Home offers reliable handyman services in the Pittsburgh area. Call or text 412-353-5341 for an estimate." />
   <style>
     :root {
-      --navy: #17384a;
-      --teal: #2f8f9d;
-      --light-teal: #dff4f6;
-      --gold: #d7b56d;
+      --blue: #1F5DAA;
+      --orange: #F58220;
+      --blue-dark: #174a87;
+      --orange-dark: #d96f16;
       --text: #24323a;
       --muted: #5f6f78;
-      --bg: #f7fafb;
+      --bg: #f7f9fc;
       --white: #ffffff;
-      --border: #d9e4e8;
+      --border: #d9e4ef;
+      --light-blue: #eef5ff;
+      --light-orange: #fff4ea;
     }
 
     * { box-sizing: border-box; }
@@ -39,7 +41,7 @@
     }
 
     .topbar {
-      background: var(--navy);
+      background: var(--blue-dark);
       color: var(--white);
       font-size: 15px;
     }
@@ -54,24 +56,31 @@
     }
 
     .hero {
-      background: linear-gradient(135deg, var(--navy), var(--teal));
+      background: linear-gradient(135deg, var(--blue-dark), var(--blue));
       color: var(--white);
-      padding: 64px 0 56px;
+      padding: 56px 0 56px;
       text-align: center;
     }
 
-    .logo {
-      font-size: 42px;
-      font-weight: 800;
-      margin: 0 0 12px;
-      letter-spacing: 0.5px;
+    .logo-wrap {
+      display: flex;
+      justify-content: center;
+      margin-bottom: 18px;
+    }
+
+    .logo-svg {
+      width: min(560px, 92%);
+      height: auto;
+      display: block;
+      background: transparent;
     }
 
     .insured-badge {
       display: inline-block;
       margin-bottom: 18px;
-      background: rgba(255,255,255,0.14);
-      border: 1px solid rgba(255,255,255,0.25);
+      background: rgba(245, 130, 32, 0.15);
+      border: 1px solid rgba(245, 130, 32, 0.4);
+      color: #fff;
       padding: 8px 14px;
       border-radius: 999px;
       font-weight: 700;
@@ -79,7 +88,7 @@
     }
 
     .hero h1 {
-      font-size: clamp(32px, 5vw, 54px);
+      font-size: clamp(30px, 5vw, 50px);
       line-height: 1.1;
       margin: 0 0 14px;
     }
@@ -88,7 +97,7 @@
       max-width: 760px;
       margin: 0 auto 24px;
       font-size: 18px;
-      opacity: 0.97;
+      opacity: 0.98;
     }
 
     .hero-buttons {
@@ -108,13 +117,21 @@
     }
 
     .btn-primary {
-      background: var(--gold);
-      color: #1f2326;
+      background: var(--orange);
+      color: #fff;
+    }
+
+    .btn-primary:hover {
+      background: var(--orange-dark);
     }
 
     .btn-secondary {
-      background: var(--white);
-      color: var(--navy);
+      background: #fff;
+      color: var(--blue-dark);
+    }
+
+    .btn-secondary:hover {
+      background: #f2f6fb;
     }
 
     .section {
@@ -125,7 +142,7 @@
       text-align: center;
       margin: 0 0 12px;
       font-size: 34px;
-      color: var(--navy);
+      color: var(--blue-dark);
     }
 
     .section-subtitle {
@@ -150,13 +167,13 @@
       border: 1px solid var(--border);
       border-radius: 16px;
       padding: 24px;
-      box-shadow: 0 6px 18px rgba(0,0,0,0.05);
+      box-shadow: 0 6px 18px rgba(20, 50, 90, 0.06);
     }
 
     .card h3 {
       margin-top: 0;
       margin-bottom: 10px;
-      color: var(--navy);
+      color: var(--blue-dark);
       font-size: 20px;
     }
 
@@ -169,8 +186,12 @@
       grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
     }
 
+    .reviews-section {
+      background: var(--light-blue);
+    }
+
     .stars {
-      color: #d3a93a;
+      color: var(--orange);
       font-size: 18px;
       margin-bottom: 10px;
     }
@@ -178,7 +199,7 @@
     .review-name {
       margin-top: 14px;
       font-weight: 700;
-      color: var(--navy);
+      color: var(--blue-dark);
     }
 
     .checklist {
@@ -197,15 +218,15 @@
     }
 
     .cta {
-      background: var(--light-teal);
+      background: var(--light-orange);
       text-align: center;
-      border-top: 1px solid var(--border);
-      border-bottom: 1px solid var(--border);
+      border-top: 1px solid #f1d4bb;
+      border-bottom: 1px solid #f1d4bb;
     }
 
     .cta h2 {
       margin-top: 0;
-      color: var(--navy);
+      color: var(--blue-dark);
       font-size: 34px;
     }
 
@@ -217,7 +238,7 @@
     }
 
     footer {
-      background: var(--navy);
+      background: var(--blue-dark);
       color: var(--white);
       text-align: center;
       padding: 28px 0;
@@ -228,9 +249,8 @@
     }
 
     @media (max-width: 640px) {
-      .hero { padding: 52px 0 46px; }
-      .section { padding: 46px 0; }
-      .logo { font-size: 34px; }
+      .hero { padding: 46px 0; }
+      .section { padding: 44px 0; }
     }
   </style>
 </head>
@@ -246,7 +266,26 @@
   <section class="hero">
     <div class="container">
       <div class="insured-badge">Fully Insured</div>
-      <div class="logo">Handled Home</div>
+
+      <div class="logo-wrap">
+        <svg class="logo-svg" viewBox="0 0 1800 800" xmlns="http://www.w3.org/2000/svg" aria-label="Handled Home logo">
+          <g transform="translate(100,150)" fill="none" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M100 250 L100 120 L260 20 L420 120 L420 360 L100 360 Z"
+                  stroke="#1F5DAA" stroke-width="24"/>
+            <path d="M100 120 L260 20 L420 120 L420 360"
+                  stroke="#F58220" stroke-width="24"/>
+            <path d="M190 260 L260 320 L360 200"
+                  stroke="#1F5DAA" stroke-width="24"/>
+          </g>
+          <text x="600" y="330" font-family="Arial, Helvetica, sans-serif" font-size="160" fill="#F58220" font-weight="bold">
+            Handled
+          </text>
+          <text x="600" y="520" font-family="Arial, Helvetica, sans-serif" font-size="160" fill="#1F5DAA" font-weight="bold">
+            Home
+          </text>
+        </svg>
+      </div>
+
       <h1>Reliable Handyman Services You Can Trust</h1>
       <p>
         Quality repairs, honest service, and dependable work for homeowners in the Pittsburgh area.
@@ -294,7 +333,7 @@
     </div>
   </section>
 
-  <section class="section" style="background:#eef5f7;">
+  <section class="section reviews-section">
     <div class="container">
       <h2 class="section-title">Customer Reviews</h2>
       <p class="section-subtitle">
