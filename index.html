@@ -26,52 +26,71 @@ body {
 .topbar {
   background:var(--blue-dark);
   color:#fff;
-  text-align:center;
-  padding:10px;
   font-size:14px;
+}
+
+.topbar-inner {
+  max-width:1100px;
+  margin:auto;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:10px 15px;
+  flex-wrap:wrap;
+}
+
+.topbar-left {
+  display:flex;
+  gap:15px;
+  flex-wrap:wrap;
 }
 
 .topbar a {
   color:#fff;
   text-decoration:none;
-  margin:0 10px;
   font-weight:600;
+}
+
+.topbar-right {
+  white-space:nowrap;
+  font-size:13px;
+  opacity:0.9;
 }
 
 /* HERO */
 .hero {
-  text-align:center;
-  padding:50px 20px 20px;
+  padding:35px 20px 5px;
 }
 
-.logo {
-  display:flex;
-  justify-content:center;
+.hero-inner {
+  max-width:1100px;
+  margin:auto;
 }
 
 .logo img {
-  width:320px;
-  max-width:90%;
+  width:300px;
 }
 
+/* 🔥 TIGHTENED + RECOLORED */
 .tagline {
-  margin-top:18px;
-  font-size:20px;
+  margin-top:6px;
+  font-size:18px;
   font-weight:600;
-  color:var(--text);
+  color:var(--blue-dark);
+  letter-spacing:0.3px;
 }
 
 .insured {
-  margin-top:6px;
-  font-size:18px;
+  margin-top:2px;
+  font-size:15px;
   color:var(--orange);
-  font-weight:bold;
+  font-weight:700;
 }
 
 /* MAIN HERO */
 .hero-content {
   max-width:1100px;
-  margin:30px auto;
+  margin:20px auto;
   background:#fff;
   border-radius:18px;
   padding:40px;
@@ -113,7 +132,7 @@ body {
 }
 
 .note {
-  margin-top:15px;
+  margin-top:12px;
   color:var(--muted);
   font-size:14px;
 }
@@ -135,7 +154,6 @@ body {
   padding:15px;
   border-radius:10px;
   margin-bottom:12px;
-  color:var(--text);
 }
 
 /* SECTION */
@@ -170,7 +188,6 @@ body {
   padding:20px;
   border-radius:12px;
   box-shadow:0 6px 18px rgba(0,0,0,0.05);
-  color:var(--text);
 }
 
 /* REVIEWS */
@@ -210,6 +227,12 @@ body {
   .hero-content {
     grid-template-columns:1fr;
   }
+
+  .topbar-inner {
+    flex-direction:column;
+    gap:6px;
+    text-align:center;
+  }
 }
 </style>
 </head>
@@ -217,25 +240,33 @@ body {
 <body>
 
 <div class="topbar">
-📞 <a href="tel:14123535341">412-353-5341</a> |
-📧 <a href="mailto:info@handledhome.net">info@handledhome.net</a> |
-Serving Pittsburgh Area
+  <div class="topbar-inner">
+    <div class="topbar-left">
+      <a href="tel:14123535341">412-353-5341</a>
+      <a href="mailto:info@handledhome.net">info@handledhome.net</a>
+    </div>
+    <div class="topbar-right">
+      Serving Pittsburgh Area
+    </div>
+  </div>
 </div>
 
 <div class="hero">
+  <div class="hero-inner">
 
-  <div class="logo">
-    <img src="handled_home_front_logo.svg">
+    <div class="logo">
+      <img src="handled_home_front_logo.svg">
+    </div>
+
+    <div class="tagline">
+      Point. Fix. Handled.
+    </div>
+
+    <div class="insured">
+      Fully Insured
+    </div>
+
   </div>
-
-  <div class="tagline">
-    Point. Fix. Handled.
-  </div>
-
-  <div class="insured">
-    Fully Insured
-  </div>
-
 </div>
 
 <div class="hero-content">
@@ -276,19 +307,6 @@ Serving Pittsburgh Area
 
   </div>
 
-</div>
-
-<div class="section">
-  <h2>What we help with</h2>
-  <p>Practical handyman services for real homeowner problems.</p>
-
-  <div class="grid">
-    <div class="box">General Repairs</div>
-    <div class="box">Drywall & Painting</div>
-    <div class="box">Doors & Windows</div>
-    <div class="box">Outdoor & Shed Work</div>
-    <div class="box">Trim & Flooring</div>
-  </div>
 </div>
 
 <div class="section">
