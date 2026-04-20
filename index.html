@@ -1,169 +1,222 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>Handyman in Pittsburgh | Handled Home | Fully Insured</title>
+<title>Handyman in Pittsburgh | Handled Home | Fully Insured</title>
 
-  <meta name="description" content="Reliable handyman services in Pittsburgh. Fully insured. Fast quotes, clear communication, and quality work. Call or text Handled Home today.">
-  <meta name="robots" content="index, follow">
+<meta name="description" content="Reliable handyman services in Pittsburgh. Fully insured. Fast quotes, clear communication, and quality work. Call or text Handled Home today.">
+<meta name="robots" content="index, follow">
 
-  <!-- Favicons -->
-  <link rel="icon" href="favicon.ico">
-  <link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="favicon-16.png">
-  <link rel="icon" type="image/png" sizes="192x192" href="favicon-192.png">
-  <link rel="icon" type="image/png" sizes="512x512" href="favicon-512.png">
-  <link rel="apple-touch-icon" href="apple-touch-icon.png">
-  <link rel="manifest" href="site.webmanifest">
+<link rel="icon" href="favicon.ico">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="favicon-16.png">
+<link rel="icon" type="image/png" sizes="192x192" href="favicon-192.png">
+<link rel="icon" type="image/png" sizes="512x512" href="favicon-512.png">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<link rel="manifest" href="site.webmanifest">
 
-  <style>
-  :root {
-    --blue:#1F5DAA;
-    --blue-dark:#174A87;
-    --orange:#F58220;
-    --text:#1F2937;
-    --muted:#6B7280;
-    --bg:#F6F8FB;
-    --card:#FFFFFF;
-    --soft:#F3F7FC;
-    --line:#E5ECF4;
-  }
+<style>
+:root {
+  --blue:#1F5DAA;
+  --blue-dark:#174A87;
+  --orange:#F58220;
+  --text:#1F2937;
+  --muted:#6B7280;
+  --bg:#F6F8FB;
+  --card:#FFFFFF;
+  --soft:#F3F7FC;
+  --line:#E5ECF4;
+  --shadow:0 12px 28px rgba(17, 24, 39, 0.06);
+  --shadow-soft:0 8px 20px rgba(17, 24, 39, 0.04);
+}
 
-  body {
-    margin:0;
-    font-family:Arial, sans-serif;
-    background:var(--bg);
-    color:var(--text);
-  }
+* {
+  box-sizing:border-box;
+}
 
-  a {
-    text-decoration:none;
-    color:inherit;
-  }
+body {
+  margin:0;
+  font-family:Arial, sans-serif;
+  background:var(--bg);
+  color:var(--text);
+}
 
-  .topbar {
-    background:var(--blue-dark);
-    color:#fff;
-    font-size:14px;
-  }
+a {
+  text-decoration:none;
+  color:inherit;
+}
 
-  .topbar-inner {
-    max-width:1100px;
-    margin:auto;
-    display:flex;
-    justify-content:space-between;
-    padding:10px 15px;
-    flex-wrap:wrap;
-  }
+/* TOP BAR */
+.topbar {
+  background:var(--blue-dark);
+  color:#fff;
+  font-size:14px;
+}
 
-  .hero {
-    text-align:center;
-    padding:20px;
-  }
+.topbar-inner {
+  max-width:1120px;
+  margin:auto;
+  display:flex;
+  justify-content:space-between;
+  padding:10px 18px;
+}
 
-  .logo img {
-    width:360px;
-    max-width:90%;
-  }
+/* HERO */
+.hero {
+  text-align:center;
+  padding:20px 20px 5px;
+}
 
-  .tagline {
-    font-size:22px;
-    font-weight:700;
-    color:var(--blue-dark);
-  }
+.logo img {
+  width:380px;
+  max-width:94%;
+}
 
-  .insured {
-    color:var(--orange);
-    font-weight:bold;
-  }
+.tagline {
+  font-size:23px;
+  font-weight:700;
+  color:var(--blue-dark);
+}
 
+.insured {
+  font-size:16px;
+  color:var(--orange);
+  font-weight:700;
+}
+
+/* HERO CARD */
+.hero-content {
+  max-width:1040px;
+  margin:12px auto;
+  background:#fff;
+  border:1px solid var(--line);
+  border-radius:22px;
+  padding:40px;
+  display:grid;
+  grid-template-columns:1.15fr 0.85fr;
+  gap:30px;
+  box-shadow:var(--shadow);
+}
+
+.hero-left h1 {
+  font-size:38px;
+  color:var(--blue-dark);
+}
+
+.hero-left p {
+  color:var(--muted);
+  font-size:18px;
+}
+
+.buttons a {
+  padding:14px 24px;
+  border-radius:10px;
+  font-weight:700;
+  display:inline-block;
+  margin-right:10px;
+}
+
+.call {
+  background:var(--orange);
+  color:#fff;
+}
+
+.email {
+  border:1.5px solid var(--blue);
+  color:var(--blue);
+}
+
+/* RIGHT */
+.hero-right h3 {
+  color:var(--blue-dark);
+}
+
+.card {
+  background:var(--soft);
+  border:1px solid var(--line);
+  padding:15px;
+  border-radius:12px;
+  margin-bottom:10px;
+}
+
+/* SECTIONS */
+.section {
+  padding:40px 20px;
+  text-align:center;
+}
+
+.section h2 {
+  color:var(--blue-dark);
+}
+
+.grid {
+  display:grid;
+  grid-template-columns:repeat(auto-fit, minmax(250px,1fr));
+  gap:20px;
+  max-width:1000px;
+  margin:auto;
+}
+
+.box {
+  background:#fff;
+  padding:20px;
+  border-radius:12px;
+  border:1px solid var(--line);
+}
+
+/* REVIEWS */
+.stars {
+  color:var(--orange);
+}
+
+/* SERVICE AREA */
+.service-area {
+  margin-top:25px;
+  color:var(--muted);
+  border-top:1px solid var(--line);
+  padding-top:15px;
+}
+
+/* CTA */
+.cta {
+  background:var(--blue-dark);
+  color:#fff;
+  padding:50px 20px;
+  text-align:center;
+}
+
+.cta a {
+  background:var(--orange);
+  padding:14px 24px;
+  border-radius:10px;
+  color:#fff;
+  font-weight:bold;
+}
+
+/* FOOTER */
+.footer {
+  background:#0f3563;
+  color:#fff;
+  text-align:center;
+  padding:20px;
+}
+
+@media(max-width:800px){
   .hero-content {
-    max-width:1000px;
-    margin:20px auto;
-    background:#fff;
-    padding:40px;
-    border-radius:16px;
-    display:grid;
-    grid-template-columns:1fr 1fr;
-    gap:20px;
+    grid-template-columns:1fr;
   }
-
-  .hero-left h1 {
-    font-size:36px;
-    color:var(--blue-dark);
-  }
-
-  .buttons a {
-    display:inline-block;
-    margin:5px;
-    padding:12px 20px;
-    border-radius:8px;
-    font-weight:bold;
-  }
-
-  .call {
-    background:var(--orange);
-    color:#fff;
-  }
-
-  .email {
-    border:2px solid var(--blue);
-    color:var(--blue);
-  }
-
-  .section {
-    padding:40px 20px;
-    text-align:center;
-  }
-
-  .grid {
-    display:grid;
-    grid-template-columns:repeat(auto-fit, minmax(200px,1fr));
-    gap:20px;
-    max-width:900px;
-    margin:auto;
-  }
-
-  .box {
-    background:#fff;
-    padding:20px;
-    border-radius:12px;
-  }
-
-  .service-area {
-    margin-top:25px;
-    color:var(--muted);
-    border-top:1px solid var(--line);
-    padding-top:15px;
-  }
-
-  .footer {
-    background:var(--blue-dark);
-    color:#fff;
-    text-align:center;
-    padding:20px;
-  }
-
-  @media(max-width:800px){
-    .hero-content {
-      grid-template-columns:1fr;
-    }
-  }
-  </style>
+}
+</style>
 </head>
 
 <body>
 
 <div class="topbar">
   <div class="topbar-inner">
-    <div>
-      412-353-5341 | info@handledhome.net
-    </div>
-    <div>
-      Serving Pittsburgh Area
-    </div>
+    <div>412-353-5341 | info@handledhome.net</div>
+    <div>Serving Pittsburgh Area</div>
   </div>
 </div>
 
@@ -172,16 +225,12 @@
     <img src="handled_home_front_logo.svg">
   </div>
 
-  <div class="tagline">
-    Point. Fix. Handled.
-  </div>
-
-  <div class="insured">
-    Fully Insured
-  </div>
+  <div class="tagline">Point. Fix. Handled.</div>
+  <div class="insured">Fully Insured</div>
 </div>
 
 <div class="hero-content">
+
   <div class="hero-left">
     <h1>Reliable handyman services in Pittsburgh without the runaround.</h1>
     <p>Honest service, clear communication, and quality repairs for homeowners.</p>
@@ -192,36 +241,45 @@
     </div>
   </div>
 
-  <div>
-    <p><strong>Fast quotes</strong></p>
-    <p><strong>Clear communication</strong></p>
-    <p><strong>Reliable service</strong></p>
+  <div class="hero-right">
+    <h3>Fast quote. Clear communication. Solid work.</h3>
+
+    <div class="card">Text photos for a fast quote</div>
+    <div class="card">Straightforward service</div>
+    <div class="card">Local and dependable</div>
   </div>
+
 </div>
 
 <div class="section">
   <h2>Our Services</h2>
+
   <div class="grid">
     <div class="box">Drywall repair</div>
-    <div class="box">Door installation</div>
-    <div class="box">Trim work</div>
-    <div class="box">Flooring</div>
+    <div class="box">Door repair and installation</div>
+    <div class="box">Trim and molding</div>
+    <div class="box">Flooring installation</div>
     <div class="box">Shed assembly</div>
-    <div class="box">General repairs</div>
+    <div class="box">General home repairs</div>
   </div>
 </div>
 
 <div class="section">
   <h2>Reviews</h2>
+
   <div class="grid">
-    <div class="box">★★★★★ Great work - Mike</div>
-    <div class="box">★★★★★ Very reliable - Sarah</div>
-    <div class="box">★★★★★ Would hire again - James</div>
+    <div class="box"><div class="stars">★★★★★</div>Great work and very reliable.<br><strong>- Mike R.</strong></div>
+    <div class="box"><div class="stars">★★★★★</div>Easy to work with and responsive.<br><strong>- Sarah L.</strong></div>
+    <div class="box"><div class="stars">★★★★★</div>Would hire again without hesitation.<br><strong>- James T.</strong></div>
+    <div class="box"><div class="stars">★★★★★</div>Showed up on time and did great work.<br><strong>- Lisa M.</strong></div>
+    <div class="box"><div class="stars">★★★★★</div>Fair pricing and clean finish.<br><strong>- Tom B.</strong></div>
+    <div class="box"><div class="stars">★★★★★</div>Professional and reliable service.<br><strong>- Karen D.</strong></div>
   </div>
 </div>
 
 <div class="section">
   <h2>Why choose us</h2>
+
   <div class="grid">
     <div class="box">Fully insured</div>
     <div class="box">Clear communication</div>
@@ -231,6 +289,11 @@
   <div class="service-area">
     Serving Pittsburgh, Moon Township, Robinson, Coraopolis, and surrounding areas.
   </div>
+</div>
+
+<div class="cta">
+  <h2>Need something fixed?</h2>
+  <a href="tel:14123535341">Call Now</a>
 </div>
 
 <div class="footer">
