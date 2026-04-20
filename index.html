@@ -203,6 +203,24 @@ a {
   padding:20px;
 }
 
+.floating-call {
+  position: fixed;
+  right: 16px;
+  bottom: 16px;
+  background: var(--orange);
+  color: #fff;
+  padding: 14px 18px;
+  border-radius: 999px;
+  font-weight: 700;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.18);
+  z-index: 999;
+}
+
+@media (min-width: 801px) {
+  .floating-call {
+    display: none;
+  }
+}
 @media(max-width:800px){
   .hero-content {
     grid-template-columns:1fr;
@@ -303,5 +321,6 @@ a {
 Handled Home | Pittsburgh Area
 </div>
 
+<a href="tel:14123535341" class="floating-call">Call Now</a>
 </body>
 </html>
