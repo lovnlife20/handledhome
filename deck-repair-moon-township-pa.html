@@ -1,349 +1,106 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Deck Repair & Deck Building in Moon Township, PA | Handled Home</title>
-<meta name="description" content="Handled Home provides deck repair, deck board replacement, railing repair, deck upgrades, and new deck construction in Moon Township, Coraopolis, Sewickley, Robinson, and nearby areas.">
-<meta name="robots" content="index, follow">
+  <title>Deck Repair & Deck Building in Moon Township, PA | Handled Home</title>
+  <meta name="description" content="Handled Home provides deck repair, board replacement, railing repair, and new deck construction in Moon Township, Coraopolis, Sewickley, Robinson, and nearby areas.">
+  <meta name="robots" content="index, follow">
 
-<link rel="icon" href="favicon.ico">
-<link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png">
-<link rel="icon" type="image/png" sizes="16x16" href="favicon-16.png">
-<link rel="icon" type="image/png" sizes="192x192" href="favicon-192.png">
-<link rel="icon" type="image/png" sizes="512x512" href="favicon-512.png">
-<link rel="apple-touch-icon" href="apple-touch-icon.png">
-<link rel="manifest" href="site.webmanifest">
-
-<style>
-:root {
-  --blue:#1F5DAA;
-  --blue-dark:#174A87;
-  --orange:#F58220;
-  --text:#1F2937;
-  --muted:#6B7280;
-  --bg:#F6F8FB;
-  --line:#E5ECF4;
-  --soft:#F3F7FC;
-  --shadow:0 12px 28px rgba(17, 24, 39, 0.06);
-}
-
-* { box-sizing:border-box; }
-
-body {
-  margin:0;
-  font-family:Arial, sans-serif;
-  background:var(--bg);
-  color:var(--text);
-  line-height:1.6;
-}
-
-a {
-  text-decoration:none;
-  color:inherit;
-}
-
-.topbar {
-  background:var(--blue-dark);
-  color:#fff;
-  font-size:14px;
-}
-
-.topbar-inner {
-  max-width:1120px;
-  margin:auto;
-  display:flex;
-  justify-content:space-between;
-  padding:10px 18px;
-}
-
-.page-wrap {
-  max-width:1120px;
-  margin:auto;
-  padding:20px;
-}
-
-.logo-wrap {
-  text-align:center;
-  padding:20px 20px 5px;
-}
-
-.logo-wrap img {
-  width:380px;
-  max-width:94%;
-}
-
-.nav-card {
-  background:#fff;
-  border:1px solid var(--line);
-  border-radius:18px;
-  box-shadow:var(--shadow);
-  padding:16px 20px;
-  margin:10px auto 24px;
-  max-width:1040px;
-}
-
-.nav {
-  display:flex;
-  flex-wrap:wrap;
-  gap:16px;
-  justify-content:center;
-  font-weight:700;
-  color:var(--blue-dark);
-}
-
-.hero-card {
-  background:#fff;
-  border:1px solid var(--line);
-  border-radius:22px;
-  box-shadow:var(--shadow);
-  padding:40px;
-  margin-bottom:24px;
-}
-
-.hero-card h1 {
-  margin-top:0;
-  color:var(--blue-dark);
-  font-size:38px;
-  line-height:1.2;
-}
-
-.hero-card p {
-  font-size:18px;
-  color:var(--muted);
-}
-
-.buttons {
-  margin-top:20px;
-}
-
-.buttons a {
-  padding:14px 24px;
-  border-radius:10px;
-  font-weight:700;
-  display:inline-block;
-  margin-right:10px;
-  margin-bottom:10px;
-}
-
-.call {
-  background:var(--orange);
-  color:#fff;
-}
-
-.email {
-  border:1.5px solid var(--blue);
-  color:var(--blue);
-  background:#fff;
-}
-
-.section {
-  padding:10px 0 20px;
-}
-
-.section h2 {
-  color:var(--blue-dark);
-  text-align:center;
-  margin-bottom:20px;
-}
-
-.grid {
-  display:grid;
-  grid-template-columns:repeat(auto-fit, minmax(250px,1fr));
-  gap:20px;
-}
-
-.box {
-  background:#fff;
-  padding:22px;
-  border-radius:16px;
-  border:1px solid var(--line);
-  box-shadow:0 8px 18px rgba(17,24,39,0.04);
-}
-
-.box h3 {
-  margin-top:0;
-  color:var(--blue-dark);
-}
-
-.box ul {
-  padding-left:18px;
-  margin-bottom:0;
-}
-
-.cta {
-  background:var(--blue-dark);
-  color:#fff;
-  padding:50px 20px;
-  text-align:center;
-  border-radius:22px;
-  margin:30px 0;
-}
-
-.cta a {
-  background:var(--orange);
-  padding:14px 24px;
-  border-radius:10px;
-  color:#fff;
-  font-weight:bold;
-  display:inline-block;
-  margin-top:10px;
-}
-
-.footer {
-  background:#0f3563;
-  color:#fff;
-  text-align:center;
-  padding:20px;
-}
-
-.floating-call {
-  position: fixed;
-  right: 16px;
-  bottom: 16px;
-  background: var(--orange);
-  color: #fff;
-  padding: 14px 18px;
-  border-radius: 999px;
-  font-weight: 700;
-  box-shadow: 0 8px 20px rgba(0,0,0,0.18);
-  z-index: 999;
-}
-
-@media(max-width:800px){
-  .topbar-inner {
-    flex-direction:column;
-    gap:6px;
-    text-align:center;
-  }
-
-  .hero-card {
-    padding:26px;
-  }
-
-  .hero-card h1 {
-    font-size:30px;
-  }
-}
-</style>
+  <link rel="icon" href="favicon.ico">
+  <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-<div class="topbar">
-  <div class="topbar-inner">
-    <div>
-      <a href="tel:14123535341">412-353-5341</a> |
-      <a href="mailto:info@handledhome.net">info@handledhome.net</a>
-    </div>
-    <div>Serving Moon Township & Pittsburgh Area</div>
-  </div>
-</div>
-
-<div class="logo-wrap">
-  <img src="handled_home_front_logo.svg" alt="Handled Home logo">
-</div>
-
-<div class="page-wrap">
-  <div class="nav-card">
-    <div class="nav">
-      <a href="index.html">Home</a>
-      <a href="deck-repair-moon-township-pa.html">Decks</a>
-      <a href="mailto:info@handledhome.net">Contact</a>
-    </div>
-  </div>
-
-  <div class="hero-card">
-    <h1>Deck Repair & Deck Building in Moon Township, PA</h1>
-    <p>
-      Handled Home provides reliable deck repair, deck upgrades, and new deck construction in Moon Township, Coraopolis, Sewickley, Robinson, and nearby areas. Whether your deck has loose boards, rot, railing issues, or needs a full refresh, we deliver clean, professional work with clear communication from start to finish.
-    </p>
-
-    <div class="buttons">
-      <a class="call" href="tel:14123535341">Call Now</a>
-      <a class="email" href="mailto:info@handledhome.net">Request Estimate</a>
-    </div>
-  </div>
-
-  <div class="section">
-    <h2>Our Deck Services</h2>
-    <div class="grid">
-      <div class="box">
-        <h3>Repair & Upgrades</h3>
-        <ul>
-          <li>Deck board replacement</li>
-          <li>Railing repair and replacement</li>
-          <li>Stair repair</li>
-          <li>Deck resurfacing and upgrades</li>
-        </ul>
+  <!-- TOP BAR -->
+  <div class="topbar">
+    <div class="topbar-inner">
+      <div>
+        <a href="tel:14123535341">412-353-5341</a> |
+        <a href="mailto:info@handledhome.net">info@handledhome.net</a>
       </div>
+      <div>Serving Moon Township & Pittsburgh Area</div>
+    </div>
+  </div>
 
-      <div class="box">
-        <h3>Structural Work</h3>
-        <ul>
-          <li>Structural reinforcement</li>
-          <li>Framing repairs</li>
-          <li>Safety-focused repairs</li>
-          <li>Problem diagnosis before issues worsen</li>
-        </ul>
-      </div>
+  <!-- LOGO -->
+  <div class="logo-wrap">
+    <a href="index.html">
+      <img src="handled_home_front_logo.svg" alt="Handled Home logo">
+    </a>
+  </div>
 
-      <div class="box">
-        <h3>New Construction</h3>
-        <ul>
-          <li>New deck construction</li>
-          <li>Replacement of aging decks</li>
-          <li>Custom outdoor space improvements</li>
-          <li>Covered porch projects depending on scope</li>
-        </ul>
+  <div class="page-wrap">
+
+    <!-- HERO -->
+    <div class="hero-card">
+      <h1>Deck Repair & Deck Building in Moon Township, PA</h1>
+      <p>
+        We repair damaged decks, replace boards and railings, and build new decks for homeowners in Moon Township and surrounding areas. Whether your deck needs a simple fix or a full rebuild, we deliver clean, reliable work.
+      </p>
+
+      <div class="buttons">
+        <a class="call" href="tel:14123535341">Call Now</a>
+        <a class="email" href="mailto:info@handledhome.net">Request Estimate</a>
       </div>
     </div>
-  </div>
 
-  <div class="section">
-    <h2>Common Deck Problems We Repair</h2>
-    <div class="grid">
-      <div class="box">Cracked or rotted deck boards</div>
-      <div class="box">Loose or unsafe railings</div>
-      <div class="box">Unstable stairs</div>
-      <div class="box">Popped fasteners and worn surfaces</div>
-      <div class="box">Aging framing and structural wear</div>
-      <div class="box">Decks that need cosmetic and functional updates</div>
+    <!-- SERVICES -->
+    <div class="section">
+      <h2>Our Deck Services</h2>
+
+      <div class="grid">
+        <div class="box">Deck board replacement</div>
+        <div class="box">Railing repair and replacement</div>
+        <div class="box">Stair repair</div>
+        <div class="box">Structural reinforcement</div>
+        <div class="box">Deck resurfacing and upgrades</div>
+        <div class="box">New deck construction</div>
+      </div>
     </div>
-  </div>
 
-  <div class="section">
-    <h2>Why Homeowners Choose Handled Home</h2>
-    <div class="grid">
-      <div class="box">Clear communication and dependable scheduling</div>
-      <div class="box">Professional, respectful service in your home</div>
-      <div class="box">Quality workmanship without shortcuts</div>
-      <div class="box">Honest estimates and realistic expectations</div>
-      <div class="box">Local service from a team that cares about doing the job right</div>
-      <div class="box">Straightforward guidance on project scope</div>
+    <!-- COMMON PROBLEMS -->
+    <div class="section">
+      <h2>Common Deck Problems We Fix</h2>
+
+      <div class="grid">
+        <div class="box">Rotting or cracked boards</div>
+        <div class="box">Loose or unsafe railings</div>
+        <div class="box">Unstable stairs</div>
+        <div class="box">Popped nails and fasteners</div>
+        <div class="box">Soft or weakened framing</div>
+        <div class="box">Worn or weathered surfaces</div>
+      </div>
     </div>
-  </div>
 
-  <div class="section">
-    <h2>Areas We Serve</h2>
-    <div class="box" style="max-width:900px; margin:auto;">
-      We provide deck repair and deck building services in Moon Township, Coraopolis, Sewickley, Robinson, South Park, Munhall, and nearby Pittsburgh-area communities.
+    <!-- AREAS -->
+    <div class="section">
+      <h2>Areas We Serve</h2>
+
+      <div class="grid">
+        <div class="box">Moon Township</div>
+        <div class="box">Coraopolis</div>
+        <div class="box">Sewickley</div>
+        <div class="box">Robinson</div>
+        <div class="box">South Park</div>
+        <div class="box">Nearby Pittsburgh-area communities</div>
+      </div>
     </div>
+
+    <!-- CTA -->
+    <div class="cta">
+      <h2>Need Deck Work Done?</h2>
+      <a href="tel:14123535341">Call Now</a>
+    </div>
+
   </div>
 
-  <div class="cta">
-    <h2>Need Deck Repair or a New Deck Quote?</h2>
-    <p>Call or email Handled Home today to schedule an estimate.</p>
-    <a href="tel:14123535341">Call Now</a>
+  <!-- FOOTER -->
+  <div class="footer">
+    Handled Home | Moon Township, PA
   </div>
-</div>
-
-<div class="footer">
-  Handled Home | Moon Township, PA | (412) 353-5341
-</div>
-
-<a href="tel:14123535341" class="floating-call">Call Now</a>
 
 </body>
 </html>
