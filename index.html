@@ -9,10 +9,8 @@
 <meta name="description" content="Reliable handyman services in Moon Township, Coraopolis, Sewickley, Robinson, and surrounding Pittsburgh areas. Fully insured. Fast quotes, clear communication, and quality work.">
 
 <meta name="robots" content="index, follow">
-
 <link rel="canonical" href="https://handledhome.net/">
 
-<!-- Open Graph -->
 <meta property="og:title" content="Handyman in Moon Township, PA | Handled Home">
 <meta property="og:description" content="Reliable handyman services in Moon Township and Pittsburgh. Fully insured, fast response, clean work.">
 <meta property="og:image" content="https://handledhome.net/handled-home-logo-cropped.svg">
@@ -47,11 +45,6 @@ body {
 
 a {
   text-decoration: none;
-}
-
-img {
-  max-width: 100%;
-  display: block;
 }
 
 .topbar {
@@ -114,17 +107,11 @@ img {
 
 .hero-card {
   background: linear-gradient(135deg, #ffffff 0%, #f4f8fd 100%);
-  border-radius: 20px;
-  padding: 50px;
+  border-radius: 22px;
+  padding: 64px 40px;
   box-shadow: 0 16px 40px rgba(31,93,170,0.12);
   border: 1px solid #dbe7f5;
-}
-
-.hero-content {
-  display: grid;
-  grid-template-columns: 1.1fr 0.9fr;
-  gap: 40px;
-  align-items: center;
+  text-align: center;
 }
 
 .eyebrow {
@@ -137,23 +124,26 @@ img {
 }
 
 .hero-card h1 {
-  font-size: clamp(38px, 5vw, 62px);
+  font-size: clamp(38px, 5vw, 64px);
   line-height: 1.05;
-  margin-bottom: 20px;
+  margin: 0 auto 22px;
   color: var(--blue-dark);
+  max-width: 950px;
 }
 
 .hero-card p {
   font-size: 20px;
   color: #334155;
-  max-width: 720px;
+  max-width: 850px;
+  margin: 0 auto;
 }
 
 .buttons {
   display: flex;
   gap: 16px;
   flex-wrap: wrap;
-  margin-top: 28px;
+  justify-content: center;
+  margin-top: 30px;
 }
 
 .buttons a {
@@ -184,18 +174,11 @@ img {
 .hero-trust {
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
   gap: 12px 20px;
-  margin-top: 26px;
+  margin-top: 28px;
   font-weight: 700;
   color: #1f2937;
-}
-
-.hero-photo img {
-  width: 100%;
-  height: 400px;
-  object-fit: cover;
-  border-radius: 18px;
-  box-shadow: 0 14px 34px rgba(0,0,0,0.15);
 }
 
 .section {
@@ -263,7 +246,7 @@ img {
 
 .contact-form {
   max-width: 650px;
-  margin: auto;
+  margin: 30px auto 0;
   display: flex;
   flex-direction: column;
   gap: 14px;
@@ -345,16 +328,8 @@ img {
 
 @media (max-width: 850px) {
 
-  .hero-content {
-    grid-template-columns: 1fr;
-  }
-
   .hero-card {
-    padding: 32px 24px;
-  }
-
-  .hero-photo img {
-    height: 280px;
+    padding: 42px 24px;
   }
 
   .services-list {
@@ -371,7 +346,7 @@ img {
   }
 
   .hero-card h1 {
-    font-size: 42px;
+    font-size: 40px;
   }
 
 }
@@ -417,42 +392,30 @@ img {
 
   <div class="hero-card">
 
-    <div class="hero-content">
+    <p class="eyebrow">
+      Moon Township & Pittsburgh Area Handyman Services
+    </p>
 
-      <div class="hero-text">
+    <h1>
+      Reliable Handyman Services Without the Contractor Headaches
+    </h1>
 
-        <p class="eyebrow">
-          Moon Township & Pittsburgh Area Handyman Services
-        </p>
+    <p>
+      Fully insured local handyman company serving Moon Township, Robinson,
+      Sewickley, Coraopolis, and nearby Pittsburgh areas with reliable repairs,
+      installations, and home improvement services.
+    </p>
 
-        <h1>
-          Reliable Handyman Services Without the Contractor Headaches
-        </h1>
+    <div class="buttons">
+      <a class="call" href="tel:14123535341">Get Free Estimate</a>
+      <a class="email" href="#contact">Text Us Photos</a>
+    </div>
 
-        <p>
-          Fully insured local handyman company serving Moon Township,
-          Robinson, Sewickley, Coraopolis, and nearby Pittsburgh areas
-          with reliable repairs, installations, and home improvement services.
-        </p>
-
-        <div class="buttons">
-          <a class="call" href="tel:14123535341">Get Free Estimate</a>
-          <a class="email" href="#contact">Text Us Photos</a>
-        </div>
-
-        <div class="hero-trust">
-          <span>★★★★★ Trusted by local homeowners</span>
-          <span>✔ Fully Insured</span>
-          <span>✔ Fast Response</span>
-          <span>✔ Professional Work</span>
-        </div>
-
-      </div>
-
-      <div class="hero-photo">
-        <img src="project-photo.jpg" alt="Handled Home project in Moon Township">
-      </div>
-
+    <div class="hero-trust">
+      <span>★★★★★ Trusted by local homeowners</span>
+      <span>✔ Fully Insured</span>
+      <span>✔ Fast Response</span>
+      <span>✔ Professional Work</span>
     </div>
 
   </div>
@@ -466,7 +429,7 @@ img {
       <div class="box">
         <h3>Deck Repair & Building</h3>
         <p>
-          Repair rotted boards, railings, stairs, or build a new deck.
+          Repair rotted boards, railings, stairs, steps, and other deck issues before they become bigger problems.
         </p>
         <a href="deck-repair-moon-township-pa.html">Learn More →</a>
       </div>
@@ -474,7 +437,7 @@ img {
       <div class="box">
         <h3>Drywall Repair</h3>
         <p>
-          Hole patching, crack repair, ceiling repair, and paint-ready finishes.
+          Hole patching, crack repair, ceiling repair, water-damage repairs, and paint-ready finishes.
         </p>
         <a href="drywall-repair-moon-township-pa.html">Learn More →</a>
       </div>
@@ -482,7 +445,7 @@ img {
       <div class="box">
         <h3>Door & Trim Repair</h3>
         <p>
-          Fix sticking doors, damaged trim, and finish details that make a room look right.
+          Fix sticking doors, damaged trim, loose molding, and finish details that make your home look right.
         </p>
         <a href="door-trim-repair-moon-township-pa.html">Learn More →</a>
       </div>
@@ -519,7 +482,11 @@ img {
 
     <h2>Our Services</h2>
 
-    <div class="box">
+    <p class="muted-center">
+      Most of our calls start with one issue and turn into checking off multiple things around the house.
+    </p>
+
+    <div class="box" style="margin-top:34px;">
 
       <ul class="services-list">
         <li>Deck repair and upgrades</li>
@@ -555,7 +522,7 @@ img {
       <div class="box">
         <h3>Clear Communication</h3>
         <p>
-          We answer calls, respond quickly, and keep you updated throughout the project.
+          We answer calls, respond quickly, and keep you updated so you are not left wondering what is going on.
         </p>
       </div>
 
@@ -685,7 +652,6 @@ img {
   Call Now
 </a>
 
-<!-- Local Business Schema -->
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
