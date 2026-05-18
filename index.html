@@ -35,6 +35,10 @@
   box-sizing: border-box;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   margin: 0;
   font-family: Arial, Helvetica, sans-serif;
@@ -50,8 +54,8 @@ a {
 .topbar {
   background: var(--blue-dark);
   color: white;
-  padding: 10px 20px;
-  font-size: 14px;
+  padding: 5px 20px;
+  font-size: 12px;
 }
 
 .topbar-inner {
@@ -59,8 +63,9 @@ a {
   margin: auto;
   display: flex;
   justify-content: space-between;
+  align-items: center;
   flex-wrap: wrap;
-  gap: 10px;
+  gap: 6px;
 }
 
 .topbar a {
@@ -68,35 +73,42 @@ a {
 }
 
 .header {
-  background: white;
+  background: rgba(255,255,255,0.96);
   border-bottom: 1px solid #dce5ef;
   position: sticky;
   top: 0;
   z-index: 1000;
+  backdrop-filter: blur(8px);
 }
 
 .header-inner {
   max-width: 1200px;
   margin: auto;
-  padding: 16px 20px;
+  padding: 10px 20px;
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
 
 .logo img {
-  height: 60px;
+  height: 46px;
 }
 
 .header-nav {
   display: flex;
-  gap: 24px;
+  gap: 18px;
   flex-wrap: wrap;
+  align-items: center;
 }
 
 .header-nav a {
   color: var(--text);
   font-weight: 700;
+  font-size: 15px;
+}
+
+.header-nav a:hover {
+  color: var(--blue);
 }
 
 .page-wrap {
@@ -255,6 +267,10 @@ a {
   margin-bottom: 10px;
 }
 
+#contact {
+  scroll-margin-top: 120px;
+}
+
 .contact-form {
   max-width: 650px;
   margin: 30px auto 0;
@@ -335,29 +351,60 @@ a {
   border-radius: 999px;
   font-weight: 800;
   box-shadow: 0 10px 24px rgba(0,0,0,0.2);
+  z-index: 1001;
 }
 
 @media (max-width: 850px) {
 
+  .topbar {
+    font-size: 11px;
+    padding: 4px 14px;
+  }
+
+  .topbar-inner {
+    justify-content: center;
+    text-align: center;
+  }
+
+  .header-inner {
+    flex-direction: column;
+    gap: 10px;
+    padding: 10px 16px;
+  }
+
+  .logo img {
+    height: 42px;
+  }
+
+  .header-nav {
+    justify-content: center;
+    gap: 12px;
+  }
+
+  .header-nav a {
+    font-size: 14px;
+  }
+
   .hero-card {
     padding: 42px 24px;
+  }
+
+  .hero-card h1 {
+    font-size: 40px;
+  }
+
+  .hero-card p {
+    font-size: 18px;
   }
 
   .services-list {
     columns: 1;
   }
 
-  .header-inner {
-    flex-direction: column;
-    gap: 16px;
-  }
-
-  .header-nav {
-    justify-content: center;
-  }
-
-  .hero-card h1 {
-    font-size: 40px;
+  .floating-call {
+    bottom: 14px;
+    right: 14px;
+    padding: 14px 18px;
   }
 
 }
