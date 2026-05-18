@@ -57,6 +57,16 @@ img {
 }
 
 /* Shared header styles for header.html */
+#site-header {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.site-header-shell {
+  width: 100%;
+}
+
 .topbar {
   background: var(--blue-dark);
   color: white;
@@ -81,9 +91,6 @@ img {
 .header {
   background: rgba(255,255,255,0.96);
   border-bottom: 1px solid #dce5ef;
-  position: sticky;
-  top: 0;
-  z-index: 1000;
   backdrop-filter: blur(8px);
 }
 
@@ -436,7 +443,7 @@ img {
 
     <div class="hero-trust">
       <span>✔ Fully Insured</span>
-      <span>✔ Local & Reliable</span>
+      <span>✔ Local &amp; Reliable</span>
       <span>✔ Clear Communication</span>
       <span>✔ Professional Work</span>
     </div>
