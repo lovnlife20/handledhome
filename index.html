@@ -51,7 +51,7 @@ a {
   text-decoration: none;
 }
 
-/* Shared header styles for header.html */
+/* Header styles */
 .topbar {
   background: var(--blue-dark);
   color: white;
@@ -112,6 +112,7 @@ a {
   color: var(--blue);
 }
 
+/* Page styles */
 .page-wrap {
   max-width: 1200px;
   margin: auto;
@@ -316,7 +317,7 @@ a {
   margin-top: 0;
 }
 
-/* Shared footer styles for footer.html */
+/* Footer styles */
 .footer {
   background: #eef3f9;
   padding: 40px 20px;
@@ -658,17 +659,98 @@ a {
 </a>
 
 <script>
-fetch('header.html')
-  .then(response => response.text())
-  .then(data => {
-    document.getElementById('site-header').innerHTML = data;
-  });
+const fallbackHeader = `
+  <div class="topbar">
+    <div class="topbar-inner">
+      <div>
+        <a href="tel:14123535341">412-353-5341</a> |
+        <a href="mailto:info@handledhome.net">info@handledhome.net</a>
+      </div>
+      <div>Serving Moon Township & Pittsburgh Area</div>
+    </div>
+  </div>
 
-fetch('footer.html')
-  .then(response => response.text())
-  .then(data => {
-    document.getElementById('site-footer').innerHTML = data;
-  });
+  <div class="header">
+    <div class="header-inner">
+      <a href="index.html" class="logo">
+        <img src="handled-home-logo-cropped.svg" alt="Handled Home Logo">
+      </a>
+
+      <div class="header-nav">
+        <a href="index.html">Home</a>
+        <a href="about-handled-home.html">About</a>
+        <a href="deck-repair-moon-township-pa.html">Decks</a>
+        <a href="drywall-repair-moon-township-pa.html">Drywall</a>
+        <a href="door-trim-repair-moon-township-pa.html">Doors & Trim</a>
+        <a href="index.html#contact">Contact</a>
+      </div>
+    </div>
+  </div>
+`;
+
+const fallbackFooter = `
+  <footer class="footer">
+    <div class="footer-inner">
+      <strong>Handled Home</strong><br>
+      Handyman Services in Moon Township, PA
+
+      <div style="margin-top:14px;">
+        <a href="tel:14123535341">412-353-5341</a>
+        |
+        <a href="mailto:info@handledhome.net">info@handledhome.net</a>
+      </div>
+
+      <nav>
+        <a href="index.html">Home</a>
+        <a href="about-handled-home.html">About</a>
+        <a href="deck-repair-moon-township-pa.html">Decks</a>
+        <a href="drywall-repair-moon-township-pa.html">Drywall</a>
+        <a href="door-trim-repair-moon-township-pa.html">Doors & Trim</a>
+        <a href="index.html#contact">Contact</a>
+      </nav>
+
+      <div>
+        Serving Moon Township, Coraopolis, Sewickley,
+        Robinson & surrounding Pittsburgh areas.
+      </div>
+
+      <div style="font-size:13px; color:#64748b; margin-top:10px;">
+        Fully insured handyman services for repairs, installations, and home projects.
+      </div>
+    </div>
+  </footer>
+`;
+
+function loadPartial(file, targetId, fallbackHtml) {
+  fetch(file, { cache: "no-store" })
+    .then(response => {
+      if (!response.ok) {
+        throw new Error(file + " not found");
+      }
+      return response.text();
+    })
+    .then(html => {
+      const lowerHtml = html.toLowerCase();
+
+      if (
+        lowerHtml.includes("<!doctype") ||
+        lowerHtml.includes("<html") ||
+        lowerHtml.includes("<head") ||
+        lowerHtml.includes("<body")
+      ) {
+        throw new Error(file + " contains a full HTML page instead of a partial.");
+      }
+
+      document.getElementById(targetId).innerHTML = html;
+    })
+    .catch(error => {
+      console.warn(error.message);
+      document.getElementById(targetId).innerHTML = fallbackHtml;
+    });
+}
+
+loadPartial("header.html", "site-header", fallbackHeader);
+loadPartial("footer.html", "site-footer", fallbackFooter);
 </script>
 
 <script type="application/ld+json">
