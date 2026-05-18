@@ -3,44 +3,382 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>Handyman in Moon Township, PA | Handled Home</title>
-<meta name="description" content="Reliable handyman services in Moon Township, Coraopolis, Sewickley, Robinson, and surrounding Pittsburgh areas. Fully insured. Fast quotes, clear communication, and quality work. Call or text today.">
+
+<meta name="description" content="Reliable handyman services in Moon Township, Coraopolis, Sewickley, Robinson, and surrounding Pittsburgh areas. Fully insured. Fast quotes, clear communication, and quality work.">
+
 <meta name="robots" content="index, follow">
+
 <link rel="canonical" href="https://handledhome.net/">
 
 <!-- Open Graph -->
 <meta property="og:title" content="Handyman in Moon Township, PA | Handled Home">
-<meta property="og:description" content="Reliable handyman services in Moon Township and Pittsburgh. Fully insured, fast response, clean work. Call or text today.">
+<meta property="og:description" content="Reliable handyman services in Moon Township and Pittsburgh. Fully insured, fast response, clean work.">
 <meta property="og:image" content="https://handledhome.net/handled-home-logo-cropped.svg">
 <meta property="og:url" content="https://handledhome.net/">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Handled Home">
 
 <link rel="icon" href="favicon.ico">
-<link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png">
-<link rel="icon" type="image/png" sizes="16x16" href="favicon-16.png">
-<link rel="icon" type="image/png" sizes="192x192" href="favicon-192.png">
-<link rel="icon" type="image/png" sizes="512x512" href="favicon-512.png">
-<link rel="apple-touch-icon" href="apple-touch-icon.png">
-<link rel="manifest" href="site.webmanifest">
 <link rel="stylesheet" href="style.css">
 
 <style>
-/* Contact Form — move these rules into style.css */
-.contact-form { max-width: 560px; margin: 0 auto; display: flex; flex-direction: column; gap: 12px; }
+
+:root {
+  --blue: #1f5daa;
+  --blue-dark: #163f7a;
+  --orange: #f47b20;
+  --text: #1f2937;
+  --muted: #64748b;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  color: var(--text);
+  background: #f7f9fc;
+  line-height: 1.6;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+.topbar {
+  background: var(--blue-dark);
+  color: white;
+  padding: 10px 20px;
+  font-size: 14px;
+}
+
+.topbar-inner {
+  max-width: 1200px;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.topbar a {
+  color: white;
+}
+
+.header {
+  background: white;
+  border-bottom: 1px solid #dce5ef;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.header-inner {
+  max-width: 1200px;
+  margin: auto;
+  padding: 16px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo img {
+  height: 60px;
+}
+
+.header-nav {
+  display: flex;
+  gap: 24px;
+  flex-wrap: wrap;
+}
+
+.header-nav a {
+  color: var(--text);
+  font-weight: 700;
+}
+
+.page-wrap {
+  max-width: 1200px;
+  margin: auto;
+  padding: 40px 20px;
+}
+
+.hero-card {
+  background: linear-gradient(135deg, #ffffff 0%, #f4f8fd 100%);
+  border-radius: 20px;
+  padding: 50px;
+  box-shadow: 0 16px 40px rgba(31,93,170,0.12);
+  border: 1px solid #dbe7f5;
+}
+
+.hero-content {
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: 40px;
+  align-items: center;
+}
+
+.eyebrow {
+  color: var(--orange);
+  text-transform: uppercase;
+  font-weight: 800;
+  letter-spacing: 0.05em;
+  margin-bottom: 14px;
+  font-size: 14px;
+}
+
+.hero-card h1 {
+  font-size: clamp(38px, 5vw, 62px);
+  line-height: 1.05;
+  margin-bottom: 20px;
+  color: var(--blue-dark);
+}
+
+.hero-card p {
+  font-size: 20px;
+  color: #334155;
+  max-width: 720px;
+}
+
+.buttons {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+  margin-top: 28px;
+}
+
+.buttons a {
+  padding: 15px 28px;
+  border-radius: 10px;
+  font-weight: 700;
+  transition: 0.2s ease;
+}
+
+.call {
+  background: var(--orange);
+  color: white;
+}
+
+.call:hover {
+  background: #d96712;
+}
+
+.email {
+  background: var(--blue);
+  color: white;
+}
+
+.email:hover {
+  background: var(--blue-dark);
+}
+
+.hero-trust {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px 20px;
+  margin-top: 26px;
+  font-weight: 700;
+  color: #1f2937;
+}
+
+.hero-photo img {
+  width: 100%;
+  height: 400px;
+  object-fit: cover;
+  border-radius: 18px;
+  box-shadow: 0 14px 34px rgba(0,0,0,0.15);
+}
+
+.section {
+  padding: 70px 0;
+}
+
+.section h2 {
+  font-size: 38px;
+  margin-bottom: 18px;
+  color: var(--blue-dark);
+  text-align: center;
+}
+
+.muted-center {
+  text-align: center;
+  color: var(--muted);
+  max-width: 800px;
+  margin: auto;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 26px;
+  margin-top: 34px;
+}
+
+.box {
+  background: white;
+  border-radius: 16px;
+  padding: 28px;
+  box-shadow: 0 10px 28px rgba(31,93,170,0.08);
+  border: 1px solid #e3ebf4;
+}
+
+.box h3 {
+  margin-top: 0;
+  color: var(--blue-dark);
+}
+
+.box a {
+  color: var(--orange);
+  font-weight: 700;
+}
+
+.review-quote {
+  font-style: italic;
+  display: block;
+  margin-bottom: 16px;
+}
+
+.review-name {
+  font-weight: 700;
+}
+
+.services-list {
+  columns: 2;
+  gap: 40px;
+  padding-left: 20px;
+}
+
+.services-list li {
+  margin-bottom: 10px;
+}
+
+.contact-form {
+  max-width: 650px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
 .contact-form input,
-.contact-form textarea { padding: 12px 16px; border: 1.5px solid #d0dbe8; border-radius: 8px; font-size: 16px; font-family: inherit; width: 100%; box-sizing: border-box; }
-.contact-form textarea { resize: vertical; }
-.contact-form button { background: var(--blue, #1f5daa); color: white; border: none; padding: 14px 28px; border-radius: 8px; font-size: 17px; font-weight: 700; cursor: pointer; transition: background 0.2s; }
-.contact-form button:hover { background: var(--blue-dark, #163f7a); }
-.form-success { display: none; text-align: center; padding: 20px; background: #e8f5e9; border-radius: 8px; color: #2e7d32; font-weight: 600; font-size: 17px; }
-/* Updated footer — move to style.css */
-footer.footer { text-align: center; padding: 32px 20px; background: #f4f7fb; color: #555; font-size: 14px; border-top: 1px solid #dde6f0; }
-footer.footer .footer-inner { max-width: 860px; margin: 0 auto; display: flex; flex-direction: column; gap: 10px; }
-footer.footer a { color: inherit; }
-footer.footer nav { display: flex; flex-wrap: wrap; justify-content: center; gap: 6px 16px; }
+.contact-form textarea {
+  padding: 14px 16px;
+  border: 1.5px solid #d0dbe8;
+  border-radius: 10px;
+  font-size: 16px;
+}
+
+.contact-form button {
+  background: var(--orange);
+  color: white;
+  border: none;
+  padding: 16px;
+  border-radius: 10px;
+  font-size: 18px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.contact-form button:hover {
+  background: #d96712;
+}
+
+.cta {
+  background: linear-gradient(135deg, var(--blue-dark), var(--blue));
+  color: white;
+  border-radius: 20px;
+  padding: 60px 30px;
+  text-align: center;
+}
+
+.cta h2 {
+  color: white;
+  margin-top: 0;
+}
+
+.footer {
+  background: #eef3f9;
+  padding: 40px 20px;
+  text-align: center;
+  color: #475569;
+  border-top: 1px solid #dce5ef;
+}
+
+.footer-inner {
+  max-width: 1000px;
+  margin: auto;
+}
+
+.footer nav {
+  display: flex;
+  justify-content: center;
+  gap: 18px;
+  flex-wrap: wrap;
+  margin: 20px 0;
+}
+
+.footer nav a {
+  color: #475569;
+  font-weight: 700;
+}
+
+.floating-call {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: var(--orange);
+  color: white;
+  padding: 16px 22px;
+  border-radius: 999px;
+  font-weight: 800;
+  box-shadow: 0 10px 24px rgba(0,0,0,0.2);
+}
+
+@media (max-width: 850px) {
+
+  .hero-content {
+    grid-template-columns: 1fr;
+  }
+
+  .hero-card {
+    padding: 32px 24px;
+  }
+
+  .hero-photo img {
+    height: 280px;
+  }
+
+  .services-list {
+    columns: 1;
+  }
+
+  .header-inner {
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .header-nav {
+    justify-content: center;
+  }
+
+  .hero-card h1 {
+    font-size: 42px;
+  }
+
+}
+
 </style>
 </head>
+
 <body>
 
 <div class="topbar">
@@ -49,91 +387,140 @@ footer.footer nav { display: flex; flex-wrap: wrap; justify-content: center; gap
       <a href="tel:14123535341">412-353-5341</a> |
       <a href="mailto:info@handledhome.net">info@handledhome.net</a>
     </div>
-    <div>Serving Moon Township &amp; Pittsburgh Area</div>
+
+    <div>
+      Serving Moon Township & Pittsburgh Area
+    </div>
   </div>
 </div>
 
 <div class="header">
   <div class="header-inner">
+
     <a href="index.html" class="logo">
-      <img src="handled-home-logo-cropped.svg" alt="Handled Home logo">
+      <img src="handled-home-logo-cropped.svg" alt="Handled Home Logo">
     </a>
+
     <div class="header-nav">
       <a href="index.html">Home</a>
       <a href="about-handled-home.html">About</a>
       <a href="deck-repair-moon-township-pa.html">Decks</a>
       <a href="drywall-repair-moon-township-pa.html">Drywall</a>
-      <a href="door-trim-repair-moon-township-pa.html">Doors &amp; Trim</a>
+      <a href="door-trim-repair-moon-township-pa.html">Doors & Trim</a>
       <a href="#contact">Contact</a>
     </div>
+
   </div>
 </div>
 
 <div class="page-wrap">
 
   <div class="hero-card">
-    <h1>Home repairs, handyman work, and small projects done right.</h1>
-    <p>
-      We help homeowners in Moon Township, Coraopolis, Sewickley, Robinson, and nearby areas take care of repairs, updates, and projects without the usual hassle. You'll get clear communication, solid work, and a job done right the first time.
-    </p>
-    <div class="buttons">
-      <a class="call" href="tel:14123535341">Call Now</a>
-      <a class="email" href="#contact">Request Estimate</a>
-    </div>
-  </div>
 
-  <div class="section" style="padding-top:0;">
-    <p class="trust-strip">
-      ✔ Fully Insured &nbsp;&nbsp;|&nbsp;&nbsp;
-      ✔ Fast Response &nbsp;&nbsp;|&nbsp;&nbsp;
-      ✔ Clean, Professional Work
-    </p>
+    <div class="hero-content">
+
+      <div class="hero-text">
+
+        <p class="eyebrow">
+          Moon Township & Pittsburgh Area Handyman Services
+        </p>
+
+        <h1>
+          Reliable Handyman Services Without the Contractor Headaches
+        </h1>
+
+        <p>
+          Fully insured local handyman company serving Moon Township,
+          Robinson, Sewickley, Coraopolis, and nearby Pittsburgh areas
+          with reliable repairs, installations, and home improvement services.
+        </p>
+
+        <div class="buttons">
+          <a class="call" href="tel:14123535341">Get Free Estimate</a>
+          <a class="email" href="#contact">Text Us Photos</a>
+        </div>
+
+        <div class="hero-trust">
+          <span>★★★★★ Trusted by local homeowners</span>
+          <span>✔ Fully Insured</span>
+          <span>✔ Fast Response</span>
+          <span>✔ Professional Work</span>
+        </div>
+
+      </div>
+
+      <div class="hero-photo">
+        <img src="project-photo.jpg" alt="Handled Home project in Moon Township">
+      </div>
+
+    </div>
+
   </div>
 
   <div class="section">
+
     <h2>Popular Services</h2>
+
     <div class="grid">
+
       <div class="box">
-        <h3>Deck Repair &amp; Building</h3>
-        <p>Repair rotted boards, railings, stairs, or build a new deck.</p>
+        <h3>Deck Repair & Building</h3>
+        <p>
+          Repair rotted boards, railings, stairs, or build a new deck.
+        </p>
         <a href="deck-repair-moon-township-pa.html">Learn More →</a>
       </div>
+
       <div class="box">
         <h3>Drywall Repair</h3>
-        <p>Hole patching, crack repair, ceiling repair, and paint-ready finishes.</p>
+        <p>
+          Hole patching, crack repair, ceiling repair, and paint-ready finishes.
+        </p>
         <a href="drywall-repair-moon-township-pa.html">Learn More →</a>
       </div>
+
       <div class="box">
-        <h3>Door &amp; Trim Repair</h3>
-        <p>Fix sticking doors, damaged trim, and finish details that make a room look right.</p>
+        <h3>Door & Trim Repair</h3>
+        <p>
+          Fix sticking doors, damaged trim, and finish details that make a room look right.
+        </p>
         <a href="door-trim-repair-moon-township-pa.html">Learn More →</a>
       </div>
+
     </div>
+
   </div>
 
   <div class="section">
+
     <h2>What Customers Say</h2>
+
     <div class="grid">
+
       <div class="box">
-        <span class="review-quote">"Showed up on time and fixed everything perfectly for my broken door. Would definitely hire again."</span>
-        <span class="review-name">- Mike W.</span>
+        <span class="review-quote">
+          “Showed up on time and fixed everything perfectly for my broken door. Would definitely hire again.”
+        </span>
+        <span class="review-name">— Mike W.</span>
       </div>
+
       <div class="box">
-        <span class="review-quote">"Great communication, fair pricing, and solid work from start to finish installing a new floor."</span>
-        <span class="review-name">- Greg P.</span>
+        <span class="review-quote">
+          “Great communication, fair pricing, and solid work from start to finish.”
+        </span>
+        <span class="review-name">— Greg P.</span>
       </div>
+
     </div>
+
   </div>
 
   <div class="section">
+
     <h2>Our Services</h2>
-    <div class="box services-list-box" style="border:3px solid var(--blue); box-shadow:0 14px 34px rgba(31,93,170,0.14); background:linear-gradient(to bottom, #ffffff, #f7fbff); padding:30px;">
-      <p style="margin-top:0; margin-bottom:14px; font-weight:700; color:var(--blue-dark); text-align:center; font-size:20px;">
-        Most of our calls start with one issue and turn into checking off multiple things around the house.
-      </p>
-      <p style="margin-top:0; margin-bottom:24px; text-align:center; color:var(--muted); line-height:1.7;">
-        We handle a wide range of repairs, installations, and small home improvement projects. If it's in your home, there's a good chance we can take care of it.
-      </p>
+
+    <div class="box">
+
       <ul class="services-list">
         <li>Deck repair and upgrades</li>
         <li>New deck construction</li>
@@ -141,91 +528,164 @@ footer.footer nav { display: flex; flex-wrap: wrap; justify-content: center; gap
         <li>Interior painting and touch-ups</li>
         <li>Door repair and installation</li>
         <li>Trim, molding, and finish work</li>
-        <li>Flooring installation (LVP and laminate)</li>
-        <li>TV mounting and installs</li>
+        <li>Flooring installation</li>
+        <li>TV mounting</li>
         <li>Furniture assembly</li>
-        <li>Shelving and storage installs</li>
-        <li>Blinds and curtain rods</li>
-        <li>Cabinet hardware and adjustments</li>
-        <li>Bathroom fixtures and vanity installs</li>
-        <li>Toilet installation and replacement</li>
+        <li>Shelving installation</li>
+        <li>Bathroom fixtures and vanities</li>
+        <li>Toilet replacement</li>
         <li>Faucet replacement</li>
-        <li>Caulking and sealing</li>
         <li>Light fixtures and ceiling fans</li>
         <li>Outlet and switch replacement</li>
         <li>Minor plumbing repairs</li>
-        <li>Shed assembly</li>
         <li>Fence and gate repair</li>
-        <li>Punch-list completion</li>
-        <li>Move-in and move-out repairs</li>
         <li>General home repairs</li>
       </ul>
-      <p style="margin-bottom:0; margin-top:18px; text-align:center; color:var(--muted);">
-        Don't see your project listed? Reach out to discuss what we can do for you today!
-      </p>
+
     </div>
+
   </div>
 
   <div class="section">
+
     <h2>Why Choose Handled Home</h2>
-    <p class="muted-center">
-      Fully insured, easy to work with, and focused on getting the job done right without the usual contractor runaround.
-    </p>
+
+    <div class="grid">
+
+      <div class="box">
+        <h3>Clear Communication</h3>
+        <p>
+          We answer calls, respond quickly, and keep you updated throughout the project.
+        </p>
+      </div>
+
+      <div class="box">
+        <h3>Professional Work</h3>
+        <p>
+          Clean, detail-oriented workmanship focused on getting the job done right.
+        </p>
+      </div>
+
+      <div class="box">
+        <h3>Reliable Scheduling</h3>
+        <p>
+          We respect your time and show up when we say we will.
+        </p>
+      </div>
+
+    </div>
+
   </div>
 
   <div class="section">
+
     <h2>Areas We Serve</h2>
+
     <p class="muted-center">
-      Moon Township, Coraopolis, Sewickley, Robinson, Munhall, South Park, and nearby Pittsburgh-area communities.
+      Moon Township, Coraopolis, Sewickley, Robinson,
+      Aliquippa, Beaver County, and surrounding Pittsburgh communities.
     </p>
+
   </div>
 
-  <!-- CONTACT FORM -->
   <div id="contact" class="section">
+
     <h2>Request a Free Estimate</h2>
-    <p class="muted-center">Fill out the form and we'll get back to you quickly. Or just call — <a href="tel:14123535341">412-353-5341</a>.</p>
-    <form class="contact-form" action="https://api.web3forms.com/submit" method="POST">
-      <!-- Sign up free at web3forms.com and replace YOUR_KEY below -->
-      <input type="hidden" name="access_key" value="1bc639e8-2922-410a-841d-aa1ca1fb2a68">
-      <input type="hidden" name="subject" value="New Estimate Request - Handled Home">
-      <input type="hidden" name="redirect" value="https://handledhome.net/?sent=1">
-      <input type="text" name="name" placeholder="Your Name" required>
-      <input type="tel" name="phone" placeholder="Phone Number" required>
-      <input type="email" name="email" placeholder="Email Address (optional)">
-      <textarea name="message" placeholder="Briefly describe what you need help with" rows="4"></textarea>
-      <button type="submit">Send Request</button>
+
+    <p class="muted-center">
+      Fill out the form below and we’ll get back to you quickly.
+      Or call/text us directly at
+      <a href="tel:14123535341">412-353-5341</a>.
+    </p>
+
+    <form class="contact-form"
+      action="https://api.web3forms.com/submit"
+      method="POST">
+
+      <input type="hidden"
+        name="access_key"
+        value="1bc639e8-2922-410a-841d-aa1ca1fb2a68">
+
+      <input type="hidden"
+        name="subject"
+        value="New Estimate Request - Handled Home">
+
+      <input type="text"
+        name="name"
+        placeholder="Your Name"
+        required>
+
+      <input type="tel"
+        name="phone"
+        placeholder="Phone Number"
+        required>
+
+      <input type="email"
+        name="email"
+        placeholder="Email Address">
+
+      <textarea
+        name="message"
+        rows="5"
+        placeholder="Briefly describe your project"></textarea>
+
+      <button type="submit">
+        Send Request
+      </button>
+
     </form>
+
   </div>
 
   <div class="cta">
+
     <h2>Need Something Fixed?</h2>
+
     <div class="buttons">
       <a href="tel:14123535341" class="call">Call Now</a>
       <a href="#contact" class="email">Request Estimate</a>
     </div>
+
   </div>
 
 </div>
 
 <footer class="footer">
+
   <div class="footer-inner">
-    <strong>Handled Home</strong> — Handyman Services in Moon Township, PA
-    <div><a href="tel:14123535341">412-353-5341</a> &nbsp;|&nbsp; <a href="mailto:info@handledhome.net">info@handledhome.net</a></div>
+
+    <strong>Handled Home</strong><br>
+    Handyman Services in Moon Township, PA
+
+    <div style="margin-top:14px;">
+      <a href="tel:14123535341">412-353-5341</a>
+      |
+      <a href="mailto:info@handledhome.net">info@handledhome.net</a>
+    </div>
+
     <nav>
       <a href="index.html">Home</a>
       <a href="about-handled-home.html">About</a>
       <a href="deck-repair-moon-township-pa.html">Decks</a>
       <a href="drywall-repair-moon-township-pa.html">Drywall</a>
-      <a href="door-trim-repair-moon-township-pa.html">Doors &amp; Trim</a>
+      <a href="door-trim-repair-moon-township-pa.html">Doors & Trim</a>
       <a href="#contact">Contact</a>
     </nav>
-    <div>Serving Moon Township, Coraopolis, Sewickley, Robinson, Munhall &amp; Pittsburgh Area</div>
+
+    <div>
+      Serving Moon Township, Coraopolis, Sewickley,
+      Robinson & surrounding Pittsburgh areas.
+    </div>
+
   </div>
+
 </footer>
 
-<a href="tel:14123535341" class="floating-call">Call Now</a>
+<a href="tel:14123535341" class="floating-call">
+  Call Now
+</a>
 
-<!-- LocalBusiness Schema -->
+<!-- Local Business Schema -->
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -235,16 +695,21 @@ footer.footer nav { display: flex; flex-wrap: wrap; justify-content: center; gap
   "telephone": "+14123535341",
   "email": "info@handledhome.net",
   "url": "https://handledhome.net",
-  "areaServed": ["Moon Township", "Coraopolis", "Sewickley", "Robinson", "Munhall", "South Park", "Pittsburgh"],
+  "priceRange": "$$",
+  "areaServed": [
+    "Moon Township",
+    "Coraopolis",
+    "Sewickley",
+    "Robinson",
+    "Aliquippa",
+    "Pittsburgh"
+  ],
   "address": {
     "@type": "PostalAddress",
     "addressLocality": "Moon Township",
     "addressRegion": "PA",
     "addressCountry": "US"
-  },
-  "priceRange": "$$",
-  "openingHours": "Mo-Sa 08:00-18:00",
-  "sameAs": []
+  }
 }
 </script>
 
