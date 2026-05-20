@@ -51,7 +51,6 @@ a {
   text-decoration: none;
 }
 
-/* Shared header styles for header.html */
 #site-header {
   position: sticky;
   top: 0;
@@ -102,21 +101,70 @@ a {
   height: 46px;
 }
 
-.header-nav {
+.desktop-nav {
   display: flex;
   gap: 18px;
-  flex-wrap: wrap;
   align-items: center;
+  flex-wrap: wrap;
 }
 
-.header-nav a {
+.desktop-nav a {
   color: var(--text);
   font-weight: 700;
   font-size: 15px;
 }
 
-.header-nav a:hover {
+.desktop-nav a:hover {
   color: var(--blue);
+}
+
+.mobile-header-right {
+  display: none;
+}
+
+.mobile-call-btn {
+  background: var(--orange);
+  color: white;
+  padding: 8px 14px;
+  border-radius: 8px;
+  font-weight: 700;
+  font-size: 14px;
+}
+
+.hamburger {
+  background: none;
+  border: 2px solid #dce5ef;
+  border-radius: 8px;
+  font-size: 22px;
+  padding: 4px 10px;
+  cursor: pointer;
+  color: var(--text);
+  line-height: 1;
+}
+
+.mobile-drawer {
+  display: none;
+  flex-direction: column;
+  background: white;
+  border-top: 1px solid #dce5ef;
+  padding: 8px 20px 16px;
+}
+
+.mobile-drawer.open {
+  display: flex;
+}
+
+.mobile-drawer a {
+  color: var(--text);
+  font-weight: 700;
+  font-size: 16px;
+  padding: 12px 0;
+  border-bottom: 1px solid #eef3f9;
+}
+
+.mobile-drawer a:last-child {
+  border-bottom: none;
+  color: var(--orange);
 }
 
 .page-wrap {
@@ -323,7 +371,6 @@ a {
   margin-top: 0;
 }
 
-/* Shared footer styles for footer.html */
 .footer {
   background: #eef3f9;
   padding: 40px 20px;
@@ -376,22 +423,24 @@ a {
   }
 
   .header-inner {
-    flex-direction: column;
-    gap: 10px;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
     padding: 10px 16px;
   }
 
   .logo img {
-    height: 42px;
+    height: 38px;
   }
 
-  .header-nav {
-    justify-content: center;
-    gap: 12px;
+  .desktop-nav {
+    display: none;
   }
 
-  .header-nav a {
-    font-size: 14px;
+  .mobile-header-right {
+    display: flex;
+    align-items: center;
+    gap: 10px;
   }
 
   .hero-card {
@@ -454,10 +503,10 @@ a {
 
     <div class="hero-trust">
       <span>★★★★★ Trusted by local homeowners</span>
-     <span>✔ Fully Insured</span>
-    <span>✔ PA Registered Contractor</span>
-<span>✔ Fast Response</span>
-<span>✔ Professional Work</span>
+      <span>✔ Fully Insured</span>
+      <span>✔ PA Registered Contractor</span>
+      <span>✔ Fast Response</span>
+      <span>✔ Professional Work</span>
     </div>
 
   </div>
@@ -504,14 +553,14 @@ a {
 
       <div class="box">
         <span class="review-quote">
-          “Showed up on time and fixed everything perfectly for my broken door. Would definitely hire again.”
+          "Showed up on time and fixed everything perfectly for my broken door. Would definitely hire again."
         </span>
         <span class="review-name">— Mike W.</span>
       </div>
 
       <div class="box">
         <span class="review-quote">
-          “Great communication, fair pricing, and solid work from start to finish.”
+          "Great communication, fair pricing, and solid work from start to finish."
         </span>
         <span class="review-name">— Greg P.</span>
       </div>
@@ -602,7 +651,7 @@ a {
     <h2>Request a Free Estimate</h2>
 
     <p class="muted-center">
-      Fill out the form below and we’ll get back to you quickly.
+      Fill out the form below and we'll get back to you quickly.
       Or call/text us directly at
       <a href="tel:14123535341">412-353-5341</a>.
     </p>
