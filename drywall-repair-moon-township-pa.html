@@ -742,6 +742,11 @@ fetch('header.html')
   .then(response => response.text())
   .then(data => {
     document.getElementById('site-header').innerHTML = data;
+    document.getElementById('hamburger-btn').addEventListener('click', function () {
+      var drawer = document.getElementById('mobile-drawer');
+      drawer.classList.toggle('open');
+      this.innerHTML = drawer.classList.contains('open') ? '&#10005;' : '&#9776;';
+    });
   });
 
 fetch('footer.html?v=4')
