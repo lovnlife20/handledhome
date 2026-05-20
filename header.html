@@ -1,25 +1,18 @@
 <div class="site-header-shell">
-
   <div class="topbar">
     <div class="topbar-inner">
       <div>
         <a href="tel:14123535341">412-353-5341</a> |
         <a href="mailto:info@handledhome.net">info@handledhome.net</a>
       </div>
-
-      <div>
-        Serving Moon Township &amp; Pittsburgh Area
-      </div>
+      <div>Serving Moon Township &amp; Pittsburgh Area</div>
     </div>
   </div>
-
   <div class="header">
     <div class="header-inner">
-
       <a href="index.html" class="logo">
         <img src="handled-home-logo-cropped.svg" alt="Handled Home Logo">
       </a>
-
       <nav class="desktop-nav">
         <a href="index.html">Home</a>
         <a href="about-handled-home.html">About</a>
@@ -30,23 +23,28 @@
         <a href="frequently-asked-questions.html">FAQ</a>
         <a href="index.html#contact">Contact</a>
       </nav>
-
-      <div class="mobile-header-actions">
-        <a class="mobile-call" href="tel:14123535341">Call Now</a>
-        <a class="mobile-estimate" href="index.html#contact">Get Estimate</a>
+      <div class="mobile-header-right">
+        <a class="mobile-call-btn" href="tel:14123535341">Call Now</a>
+        <button class="hamburger" id="hamburger-btn" aria-label="Open menu">&#9776;</button>
       </div>
-
-      <nav class="mobile-nav-strip">
-        <a href="index.html">Home</a>
-        <a href="about-handled-home.html">About</a>
-        <a href="deck-repair-moon-township-pa.html">Decks</a>
-        <a href="drywall-repair-moon-township-pa.html">Drywall</a>
-        <a href="door-trim-repair-moon-township-pa.html">Doors</a>
-        <a href="flooring-installation-moon-township-pa.html">Flooring</a>
-        <a href="frequently-asked-questions.html">FAQ</a>
-      </nav>
-
     </div>
+    <nav class="mobile-drawer" id="mobile-drawer">
+      <a href="index.html">Home</a>
+      <a href="about-handled-home.html">About</a>
+      <a href="deck-repair-moon-township-pa.html">Decks</a>
+      <a href="drywall-repair-moon-township-pa.html">Drywall</a>
+      <a href="door-trim-repair-moon-township-pa.html">Doors &amp; Trim</a>
+      <a href="flooring-installation-moon-township-pa.html">Flooring</a>
+      <a href="frequently-asked-questions.html">FAQ</a>
+      <a href="index.html#contact">Get Estimate</a>
+    </nav>
   </div>
-
 </div>
+
+<script>
+  document.getElementById('hamburger-btn').addEventListener('click', function () {
+    var drawer = document.getElementById('mobile-drawer');
+    drawer.classList.toggle('open');
+    this.innerHTML = drawer.classList.contains('open') ? '&#10005;' : '&#9776;';
+  });
+</script>
