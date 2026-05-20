@@ -109,12 +109,7 @@ img {
   color: var(--blue);
 }
 
-/* Hide mobile menu by default */
-.mobile-menu {
-  display: none;
-}
-
-/* Legacy nav support, in case older pages still use .header-nav */
+/* Legacy nav support */
 .header-nav {
   display: flex;
   gap: 14px;
@@ -132,6 +127,13 @@ img {
 
 .header-nav a:hover {
   color: var(--blue);
+}
+
+/* Hidden by default on desktop */
+.mobile-menu,
+.mobile-header-actions,
+.mobile-nav-strip {
+  display: none;
 }
 
 /* =========================
@@ -485,7 +487,7 @@ img {
 }
 
 /* =========================
-   MOBILE HEADER
+   MOBILE HEADER WITHOUT MENU BUTTON
 ========================= */
 
 @media (max-width: 850px) {
@@ -496,8 +498,14 @@ img {
     z-index: 1000;
   }
 
+  .desktop-nav,
+  .header-nav,
+  .mobile-menu {
+    display: none !important;
+  }
+
   .topbar {
-    padding: 5px 10px;
+    padding: 6px 10px;
     font-size: 12px;
   }
 
@@ -518,70 +526,69 @@ img {
     flex-direction: column;
     justify-content: center;
     gap: 8px;
-    padding: 8px 14px 12px;
+    padding: 10px 12px 12px;
   }
 
   .logo img {
-    height: 42px;
+    height: 38px;
     margin: 0 auto;
   }
 
-  .desktop-nav,
-  .header-nav {
-    display: none !important;
+  .mobile-header-actions {
+    display: flex !important;
+    justify-content: center;
+    gap: 10px;
+    width: 100%;
   }
 
-  .mobile-menu {
-    display: block !important;
-    width: 100%;
+  .mobile-header-actions a {
+    flex: 1;
+    max-width: 170px;
+    padding: 10px 12px;
+    border-radius: 999px;
+    font-weight: 800;
+    font-size: 14px;
     text-align: center;
   }
 
-  .mobile-menu summary {
-    display: inline-block;
-    background: var(--blue);
+  .mobile-call {
+    background: var(--orange);
     color: white;
-    padding: 9px 24px;
-    border-radius: 999px;
-    font-weight: 800;
-    cursor: pointer;
-    list-style: none;
   }
 
-  .mobile-menu summary::-webkit-details-marker {
+  .mobile-estimate {
+    background: var(--blue);
+    color: white;
+  }
+
+  .mobile-nav-strip {
+    display: flex !important;
+    width: 100%;
+    overflow-x: auto;
+    gap: 8px;
+    padding: 4px 2px 2px;
+    scrollbar-width: none;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .mobile-nav-strip::-webkit-scrollbar {
     display: none;
   }
 
-  .mobile-menu:not([open]) .mobile-menu-links {
-    display: none !important;
-  }
-
-  .mobile-menu[open] .mobile-menu-links {
-    margin: 12px auto 0;
-    max-width: 360px;
-    display: grid !important;
-    grid-template-columns: 1fr 1fr;
-    gap: 10px;
-    background: white;
-    border: 1px solid #dce5ef;
-    border-radius: 14px;
-    padding: 14px;
-    box-shadow: 0 10px 24px rgba(31, 93, 170, 0.12);
-  }
-
-  .mobile-menu-links a {
-    color: var(--text) !important;
-    font-weight: 700;
-    font-size: 14px;
-    padding: 9px 8px;
-    border-radius: 8px;
+  .mobile-nav-strip a {
+    flex: 0 0 auto;
     background: #f7f9fc;
-    text-align: center;
-    text-decoration: none !important;
+    color: var(--text);
+    border: 1px solid #dce5ef;
+    border-radius: 999px;
+    padding: 7px 12px;
+    font-weight: 700;
+    font-size: 13px;
+    white-space: nowrap;
   }
 
-  .mobile-menu-links a:hover {
-    color: var(--blue) !important;
+  .mobile-nav-strip a:hover {
+    color: var(--blue);
   }
 
   .page-wrap {
@@ -589,16 +596,16 @@ img {
   }
 
   .hero-card {
-    padding: 36px 22px;
+    padding: 34px 22px;
   }
 
   .hero-card h1 {
-    font-size: 34px;
+    font-size: 32px;
     line-height: 1.12;
   }
 
   .hero-card p {
-    font-size: 17px;
+    font-size: 16px;
   }
 
   .hero-trust {
@@ -632,7 +639,7 @@ img {
   }
 
   #contact {
-    scroll-margin-top: 150px;
+    scroll-margin-top: 170px;
   }
 
 }
@@ -649,16 +656,6 @@ img {
 
   .hero-card p {
     font-size: 16px;
-  }
-
-  .mobile-menu[open] .mobile-menu-links {
-    grid-template-columns: 1fr 1fr;
-    gap: 8px;
-    padding: 12px;
-  }
-
-  .mobile-menu-links a {
-    font-size: 14px;
   }
 
   .footer nav {
@@ -678,21 +675,21 @@ img {
   }
 
   .logo img {
-    height: 40px;
+    height: 34px;
   }
 
-  .mobile-menu summary {
-    padding: 9px 20px;
-    font-size: 14px;
-  }
-
-  .mobile-menu-links a {
+  .mobile-header-actions a {
     font-size: 13px;
-    padding: 7px;
+    padding: 9px 10px;
+  }
+
+  .mobile-nav-strip a {
+    font-size: 12px;
+    padding: 6px 10px;
   }
 
   .hero-card h1 {
-    font-size: 30px;
+    font-size: 29px;
   }
 
   .hero-card p {
@@ -711,6 +708,8 @@ img {
     display: flex !important;
   }
 
+  .mobile-header-actions,
+  .mobile-nav-strip,
   .mobile-menu {
     display: none !important;
   }
