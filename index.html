@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
@@ -21,458 +21,63 @@
 <link rel="icon" href="favicon.ico">
 <link rel="stylesheet" href="style.css?v=12">
 
-<style>
-
-:root {
-  --blue: #1f5daa;
-  --blue-dark: #163f7a;
-  --orange: #f47b20;
-  --text: #1f2937;
-  --muted: #64748b;
-}
-
-* {
-  box-sizing: border-box;
-}
-
-html {
-  scroll-behavior: smooth;
-}
-
-body {
-  margin: 0;
-  font-family: Arial, Helvetica, sans-serif;
-  color: var(--text);
-  background: #f7f9fc;
-  line-height: 1.6;
-}
-
-a {
-  text-decoration: none;
-}
-
-#site-header {
-  position: sticky;
-  top: 0;
-  z-index: 1000;
-}
-
-.site-header-shell {
-  width: 100%;
-}
-
-.topbar {
-  background: var(--blue-dark);
-  color: white;
-  padding: 5px 20px;
-  font-size: 12px;
-}
-
-.topbar-inner {
-  max-width: 1200px;
-  margin: auto;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  flex-wrap: wrap;
-  gap: 6px;
-}
-
-.topbar a {
-  color: white;
-}
-
-.header {
-  background: rgba(255,255,255,0.96);
-  border-bottom: 1px solid #dce5ef;
-  backdrop-filter: blur(8px);
-}
-
-.header-inner {
-  max-width: 1200px;
-  margin: auto;
-  padding: 10px 20px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-
-.logo img {
-  height: 46px;
-}
-
-.desktop-nav {
-  display: flex;
-  gap: 18px;
-  align-items: center;
-  flex-wrap: wrap;
-}
-
-.desktop-nav a {
-  color: var(--text);
-  font-weight: 700;
-  font-size: 15px;
-}
-
-.desktop-nav a:hover {
-  color: var(--blue);
-}
-
-.mobile-header-right {
-  display: none;
-}
-
-.mobile-call-btn {
-  background: var(--orange);
-  color: white;
-  padding: 8px 14px;
-  border-radius: 8px;
-  font-weight: 700;
-  font-size: 14px;
-}
-
-.hamburger {
-  background: none;
-  border: 2px solid #dce5ef;
-  border-radius: 8px;
-  font-size: 22px;
-  padding: 4px 10px;
-  cursor: pointer;
-  color: var(--text);
-  line-height: 1;
-}
-
-.mobile-drawer {
-  display: none;
-  flex-direction: column;
-  background: white;
-  border-top: 1px solid #dce5ef;
-  padding: 8px 20px 16px;
-}
-
-.mobile-drawer.open {
-  display: flex;
-}
-
-.mobile-drawer a {
-  color: var(--text);
-  font-weight: 700;
-  font-size: 16px;
-  padding: 12px 0;
-  border-bottom: 1px solid #eef3f9;
-}
-
-.mobile-drawer a:last-child {
-  border-bottom: none;
-  color: var(--orange);
-}
-
-.page-wrap {
-  max-width: 1200px;
-  margin: auto;
-  padding: 40px 20px;
-}
-
-.hero-card {
-  background: linear-gradient(135deg, #ffffff 0%, #f4f8fd 100%);
-  border-radius: 22px;
-  padding: 64px 40px;
-  box-shadow: 0 16px 40px rgba(31,93,170,0.12);
-  border: 1px solid #dbe7f5;
-  text-align: center;
-}
-
-.eyebrow {
-  color: var(--orange);
-  text-transform: uppercase;
-  font-weight: 800;
-  letter-spacing: 0.05em;
-  margin-bottom: 14px;
-  font-size: 14px;
-}
-
-.hero-card h1 {
-  font-size: clamp(38px, 5vw, 64px);
-  line-height: 1.05;
-  margin: 0 auto 22px;
-  color: var(--blue-dark);
-  max-width: 950px;
-}
-
-.hero-card p {
-  font-size: 20px;
-  color: #334155;
-  max-width: 850px;
-  margin: 0 auto;
-}
-
-.buttons {
-  display: flex;
-  gap: 16px;
-  flex-wrap: wrap;
-  justify-content: center;
-  margin-top: 30px;
-}
-
-.buttons a {
-  padding: 15px 28px;
-  border-radius: 10px;
-  font-weight: 700;
-  transition: 0.2s ease;
-}
-
-.call {
-  background: var(--orange);
-  color: white;
-}
-
-.call:hover {
-  background: #d96712;
-}
-
-.email {
-  background: var(--blue);
-  color: white;
-}
-
-.email:hover {
-  background: var(--blue-dark);
-}
-
-.text-note {
-  margin-top: 14px;
-  font-size: 15px;
-  color: var(--muted);
-}
-
-.text-note a {
-  color: var(--blue);
-  font-weight: 700;
-}
-
-.hero-trust {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 12px 20px;
-  margin-top: 28px;
-  font-weight: 700;
-  color: #1f2937;
-}
-
-.section {
-  padding: 70px 0;
-}
-
-.section h2 {
-  font-size: 38px;
-  margin-bottom: 18px;
-  color: var(--blue-dark);
-  text-align: center;
-}
-
-.muted-center {
-  text-align: center;
-  color: var(--muted);
-  max-width: 800px;
-  margin: auto;
-}
-
-.grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 26px;
-  margin-top: 34px;
-}
-
-.box {
-  background: white;
-  border-radius: 16px;
-  padding: 28px;
-  box-shadow: 0 10px 28px rgba(31,93,170,0.08);
-  border: 1px solid #e3ebf4;
-}
-
-.box h3 {
-  margin-top: 0;
-  color: var(--blue-dark);
-}
-
-.box a {
-  color: var(--orange);
-  font-weight: 700;
-}
-
-.review-quote {
-  font-style: italic;
-  display: block;
-  margin-bottom: 16px;
-}
-
-.review-name {
-  font-weight: 700;
-}
-
-.services-list {
-  columns: 2;
-  gap: 40px;
-  padding-left: 20px;
-}
-
-.services-list li {
-  margin-bottom: 10px;
-}
-
-#contact {
-  scroll-margin-top: 120px;
-}
-
-.contact-form {
-  max-width: 650px;
-  margin: 30px auto 0;
-  display: flex;
-  flex-direction: column;
-  gap: 14px;
-}
-
-.contact-form input,
-.contact-form textarea {
-  padding: 14px 16px;
-  border: 1.5px solid #d0dbe8;
-  border-radius: 10px;
-  font-size: 16px;
-}
-
-.contact-form button {
-  background: var(--orange);
-  color: white;
-  border: none;
-  padding: 16px;
-  border-radius: 10px;
-  font-size: 18px;
-  font-weight: 700;
-  cursor: pointer;
-}
-
-.contact-form button:hover {
-  background: #d96712;
-}
-
-.cta {
-  background: linear-gradient(135deg, var(--blue-dark), var(--blue));
-  color: white;
-  border-radius: 20px;
-  padding: 60px 30px;
-  text-align: center;
-}
-
-.cta h2 {
-  color: white;
-  margin-top: 0;
-}
-
-.footer {
-  background: #eef3f9;
-  padding: 40px 20px;
-  text-align: center;
-  color: #475569;
-  border-top: 1px solid #dce5ef;
-}
-
-.footer-inner {
-  max-width: 1000px;
-  margin: auto;
-}
-
-.footer nav {
-  display: flex;
-  justify-content: center;
-  gap: 18px;
-  flex-wrap: wrap;
-  margin: 20px 0;
-}
-
-.footer nav a {
-  color: #475569;
-  font-weight: 700;
-}
-
-.floating-call {
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
-  background: var(--orange);
-  color: white;
-  padding: 16px 22px;
-  border-radius: 999px;
-  font-weight: 800;
-  box-shadow: 0 10px 24px rgba(0,0,0,0.2);
-  z-index: 1001;
-}
-
-@media (max-width: 850px) {
-
-  .topbar {
-    font-size: 11px;
-    padding: 4px 14px;
-  }
-
-  .topbar-inner {
-    justify-content: center;
-    text-align: center;
-  }
-
-  .header-inner {
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px 16px;
-  }
-
-  .logo img {
-    height: 38px;
-  }
-
-  .desktop-nav {
-    display: none;
-  }
-
-  .mobile-header-right {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-  }
-
-  .hero-card {
-    padding: 42px 24px;
-  }
-
-  .hero-card h1 {
-    font-size: 40px;
-  }
-
-  .hero-card p {
-    font-size: 18px;
-  }
-
-  .services-list {
-    columns: 1;
-  }
-
-  .floating-call {
-    bottom: 14px;
-    right: 14px;
-    padding: 14px 18px;
-  }
-
-}
-
-</style>
 </head>
 
 <body>
 
-<div id="site-header"></div>
+<div id="site-header">
+<div class="site-header-shell">
+  <div class="topbar">
+    <div class="topbar-inner">
+      <div>
+        <a href="tel:14123535341">412-353-5341</a> |
+        <a href="mailto:info@handledhome.net">info@handledhome.net</a>
+      </div>
+      <div>Serving Moon Township &amp; Pittsburgh Area</div>
+    </div>
+  </div>
+  <div class="header">
+    <div class="header-inner">
+      <a href="index.html" class="logo">
+        <img src="handled-home-logo-cropped.svg" alt="Handled Home Logo" width="122" height="46">
+      </a>
+      <nav class="desktop-nav">
+        <a href="index.html">Home</a>
+        <a href="about-handled-home.html">About</a>
+        <a href="deck-repair-moon-township-pa.html">Decks</a>
+        <a href="drywall-repair-moon-township-pa.html">Drywall</a>
+        <a href="door-trim-repair-moon-township-pa.html">Doors &amp; Trim</a>
+        <a href="flooring-installation-moon-township-pa.html">Flooring</a>
+        <a href="frequently-asked-questions.html">FAQ</a>
+        <div class="nav-dropdown">
+          <a href="#" class="nav-dropdown-toggle">Areas â–¾</a>
+          <div class="nav-dropdown-menu">
+            <a href="handyman-coraopolis-pa.html">Coraopolis</a>
+            <a href="handyman-sewickley-pa.html">Sewickley</a>
+          </div>
+        </div>
+        <a href="index.html#contact">Contact</a>
+      </nav>
+      <div class="mobile-header-right">
+        <a class="mobile-call-btn" href="tel:14123535341">Call Now</a>
+        <button class="hamburger" id="hamburger-btn" aria-label="Open menu">&#9776;</button>
+      </div>
+    </div>
+    <nav class="mobile-drawer" id="mobile-drawer">
+      <a href="index.html">Home</a>
+      <a href="about-handled-home.html">About</a>
+      <a href="deck-repair-moon-township-pa.html">Decks</a>
+      <a href="drywall-repair-moon-township-pa.html">Drywall</a>
+      <a href="door-trim-repair-moon-township-pa.html">Doors &amp; Trim</a>
+      <a href="flooring-installation-moon-township-pa.html">Flooring</a>
+      <a href="frequently-asked-questions.html">FAQ</a>
+      <a href="handyman-coraopolis-pa.html">Coraopolis</a>
+      <a href="handyman-sewickley-pa.html">Sewickley</a>
+      <a href="index.html#contact">Get Estimate</a>
+    </nav>
+  </div>
+</div>
+</div>
 
 <div class="page-wrap">
 
@@ -502,11 +107,11 @@ a {
     </p>
 
     <div class="hero-trust">
-      <span>★★★★★ Trusted by local homeowners</span>
-      <span>✔ Fully Insured</span>
-      <span>✔ PA Registered Contractor</span>
-      <span>✔ Fast Response</span>
-      <span>✔ Professional Work</span>
+      <span>â˜…â˜…â˜…â˜…â˜… Trusted by local homeowners</span>
+      <span>âœ” Fully Insured</span>
+      <span>âœ” PA Registered Contractor</span>
+      <span>âœ” Fast Response</span>
+      <span>âœ” Professional Work</span>
     </div>
 
   </div>
@@ -522,7 +127,7 @@ a {
         <p>
           Repair rotted boards, railings, stairs, steps, and other deck issues before they become bigger problems.
         </p>
-        <a href="deck-repair-moon-township-pa.html">Learn More →</a>
+        <a href="deck-repair-moon-township-pa.html">Learn More â†’</a>
       </div>
 
       <div class="box">
@@ -530,7 +135,7 @@ a {
         <p>
           Hole patching, crack repair, ceiling repair, water-damage repairs, and paint-ready finishes.
         </p>
-        <a href="drywall-repair-moon-township-pa.html">Learn More →</a>
+        <a href="drywall-repair-moon-township-pa.html">Learn More â†’</a>
       </div>
 
       <div class="box">
@@ -538,7 +143,7 @@ a {
         <p>
           Fix sticking doors, damaged trim, loose molding, and finish details that make your home look right.
         </p>
-        <a href="door-trim-repair-moon-township-pa.html">Learn More →</a>
+        <a href="door-trim-repair-moon-township-pa.html">Learn More â†’</a>
       </div>
 
     </div>
@@ -555,14 +160,14 @@ a {
         <span class="review-quote">
           "Showed up on time and fixed everything perfectly for my broken door. Would definitely hire again."
         </span>
-        <span class="review-name">— Mike W.</span>
+        <span class="review-name">â€” Mike W.</span>
       </div>
 
       <div class="box">
         <span class="review-quote">
           "Great communication, fair pricing, and solid work from start to finish."
         </span>
-        <span class="review-name">— Greg P.</span>
+        <span class="review-name">â€” Greg P.</span>
       </div>
 
     </div>
@@ -710,28 +315,51 @@ a {
 
 </div>
 
-<div id="site-footer"></div>
+<footer class="footer">
+  <div class="footer-inner">
+    <strong>Handled Home</strong><br>
+    Handyman Services in Moon Township, PA
+    <div style="margin-top:14px;">
+      <a href="tel:14123535341">412-353-5341</a>
+      |
+      <a href="mailto:info@handledhome.net">info@handledhome.net</a>
+    </div>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="about-handled-home.html">About</a>
+      <a href="deck-repair-moon-township-pa.html">Decks</a>
+      <a href="drywall-repair-moon-township-pa.html">Drywall</a>
+      <a href="door-trim-repair-moon-township-pa.html">Doors &amp; Trim</a>
+      <a href="flooring-installation-moon-township-pa.html">Flooring</a>
+      <a href="frequently-asked-questions.html">FAQ</a>
+      <a href="index.html#contact">Contact</a>
+    </nav>
+    <div style="margin-top:6px; font-size:13px;">
+      <a href="handyman-coraopolis-pa.html" style="color: #475569; font-weight: 700;">Coraopolis</a>
+      &nbsp;|&nbsp;
+      <a href="handyman-sewickley-pa.html" style="color: #475569; font-weight: 700;">Sewickley</a>
+    </div>
+    <div>
+      Serving Moon Township, Coraopolis, Sewickley,
+      Robinson &amp; surrounding Pittsburgh areas.
+    </div>
+    <div style="font-size:13px; color:#64748b; margin-top:10px;">
+      Fully insured handyman services for repairs, installations, and home projects.<br>
+      PA Contractor Registration: T002900
+    </div>
+  </div>
+</footer>
 
 <a href="tel:14123535341" class="floating-call">
   Call Now
 </a>
 
 <script>
-fetch('header.html')
-  .then(response => response.text())
-  .then(data => {
-    document.getElementById('site-header').innerHTML = data;
-    document.getElementById('hamburger-btn').addEventListener('click', function () {
-      var drawer = document.getElementById('mobile-drawer');
-      drawer.classList.toggle('open');
-      this.innerHTML = drawer.classList.contains('open') ? '&#10005;' : '&#9776;';
-    });
-  });
-    fetch('footer.html?v=4')
-  .then(response => response.text())
-  .then(data => {
-    document.getElementById('site-footer').innerHTML = data;
-  });
+document.getElementById('hamburger-btn').addEventListener('click', function () {
+  var drawer = document.getElementById('mobile-drawer');
+  drawer.classList.toggle('open');
+  this.innerHTML = drawer.classList.contains('open') ? '&#10005;' : '&#9776;';
+});
 </script>
 
 <script type="application/ld+json">
@@ -763,3 +391,4 @@ fetch('header.html')
 
 </body>
 </html>
+

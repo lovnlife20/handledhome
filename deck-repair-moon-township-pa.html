@@ -25,7 +25,59 @@
 
 <body>
 
-<div id="site-header"></div>
+<div id="site-header">
+<div class="site-header-shell">
+  <div class="topbar">
+    <div class="topbar-inner">
+      <div>
+        <a href="tel:14123535341">412-353-5341</a> |
+        <a href="mailto:info@handledhome.net">info@handledhome.net</a>
+      </div>
+      <div>Serving Moon Township &amp; Pittsburgh Area</div>
+    </div>
+  </div>
+  <div class="header">
+    <div class="header-inner">
+      <a href="index.html" class="logo">
+        <img src="handled-home-logo-cropped.svg" alt="Handled Home Logo" width="122" height="46">
+      </a>
+      <nav class="desktop-nav">
+        <a href="index.html">Home</a>
+        <a href="about-handled-home.html">About</a>
+        <a href="deck-repair-moon-township-pa.html">Decks</a>
+        <a href="drywall-repair-moon-township-pa.html">Drywall</a>
+        <a href="door-trim-repair-moon-township-pa.html">Doors &amp; Trim</a>
+        <a href="flooring-installation-moon-township-pa.html">Flooring</a>
+        <a href="frequently-asked-questions.html">FAQ</a>
+        <div class="nav-dropdown">
+          <a href="#" class="nav-dropdown-toggle">Areas ▾</a>
+          <div class="nav-dropdown-menu">
+            <a href="handyman-coraopolis-pa.html">Coraopolis</a>
+            <a href="handyman-sewickley-pa.html">Sewickley</a>
+          </div>
+        </div>
+        <a href="index.html#contact">Contact</a>
+      </nav>
+      <div class="mobile-header-right">
+        <a class="mobile-call-btn" href="tel:14123535341">Call Now</a>
+        <button class="hamburger" id="hamburger-btn" aria-label="Open menu">&#9776;</button>
+      </div>
+    </div>
+    <nav class="mobile-drawer" id="mobile-drawer">
+      <a href="index.html">Home</a>
+      <a href="about-handled-home.html">About</a>
+      <a href="deck-repair-moon-township-pa.html">Decks</a>
+      <a href="drywall-repair-moon-township-pa.html">Drywall</a>
+      <a href="door-trim-repair-moon-township-pa.html">Doors &amp; Trim</a>
+      <a href="flooring-installation-moon-township-pa.html">Flooring</a>
+      <a href="frequently-asked-questions.html">FAQ</a>
+      <a href="handyman-coraopolis-pa.html">Coraopolis</a>
+      <a href="handyman-sewickley-pa.html">Sewickley</a>
+      <a href="index.html#contact">Get Estimate</a>
+    </nav>
+  </div>
+</div>
+</div>
 
 <div class="page-wrap">
 
@@ -319,29 +371,51 @@
 
 </div>
 
-<div id="site-footer"></div>
+<footer class="footer">
+  <div class="footer-inner">
+    <strong>Handled Home</strong><br>
+    Handyman Services in Moon Township, PA
+    <div style="margin-top:14px;">
+      <a href="tel:14123535341">412-353-5341</a>
+      |
+      <a href="mailto:info@handledhome.net">info@handledhome.net</a>
+    </div>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="about-handled-home.html">About</a>
+      <a href="deck-repair-moon-township-pa.html">Decks</a>
+      <a href="drywall-repair-moon-township-pa.html">Drywall</a>
+      <a href="door-trim-repair-moon-township-pa.html">Doors &amp; Trim</a>
+      <a href="flooring-installation-moon-township-pa.html">Flooring</a>
+      <a href="frequently-asked-questions.html">FAQ</a>
+      <a href="index.html#contact">Contact</a>
+    </nav>
+    <div style="margin-top:6px; font-size:13px;">
+      <a href="handyman-coraopolis-pa.html" style="color: #475569; font-weight: 700;">Coraopolis</a>
+      &nbsp;|&nbsp;
+      <a href="handyman-sewickley-pa.html" style="color: #475569; font-weight: 700;">Sewickley</a>
+    </div>
+    <div>
+      Serving Moon Township, Coraopolis, Sewickley,
+      Robinson &amp; surrounding Pittsburgh areas.
+    </div>
+    <div style="font-size:13px; color:#64748b; margin-top:10px;">
+      Fully insured handyman services for repairs, installations, and home projects.<br>
+      PA Contractor Registration: T002900
+    </div>
+  </div>
+</footer>
 
 <a href="tel:14123535341" class="floating-call">
   Call Now
 </a>
 
 <script>
-fetch('header.html')
-  .then(response => response.text())
-  .then(data => {
-    document.getElementById('site-header').innerHTML = data;
-    document.getElementById('hamburger-btn').addEventListener('click', function () {
-      var drawer = document.getElementById('mobile-drawer');
-      drawer.classList.toggle('open');
-      this.innerHTML = drawer.classList.contains('open') ? '&#10005;' : '&#9776;';
-    });
-  });
-
-fetch('footer.html?v=4')
-  .then(response => response.text())
-  .then(data => {
-    document.getElementById('site-footer').innerHTML = data;
-  });
+document.getElementById('hamburger-btn').addEventListener('click', function () {
+  var drawer = document.getElementById('mobile-drawer');
+  drawer.classList.toggle('open');
+  this.innerHTML = drawer.classList.contains('open') ? '&#10005;' : '&#9776;';
+});
 </script>
 
 <script type="application/ld+json">
