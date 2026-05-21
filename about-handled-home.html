@@ -28,7 +28,7 @@
 <meta property="og:site_name" content="Handled Home">
 
 <link rel="icon" href="favicon.ico">
-<link rel="stylesheet" href="style.css?v=14">
+<link rel="stylesheet" href="style.css?v=15">
 
 </head>
 
@@ -84,12 +84,15 @@
     <nav class="mobile-drawer" id="mobile-drawer">
       <a href="index.html">Home</a>
       <a href="about-handled-home.html">About</a>
-      <a href="deck-repair-moon-township-pa.html">Decks</a>
-      <a href="drywall-repair-moon-township-pa.html">Drywall</a>
-      <a href="door-trim-repair-moon-township-pa.html">Doors &amp; Trim</a>
-      <a href="flooring-installation-moon-township-pa.html">Flooring</a>
-      <a href="shed-building-moon-township-pa.html">Sheds</a>
-      <a href="playset-installation-moon-township-pa.html">Playsets</a>
+      <button class="mobile-services-toggle" id="mobile-services-toggle">Services &#9660;</button>
+      <div class="mobile-services-grid" id="mobile-services-grid">
+        <a href="deck-repair-moon-township-pa.html">Decks</a>
+        <a href="drywall-repair-moon-township-pa.html">Drywall</a>
+        <a href="door-trim-repair-moon-township-pa.html">Doors &amp; Trim</a>
+        <a href="flooring-installation-moon-township-pa.html">Flooring</a>
+        <a href="shed-building-moon-township-pa.html">Sheds</a>
+        <a href="playset-installation-moon-township-pa.html">Playsets</a>
+      </div>
       <a href="frequently-asked-questions.html">FAQ</a>
       <button class="mobile-areas-toggle" id="mobile-areas-toggle">Areas We Serve &#9660;</button>
       <div class="mobile-areas-grid" id="mobile-areas-grid">
@@ -372,12 +375,15 @@
     <nav>
       <a href="index.html">Home</a>
       <a href="about-handled-home.html">About</a>
-      <a href="deck-repair-moon-township-pa.html">Decks</a>
-      <a href="drywall-repair-moon-township-pa.html">Drywall</a>
-      <a href="door-trim-repair-moon-township-pa.html">Doors &amp; Trim</a>
-      <a href="flooring-installation-moon-township-pa.html">Flooring</a>
-      <a href="shed-building-moon-township-pa.html">Sheds</a>
-      <a href="playset-installation-moon-township-pa.html">Playsets</a>
+      <button class="mobile-services-toggle" id="mobile-services-toggle">Services &#9660;</button>
+      <div class="mobile-services-grid" id="mobile-services-grid">
+        <a href="deck-repair-moon-township-pa.html">Decks</a>
+        <a href="drywall-repair-moon-township-pa.html">Drywall</a>
+        <a href="door-trim-repair-moon-township-pa.html">Doors &amp; Trim</a>
+        <a href="flooring-installation-moon-township-pa.html">Flooring</a>
+        <a href="shed-building-moon-township-pa.html">Sheds</a>
+        <a href="playset-installation-moon-township-pa.html">Playsets</a>
+      </div>
       <a href="frequently-asked-questions.html">FAQ</a>
       <a href="index.html#contact">Contact</a>
     </nav>
@@ -420,6 +426,11 @@ document.getElementById('hamburger-btn').addEventListener('click', function () {
   var drawer = document.getElementById('mobile-drawer');
   drawer.classList.toggle('open');
   this.innerHTML = drawer.classList.contains('open') ? '&#10005;' : '&#9776;';
+});
+document.getElementById('mobile-services-toggle').addEventListener('click', function () {
+  var grid = document.getElementById('mobile-services-grid');
+  grid.classList.toggle('open');
+  this.innerHTML = grid.classList.contains('open') ? 'Services &#9650;' : 'Services &#9660;';
 });
 document.getElementById('mobile-areas-toggle').addEventListener('click', function () {
   var grid = document.getElementById('mobile-areas-grid');

@@ -199,7 +199,8 @@ img {
   color: var(--orange);
 }
 
-.mobile-areas-toggle {
+.mobile-areas-toggle,
+.mobile-services-toggle {
   background: none;
   border: none;
   border-bottom: 1px solid #eef3f9;
@@ -213,18 +214,21 @@ img {
   font-family: Arial, Helvetica, sans-serif;
 }
 
-.mobile-areas-grid {
+.mobile-areas-grid,
+.mobile-services-grid {
   display: none;
   grid-template-columns: 1fr 1fr;
   border-bottom: 1px solid #eef3f9;
   padding-bottom: 4px;
 }
 
-.mobile-areas-grid.open {
+.mobile-areas-grid.open,
+.mobile-services-grid.open {
   display: grid;
 }
 
-.mobile-areas-grid a {
+.mobile-areas-grid a,
+.mobile-services-grid a {
   font-size: 14px;
   padding: 8px 6px;
   border-bottom: none;
