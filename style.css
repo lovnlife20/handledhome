@@ -128,13 +128,13 @@ img {
   border-radius: 10px;
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
   padding: 8px 0;
-  min-width: 160px;
+  min-width: 280px;
   z-index: 1001;
 }
 
 .nav-dropdown:hover .nav-dropdown-menu {
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
 }
 
 .nav-dropdown-menu a {
