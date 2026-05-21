@@ -19,7 +19,7 @@
 <meta property="og:site_name" content="Handled Home">
 
 <link rel="icon" href="favicon.ico">
-<link rel="stylesheet" href="style.css?v=13">
+<link rel="stylesheet" href="style.css?v=14">
 
 </head>
 
@@ -78,15 +78,18 @@
       <a href="door-trim-repair-moon-township-pa.html">Doors &amp; Trim</a>
       <a href="flooring-installation-moon-township-pa.html">Flooring</a>
       <a href="frequently-asked-questions.html">FAQ</a>
-      <a href="handyman-coraopolis-pa.html">Coraopolis</a>
-      <a href="handyman-sewickley-pa.html">Sewickley</a>
-      <a href="handyman-robinson-pa.html">Robinson</a>
-      <a href="handyman-aliquippa-pa.html">Aliquippa</a>
-      <a href="handyman-ambridge-pa.html">Ambridge</a>
-      <a href="handyman-cranberry-township-pa.html">Cranberry</a>
-      <a href="handyman-wexford-pa.html">Wexford</a>
-      <a href="handyman-beaver-pa.html">Beaver</a>
-      <a href="handyman-monaca-pa.html">Monaca</a>
+      <button class="mobile-areas-toggle" id="mobile-areas-toggle">Areas We Serve &#9660;</button>
+      <div class="mobile-areas-grid" id="mobile-areas-grid">
+        <a href="handyman-coraopolis-pa.html">Coraopolis</a>
+        <a href="handyman-sewickley-pa.html">Sewickley</a>
+        <a href="handyman-robinson-pa.html">Robinson</a>
+        <a href="handyman-aliquippa-pa.html">Aliquippa</a>
+        <a href="handyman-ambridge-pa.html">Ambridge</a>
+        <a href="handyman-cranberry-township-pa.html">Cranberry</a>
+        <a href="handyman-wexford-pa.html">Wexford</a>
+        <a href="handyman-beaver-pa.html">Beaver</a>
+        <a href="handyman-monaca-pa.html">Monaca</a>
+      </div>
       <a href="index.html#contact">Get Estimate</a>
     </nav>
   </div>
@@ -398,6 +401,11 @@ document.getElementById('hamburger-btn').addEventListener('click', function () {
   var drawer = document.getElementById('mobile-drawer');
   drawer.classList.toggle('open');
   this.innerHTML = drawer.classList.contains('open') ? '&#10005;' : '&#9776;';
+});
+document.getElementById('mobile-areas-toggle').addEventListener('click', function () {
+  var grid = document.getElementById('mobile-areas-grid');
+  grid.classList.toggle('open');
+  this.innerHTML = grid.classList.contains('open') ? 'Areas We Serve &#9650;' : 'Areas We Serve &#9660;';
 });
 </script>
 
