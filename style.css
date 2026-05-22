@@ -83,6 +83,14 @@ img {
 .nav-links a:hover, .nav-trigger:hover { color: #fff; }
 .nav-trigger svg { opacity: 0.55; transition: transform 0.2s; }
 .nav-trigger:hover svg { opacity: 1; transform: rotate(180deg); }
+.nav-trigger::after {
+  content: '';
+  position: absolute;
+  top: 100%;
+  left: -12px;
+  right: -12px;
+  height: 18px;
+}
 .dropdown {
   display: none;
   position: absolute;
