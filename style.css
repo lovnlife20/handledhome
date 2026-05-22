@@ -491,7 +491,7 @@ img {
 ========================= */
 
 .cta {
-  background: linear-gradient(135deg, var(--blue-dark), var(--blue));
+  background: #0f2340;
   color: white;
   border-radius: 20px;
   padding: 60px 30px;
@@ -508,11 +508,11 @@ img {
 ========================= */
 
 .footer {
-  background: #eef3f9;
+  background: #0f2340;
   padding: 40px 20px;
   text-align: center;
-  color: #475569;
-  border-top: 1px solid #dce5ef;
+  color: rgba(255,255,255,0.6);
+  border-top: 1px solid rgba(255,255,255,0.08);
 }
 
 .footer-inner {
@@ -529,12 +529,12 @@ img {
 }
 
 .footer nav a {
-  color: #475569;
+  color: rgba(255,255,255,0.75);
   font-weight: 700;
 }
 
 .footer nav a:hover {
-  color: var(--blue);
+  color: #fff;
 }
 
 /* =========================
