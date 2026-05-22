@@ -667,6 +667,24 @@ img {
 
 }
 
+.services-footer-cta {
+  text-align: center;
+  margin-top: 24px;
+  padding: 20px;
+  background: #f6f8fb;
+  border-radius: 12px;
+  border: 1px solid var(--soft-border);
+  font-size: 15px;
+  color: var(--muted);
+}
+.services-footer-cta a {
+  color: var(--blue);
+  font-weight: 600;
+}
+.services-footer-cta a:hover {
+  color: var(--orange);
+}
+
 /* ========================= SERVICE CARDS (service pages) ========================= */
 .svc-grid {
   display: grid;
