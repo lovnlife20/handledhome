@@ -537,6 +537,14 @@ img {
   color: #fff;
 }
 
+.footer-towns a {
+  color: #F58220;
+}
+
+.footer-towns a:hover {
+  color: #ffb066;
+}
+
 /* =========================
    FLOATING CALL BUTTON
 ========================= */
