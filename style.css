@@ -61,7 +61,6 @@ img {
   height: 30px;
   width: auto;
   display: block;
-  filter: brightness(0) invert(1);
 }
 .nav-links {
   display: flex;
@@ -72,8 +71,8 @@ img {
 }
 .nav-links a, .nav-trigger {
   font-size: 13px;
-  font-weight: 400;
-  color: rgba(255,255,255,0.85);
+  font-weight: 500;
+  color: #fff;
   text-decoration: none;
   white-space: nowrap;
   cursor: pointer;
@@ -115,7 +114,8 @@ img {
 .nav-actions { display: flex; align-items: center; gap: 20px; }
 .nav-phone {
   font-size: 13px;
-  color: rgba(255,255,255,0.85);
+  font-weight: 500;
+  color: #fff;
   text-decoration: none;
 }
 .nav-phone:hover { color: #fff; }
