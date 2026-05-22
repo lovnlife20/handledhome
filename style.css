@@ -669,20 +669,25 @@ img {
 
 .services-footer-cta {
   text-align: center;
-  margin-top: 24px;
-  padding: 20px;
-  background: #f6f8fb;
+  margin-top: 28px;
+  padding: 22px 28px;
+  background: #fff8f2;
   border-radius: 12px;
-  border: 1px solid var(--soft-border);
-  font-size: 15px;
-  color: var(--muted);
-}
-.services-footer-cta a {
-  color: var(--blue);
+  border: 1px solid #fdd9b8;
+  border-left: 4px solid var(--orange);
+  font-size: 16px;
   font-weight: 600;
+  color: var(--text);
+}
+.services-footer-cta p { margin: 0; }
+.services-footer-cta a {
+  color: var(--orange);
+  font-weight: 700;
+  text-decoration: underline;
+  text-underline-offset: 2px;
 }
 .services-footer-cta a:hover {
-  color: var(--orange);
+  color: #d96712;
 }
 
 /* ========================= SERVICE CARDS (service pages) ========================= */
