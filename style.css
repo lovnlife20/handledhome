@@ -43,8 +43,6 @@ img {
   top: 0;
   z-index: 999;
   background: #0f2340;
-  backdrop-filter: blur(20px);
-  -webkit-backdrop-filter: blur(20px);
   border-bottom: 1px solid rgba(0,0,0,0.2);
 }
 .nav-inner {
