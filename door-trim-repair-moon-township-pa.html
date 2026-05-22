@@ -28,7 +28,7 @@
 <meta property="og:site_name" content="Handled Home">
 
 <link rel="icon" href="favicon.ico">
-<link rel="stylesheet" href="style.css?v=20">
+<link rel="stylesheet" href="style.css?v=21">
 
 </head>
 
@@ -74,7 +74,27 @@
     <div class="nav-actions">
       <a href="tel:14123535341" class="nav-phone">412-353-5341</a>
       <a href="index.html#contact" class="nav-cta">Get Estimate</a>
+      <button class="nav-hamburger" id="nav-hamburger" aria-label="Open menu">
+        <svg width="20" height="14" viewBox="0 0 20 14" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+          <rect width="20" height="2" rx="1"/>
+          <rect y="6" width="20" height="2" rx="1"/>
+          <rect y="12" width="20" height="2" rx="1"/>
+        </svg>
+      </button>
     </div>
+  </div>
+  <div class="nav-mobile-menu" id="nav-mobile-menu">
+    <a href="index.html">Home</a>
+    <a href="about-handled-home.html">About</a>
+    <a href="deck-repair-moon-township-pa.html">Decks</a>
+    <a href="drywall-repair-moon-township-pa.html">Drywall</a>
+    <a href="door-trim-repair-moon-township-pa.html">Doors &amp; Trim</a>
+    <a href="flooring-installation-moon-township-pa.html">Flooring</a>
+    <a href="shed-building-moon-township-pa.html">Sheds</a>
+    <a href="playset-installation-moon-township-pa.html">Playsets</a>
+    <a href="frequently-asked-questions.html">FAQ</a>
+    <a href="blog.html">Blog</a>
+    <a href="index.html#contact" class="nav-mobile-cta">Get Estimate</a>
   </div>
 </nav>
 
@@ -483,6 +503,23 @@
   ],
   "url": "https://handledhome.net/door-trim-repair-moon-township-pa.html"
 }
+</script>
+<script>
+(function() {
+  var btn = document.getElementById('nav-hamburger');
+  var menu = document.getElementById('nav-mobile-menu');
+  if (!btn || !menu) return;
+  btn.addEventListener('click', function() {
+    var open = menu.classList.toggle('open');
+    document.body.style.overflow = open ? 'hidden' : '';
+  });
+  menu.querySelectorAll('a').forEach(function(link) {
+    link.addEventListener('click', function() {
+      menu.classList.remove('open');
+      document.body.style.overflow = '';
+    });
+  });
+})();
 </script>
 </body>
 </html>
