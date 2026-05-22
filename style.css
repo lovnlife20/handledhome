@@ -689,14 +689,6 @@ img {
 .services-footer-cta a:hover {
   color: #d96712;
 }
-@media (max-width: 850px) {
-  .services-footer-cta {
-    border-left: 1px solid #fdd9b8;
-    border-top: 4px solid var(--orange);
-    padding: 20px 18px;
-    font-size: 15px;
-  }
-}
 
 /* ========================= SERVICE CARDS (service pages) ========================= */
 .svc-grid {
