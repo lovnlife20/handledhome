@@ -28,7 +28,7 @@
 <meta property="og:site_name" content="Handled Home">
 
 <link rel="icon" href="favicon.ico">
-<link rel="stylesheet" href="style.css?v=15">
+<link rel="stylesheet" href="style.css?v=17">
 
 </head>
 
@@ -39,8 +39,7 @@
   <div class="topbar">
     <div class="topbar-inner">
       <div>
-        <a href="tel:14123535341">412-353-5341</a> |
-        <a href="mailto:info@handledhome.net">info@handledhome.net</a>
+        <a href="tel:14123535341">412-353-5341</a>
       </div>
       <div>Serving Moon Township &amp; Pittsburgh Area</div>
     </div>
@@ -53,16 +52,21 @@
       <nav class="desktop-nav">
         <a href="index.html">Home</a>
         <a href="about-handled-home.html">About</a>
-        <a href="deck-repair-moon-township-pa.html">Decks</a>
-        <a href="drywall-repair-moon-township-pa.html">Drywall</a>
-        <a href="door-trim-repair-moon-township-pa.html">Doors &amp; Trim</a>
-        <a href="flooring-installation-moon-township-pa.html">Flooring</a>
-        <a href="shed-building-moon-township-pa.html">Sheds</a>
-        <a href="playset-installation-moon-township-pa.html">Playsets</a>
-        <a href="frequently-asked-questions.html">FAQ</a>
+        <div class="nav-dropdown">
+          <a href="#" class="nav-dropdown-toggle">Services &#9660;</a>
+          <div class="nav-dropdown-menu">
+            <a href="deck-repair-moon-township-pa.html">Decks</a>
+            <a href="drywall-repair-moon-township-pa.html">Drywall</a>
+            <a href="door-trim-repair-moon-township-pa.html">Doors &amp; Trim</a>
+            <a href="flooring-installation-moon-township-pa.html">Flooring</a>
+            <a href="shed-building-moon-township-pa.html">Sheds</a>
+            <a href="playset-installation-moon-township-pa.html">Playsets</a>
+            <a href="frequently-asked-questions.html">FAQ</a>
+          </div>
+        </div>
         <a href="blog.html">Blog</a>
         <div class="nav-dropdown">
-          <a href="#" class="nav-dropdown-toggle">Areas ▾</a>
+          <a href="#" class="nav-dropdown-toggle">Areas &#9660;</a>
           <div class="nav-dropdown-menu">
             <a href="handyman-coraopolis-pa.html">Coraopolis</a>
             <a href="handyman-sewickley-pa.html">Sewickley</a>
@@ -75,41 +79,29 @@
             <a href="handyman-monaca-pa.html">Monaca</a>
           </div>
         </div>
-        <a href="index.html#contact">Contact</a>
+        <a href="index.html#contact" class="nav-cta">Get Estimate</a>
       </nav>
       <div class="mobile-header-right">
         <a class="mobile-call-btn" href="tel:14123535341">Call Now</a>
         <button class="hamburger" id="hamburger-btn" aria-label="Open menu">&#9776;</button>
       </div>
     </div>
-    <nav class="mobile-drawer" id="mobile-drawer">
-      <a href="index.html">Home</a>
-      <a href="about-handled-home.html">About</a>
-      <button class="mobile-services-toggle" id="mobile-services-toggle">Services &#9660;</button>
-      <div class="mobile-services-grid" id="mobile-services-grid">
+    <div class="mobile-overlay" id="mobile-overlay">
+      <button class="mobile-overlay-close" id="mobile-overlay-close" aria-label="Close menu">&#10005;</button>
+      <nav class="mobile-overlay-nav">
+        <a href="index.html">Home</a>
+        <a href="about-handled-home.html">About</a>
         <a href="deck-repair-moon-township-pa.html">Decks</a>
         <a href="drywall-repair-moon-township-pa.html">Drywall</a>
         <a href="door-trim-repair-moon-township-pa.html">Doors &amp; Trim</a>
         <a href="flooring-installation-moon-township-pa.html">Flooring</a>
         <a href="shed-building-moon-township-pa.html">Sheds</a>
         <a href="playset-installation-moon-township-pa.html">Playsets</a>
-      </div>
-      <a href="frequently-asked-questions.html">FAQ</a>
-      <a href="blog.html">Blog</a>
-      <button class="mobile-areas-toggle" id="mobile-areas-toggle">Areas We Serve &#9660;</button>
-      <div class="mobile-areas-grid" id="mobile-areas-grid">
-        <a href="handyman-coraopolis-pa.html">Coraopolis</a>
-        <a href="handyman-sewickley-pa.html">Sewickley</a>
-        <a href="handyman-robinson-pa.html">Robinson</a>
-        <a href="handyman-aliquippa-pa.html">Aliquippa</a>
-        <a href="handyman-ambridge-pa.html">Ambridge</a>
-        <a href="handyman-cranberry-township-pa.html">Cranberry</a>
-        <a href="handyman-wexford-pa.html">Wexford</a>
-        <a href="handyman-beaver-pa.html">Beaver</a>
-        <a href="handyman-monaca-pa.html">Monaca</a>
-      </div>
-      <a href="index.html#contact">Get Estimate</a>
-    </nav>
+        <a href="frequently-asked-questions.html">FAQ</a>
+        <a href="blog.html">Blog</a>
+        <a href="index.html#contact" class="mobile-overlay-cta">Get Estimate</a>
+      </nav>
+    </div>
   </div>
 </div>
 </div>
@@ -413,8 +405,6 @@
     Handyman Services in Moon Township, PA
     <div style="margin-top:14px;">
       <a href="tel:14123535341">412-353-5341</a>
-      |
-      <a href="mailto:info@handledhome.net">info@handledhome.net</a>
     </div>
     <nav>
       <a href="index.html">Home</a>
@@ -465,19 +455,18 @@
 
 <script>
 document.getElementById('hamburger-btn').addEventListener('click', function () {
-  var drawer = document.getElementById('mobile-drawer');
-  drawer.classList.toggle('open');
-  this.innerHTML = drawer.classList.contains('open') ? '&#10005;' : '&#9776;';
+  document.getElementById('mobile-overlay').classList.add('open');
+  document.body.style.overflow = 'hidden';
 });
-document.getElementById('mobile-services-toggle').addEventListener('click', function () {
-  var grid = document.getElementById('mobile-services-grid');
-  grid.classList.toggle('open');
-  this.innerHTML = grid.classList.contains('open') ? 'Services &#9650;' : 'Services &#9660;';
+document.getElementById('mobile-overlay-close').addEventListener('click', function () {
+  document.getElementById('mobile-overlay').classList.remove('open');
+  document.body.style.overflow = '';
 });
-document.getElementById('mobile-areas-toggle').addEventListener('click', function () {
-  var grid = document.getElementById('mobile-areas-grid');
-  grid.classList.toggle('open');
-  this.innerHTML = grid.classList.contains('open') ? 'Areas We Serve &#9650;' : 'Areas We Serve &#9660;';
+document.querySelectorAll('.mobile-overlay-nav a').forEach(function (link) {
+  link.addEventListener('click', function () {
+    document.getElementById('mobile-overlay').classList.remove('open');
+    document.body.style.overflow = '';
+  });
 });
 </script>
 
