@@ -351,6 +351,20 @@ img {
    REVIEWS
 ========================= */
 
+.reviews-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 26px;
+  margin-top: 34px;
+  align-items: stretch;
+}
+
+@media (max-width: 640px) {
+  .reviews-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
 .review-quote {
   font-style: italic;
   display: block;
