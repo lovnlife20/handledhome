@@ -588,9 +588,6 @@ img {
   letter-spacing: 0.01em;
   box-shadow: 0 8px 28px rgba(244, 123, 32, 0.45);
   z-index: 1001;
-  display: flex;
-  align-items: center;
-  gap: 8px;
   transition: background 0.2s, transform 0.15s, box-shadow 0.2s;
 }
 
@@ -598,10 +595,6 @@ img {
   background: #d96712;
   transform: translateY(-2px);
   box-shadow: 0 12px 32px rgba(244, 123, 32, 0.5);
-}
-
-.floating-call svg {
-  flex-shrink: 0;
 }
 
 /* =========================
@@ -628,18 +621,6 @@ img {
   gap: 10px;
 }
 
-.contact-method-icon {
-  width: 58px;
-  height: 58px;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-bottom: 4px;
-}
-
-.contact-method-icon.orange { background: #fff3e8; color: var(--orange); }
-.contact-method-icon.blue   { background: #e8f0fc; color: var(--blue); }
 
 .contact-method-label {
   font-size: 11px;
