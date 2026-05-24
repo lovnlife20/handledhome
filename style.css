@@ -267,6 +267,14 @@ img {
   margin: 0 auto;
 }
 
+.hero-tagline {
+  font-size: clamp(22px, 3vw, 30px);
+  font-weight: 700;
+  color: var(--orange);
+  letter-spacing: 0.02em;
+  margin: 0 auto 24px !important;
+}
+
 .hero-trust {
   display: flex;
   flex-wrap: wrap;
