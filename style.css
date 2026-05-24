@@ -1013,33 +1013,52 @@ img {
    WORK GALLERY
 ========================= */
 
-.work-grid {
+.work-grid-2 {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+  margin-top: 16px;
+  max-width: 760px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.work-grid-3 {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 16px;
   margin-top: 16px;
 }
-.work-grid figure {
+.work-grid-2 figure,
+.work-grid-3 figure {
   margin: 0;
 }
-.work-grid img {
+.work-grid-2 img,
+.work-grid-3 img {
   width: 100%;
   aspect-ratio: 4/3;
   object-fit: cover;
   border-radius: 10px;
   display: block;
 }
-.work-grid figcaption {
+.work-grid-2 figcaption,
+.work-grid-3 figcaption {
   font-size: 13px;
   color: #6B7280;
   margin-top: 6px;
   line-height: 1.4;
 }
+.work-section h2 {
+  text-align: left;
+}
+.work-section .muted-center {
+  text-align: left;
+}
 @media (max-width: 800px) {
-  .work-grid { grid-template-columns: repeat(2, 1fr); }
+  .work-grid-3 { grid-template-columns: repeat(2, 1fr); }
 }
 @media (max-width: 500px) {
-  .work-grid { grid-template-columns: 1fr; }
+  .work-grid-2,
+  .work-grid-3 { grid-template-columns: 1fr; }
 }
 
 /* =========================
