@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=7200">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html, body {
+    width: 7200px;
+    height: 5400px;
+    overflow: hidden;
+    background: white;
+    font-family: Arial, sans-serif;
+  }
+  .canvas {
+    width: 7200px;
+    height: 5400px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  /* ── TOP SECTION ─────────────────────────────── */
+  .top {
+    flex: 0 0 2970px;
+    background: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 140px;
+    padding: 0 500px;
+  }
+  .brand-text {
+    display: flex;
+    flex-direction: column;
+    line-height: 1.0;
+  }
+  .brand-handled {
+    font-size: 520px;
+    font-weight: 900;
+    color: #F58220;
+    line-height: 1.0;
+    letter-spacing: -0.01em;
+  }
+  .brand-home {
+    font-size: 520px;
+    font-weight: 900;
+    color: #1f5daa;
+    line-height: 1.0;
+    letter-spacing: -0.01em;
+  }
+
+  /* ── TAGLINE BAR ──────────────────────────────── */
+  .tagline-bar {
+    flex: 0 0 420px;
+    background: white;
+    border-bottom: 12px solid #0f2340;
+    display: flex;
+    align-items: center;
+    padding: 0 500px;
+  }
+  .tagline-text {
+    font-size: 180px;
+    font-weight: 700;
+    color: #F58220;
+    white-space: nowrap;
+  }
+
+  /* ── PHONE BAR ────────────────────────────────── */
+  .phone-bar {
+    flex: 1;
+    background: #F58220;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .phone-text {
+    font-size: 580px;
+    font-weight: 900;
+    color: #0f2340;
+    letter-spacing: -0.02em;
+    white-space: nowrap;
+  }
+
+  /* ── BOTTOM STRIP ─────────────────────────────── */
+  .bottom-strip {
+    flex: 0 0 360px;
+    background: #0f2340;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 500px;
+  }
+  .website-text {
+    font-size: 130px;
+    font-weight: 700;
+    color: #ffffff;
+    letter-spacing: 0.01em;
+  }
+  .reg-text {
+    font-size: 110px;
+    font-weight: 400;
+    color: rgba(255, 255, 255, 0.55);
+  }
+</style>
+</head>
+<body>
+<div class="canvas">
+
+  <!-- TOP: logo icon + Handled Home wordmark -->
+  <div class="top">
+    <svg width="1158" height="900" viewBox="168 138 520 404" xmlns="http://www.w3.org/2000/svg">
+      <g fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="24">
+        <path stroke="#1f5daa" d="M200 400V270l160-100 160 100v240H200Z"/>
+        <path stroke="#f58220" d="m200 270 160-100 160 100v240"/>
+        <path stroke="#1f5daa" d="m290 410 70 60 100-120"/>
+      </g>
+    </svg>
+    <div class="brand-text">
+      <span class="brand-handled">Handled</span>
+      <span class="brand-home">Home</span>
+    </div>
+  </div>
+
+  <!-- TAGLINE BAR -->
+  <div class="tagline-bar">
+    <span class="tagline-text">Point. Fix. Handled. &nbsp;&middot;&nbsp; Fully Insured</span>
+  </div>
+
+  <!-- PHONE BAR -->
+  <div class="phone-bar">
+    <span class="phone-text">412-353-5341</span>
+  </div>
+
+  <!-- BOTTOM STRIP -->
+  <div class="bottom-strip">
+    <span class="website-text">handledhome.net</span>
+    <span class="reg-text">PA Reg. T002900</span>
+  </div>
+
+</div>
+</body>
+</html>
