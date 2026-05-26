@@ -29,6 +29,37 @@ a {
   text-decoration: none;
 }
 
+/* Accessibility: underline inline links in body content */
+main p a,
+main li a,
+.box a,
+.tip-box a,
+.faq-item a,
+.section p a,
+.blog-body a,
+.text-note a {
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+/* Keep nav, buttons, and CTAs underline-free */
+.nav a,
+.nav-links a,
+.nav-cta,
+.nav-phone,
+.nav-mobile-menu a,
+.footer nav a,
+.footer-towns a,
+.buttons a,
+.cta,
+a.cta,
+a.call,
+a.email,
+a.nav-mobile-cta,
+a.floating-call {
+  text-decoration: none;
+}
+
 img {
   max-width: 100%;
   display: block;
