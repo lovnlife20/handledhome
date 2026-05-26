@@ -205,6 +205,30 @@ img {
   display: block;
 }
 .nav-mobile-menu a:hover { color: #fff; }
+/* Mobile services accordion */
+details.nav-mobile-services {
+  border-bottom: 1px solid rgba(255,255,255,0.08);
+}
+details.nav-mobile-services > summary {
+  list-style: none;
+  color: rgba(255,255,255,0.85);
+  font-size: 18px;
+  font-weight: 500;
+  padding: 15px 0;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  user-select: none;
+  border-bottom: none;
+}
+details.nav-mobile-services > summary::-webkit-details-marker { display: none; }
+details.nav-mobile-services > summary::marker { display: none; }
+details.nav-mobile-services > summary svg { transition: transform 0.2s ease; flex-shrink: 0; }
+details.nav-mobile-services[open] > summary { border-bottom: 1px solid rgba(255,255,255,0.08); }
+details.nav-mobile-services[open] > summary svg { transform: rotate(180deg); }
+details.nav-mobile-services > a { padding-left: 16px; font-size: 16px !important; }
+details.nav-mobile-services > a:last-child { border-bottom: none; }
 .nav-mobile-cta {
   background: #F58220;
   color: #fff !important;
