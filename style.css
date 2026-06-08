@@ -323,6 +323,23 @@ details.nav-mobile-services > a:last-child { border-bottom: none; }
   margin: 0 auto;
 }
 
+.hero-phone {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: #F58220;
+  text-align: center;
+  margin: 14px 0;
+}
+
+.hero-phone a {
+  color: #F58220;
+  text-decoration: none;
+}
+
+.hero-phone a:hover {
+  text-decoration: underline;
+}
+
 .hero-tagline {
   font-size: clamp(22px, 3vw, 30px);
   font-weight: 700;
