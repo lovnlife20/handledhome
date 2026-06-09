@@ -679,7 +679,6 @@ details.nav-mobile-services > a:last-child { border-bottom: none; }
   bottom: 0;
   left: 0;
   right: 0;
-  display: none;
   z-index: 1001;
   box-shadow: 0 -2px 12px rgba(0,0,0,0.12);
 }
