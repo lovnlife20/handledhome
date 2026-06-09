@@ -674,7 +674,10 @@ details.nav-mobile-services > a:last-child { border-bottom: none; }
    FLOATING CALL BUTTON
 ========================= */
 
-.floating-call .fc-full { display: none; }
+@media (min-width: 641px) {
+  .floating-call .fc-full { display: none; }
+  .floating-call .fc-short { display: inline; }
+}
 
 .floating-call {
   position: fixed;
