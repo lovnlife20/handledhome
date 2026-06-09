@@ -477,12 +477,6 @@ details.nav-mobile-services > a:last-child { border-bottom: none; }
   .reviews-grid {
     grid-template-columns: 1fr;
   }
-  body { padding-bottom: 72px; }
-  .sticky-cta { display: flex; }
-}
-
-@media (min-width: 641px) {
-  .sticky-cta { display: none; }
 }
 
 .review-quote {
@@ -666,49 +660,6 @@ details.nav-mobile-services > a:last-child { border-bottom: none; }
   color: #ffb066;
 }
 
-/* =========================
-   FLOATING CALL BUTTON
-========================= */
-
-/* =========================
-   STICKY MOBILE CTA BAR
-========================= */
-
-.sticky-cta {
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  z-index: 1001;
-  box-shadow: 0 -2px 12px rgba(0,0,0,0.12);
-}
-
-.sticky-cta a {
-  flex: 1;
-  padding: 16px 10px;
-  text-align: center;
-  font-weight: 800;
-  font-size: 15px;
-  color: white;
-  text-decoration: none;
-  letter-spacing: 0.01em;
-}
-
-.sticky-cta .sticky-call {
-  background: var(--blue);
-}
-
-.sticky-cta .sticky-call:hover {
-  background: var(--blue-dark);
-}
-
-.sticky-cta .sticky-text {
-  background: var(--orange);
-}
-
-.sticky-cta .sticky-text:hover {
-  background: #d96712;
-}
 
 /* =========================
    CONTACT METHOD CARDS
