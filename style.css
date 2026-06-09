@@ -484,8 +484,8 @@ details.nav-mobile-services > a:last-child { border-bottom: none; }
     text-align: center;
     padding: 16px 22px;
   }
-  .floating-call .fc-short { display: none; }
-  .floating-call .fc-full { display: inline; }
+  .floating-call .fc-short { display: none !important; }
+  .floating-call .fc-full { display: inline !important; }
   body { padding-bottom: 84px; }
 }
 
