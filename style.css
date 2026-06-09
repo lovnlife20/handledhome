@@ -348,6 +348,14 @@ details.nav-mobile-services > a:last-child { border-bottom: none; }
   margin: 0 auto 24px !important;
 }
 
+.hero-trust-line {
+  font-size: 13px;
+  color: #6b7280;
+  text-align: center;
+  margin: 0 auto 20px !important;
+  letter-spacing: 0.02em;
+}
+
 .hero-trust {
   display: flex;
   flex-wrap: wrap;
@@ -469,6 +477,16 @@ details.nav-mobile-services > a:last-child { border-bottom: none; }
   .reviews-grid {
     grid-template-columns: 1fr;
   }
+  .floating-call {
+    left: 16px;
+    right: 16px;
+    bottom: 16px;
+    text-align: center;
+    padding: 16px 22px;
+  }
+  .floating-call .fc-short { display: none; }
+  .floating-call .fc-full { display: inline; }
+  body { padding-bottom: 84px; }
 }
 
 .review-quote {
@@ -655,6 +673,8 @@ details.nav-mobile-services > a:last-child { border-bottom: none; }
 /* =========================
    FLOATING CALL BUTTON
 ========================= */
+
+.floating-call .fc-full { display: none; }
 
 .floating-call {
   position: fixed;
