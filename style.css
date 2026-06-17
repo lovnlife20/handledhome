@@ -270,7 +270,7 @@ details.nav-mobile-services > a:last-child { border-bottom: none; }
   border-bottom: none !important;
   font-size: 16px !important;
 }
-@media (max-width: 800px) {
+@media (max-width: 960px) {
   .nav-links { display: none; }
   .nav-actions .nav-phone { display: none; }
   .nav-hamburger { display: block; }
