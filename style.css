@@ -175,6 +175,13 @@ img {
   padding: 22px 0 6px;
   border-bottom: none !important;
 }
+/* Hide leftover mobile-only items (Areas label + town links + FAQ) that are
+   stuck inside the desktop .nav-links. They overcrowd the bar and squeeze the
+   logo/phone. Scoped to .nav-links so the footer's town list is unaffected. */
+.nav-links .nav-mobile-category,
+.nav-links .nav-mobile-category ~ a {
+  display: none;
+}
 .nav-actions { display: flex; align-items: center; gap: 20px; }
 .nav-phone {
   font-size: 13px;
