@@ -34,4 +34,11 @@
       });
     }
   });
+
+  document.addEventListener('submit', function (e) {
+    if (typeof gtag !== 'function') return;
+    if (e.target.closest('form.contact-form')) {
+      gtag('event', 'form_submit', { event_category: 'Contact', event_label: document.title, value: 1 });
+    }
+  });
 })();
