@@ -135,7 +135,7 @@ $faqNode = @'
       "mainEntity": [
         { "@type": "Question", "name": "What areas do you serve?", "acceptedAnswer": { "@type": "Answer", "text": "Handled Home serves Moon Township, Coraopolis, Oakdale, Sewickley, Robinson Township, Aliquippa, Ambridge, Cranberry Township, Wexford, Beaver, Monaca, Mt. Lebanon, and nearby Pittsburgh-area communities." } },
         { "@type": "Question", "name": "Are you insured?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. Handled Home is fully insured for handyman services, repairs, installations, and home projects." } },
-        { "@type": "Question", "name": "Are you a registered contractor?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. PA Contractor Registration number: T002900." } },
+        { "@type": "Question", "name": "Are you a registered contractor?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. PA Contractor Registration number: PA217831." } },
         { "@type": "Question", "name": "Do you offer free estimates?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. Request a free estimate through the website, by calling 412-353-5341, or by texting project photos directly to that number." } },
         { "@type": "Question", "name": "Can I provide my own materials?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. Homeowners can supply fixtures, flooring, fans, faucets, doors, or other materials. Have them on hand before the appointment." } },
         { "@type": "Question", "name": "Do you do plumbing work?", "acceptedAnswer": { "@type": "Answer", "text": "We handle handyman-level plumbing: faucet replacement, leaking faucet repair, toilet replacement, supply line replacement, and shower head replacement. We do not do full pipe runs or rough plumbing." } }
