@@ -1280,6 +1280,8 @@ body.nh .nav-links a {
   text-transform: uppercase;
 }
 body.nh .nav-links a:hover { color: var(--nh-orange); }
+body.nh .nav-links a.nav-active,
+body.nh .nav-mobile-menu a.nav-active { color: var(--nh-orange); }
 body.nh .nav-phone { color: var(--nh-heading); font-weight: 700; }
 body.nh .nav-phone:hover { color: var(--nh-orange); }
 body.nh .nav-cta,

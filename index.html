@@ -555,6 +555,17 @@
 }
 </script>
 <script src="/tracking.js"></script>
+<script>
+(function() {
+  var path = location.pathname.replace(/index\.html$/, '').replace(/\/$/, '') || '/';
+  document.querySelectorAll('.nav-links a, .nav-mobile-menu a').forEach(function(link) {
+    var href = link.getAttribute('href');
+    if (!href || href.charAt(0) === '#') return;
+    var linkPath = href.split('#')[0].replace(/index\.html$/, '').replace(/\/$/, '') || '/';
+    if (linkPath === path) link.classList.add('nav-active');
+  });
+})();
+</script>
 </body>
 </html>
 
