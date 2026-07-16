@@ -1,4 +1,4 @@
-$dir = "C:\Users\aprus\Claude\handledhome"
+$dir = "D:\.claude\handledhome"
 $enc = [System.Text.Encoding]::UTF8
 
 $rootFiles    = Get-ChildItem "$dir\*.html"

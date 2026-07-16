@@ -1,4 +1,4 @@
-$dir = 'C:\Users\aprus\Claude\handledhome'
+$dir = 'D:\.claude\handledhome'
 $utf8NoBom = New-Object System.Text.UTF8Encoding($false)
 $skipFiles = @('header.html', 'footer.html', 'nav-update.ps1', 'nav-apple.ps1')
 

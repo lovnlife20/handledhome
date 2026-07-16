@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1800 800"><g fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="24"><path stroke="#07182D" d="M200 400V270l160-100 160 100v240H200Z"></path><path stroke="#E97824" d="m200 270 160-100 160 100v240"></path><path stroke="#07182D" d="m290 410 70 60 100-120"></path></g><text x="600" y="330" fill="#07182D" font-family="Arial, Helvetica, sans-serif" font-size="160" font-weight="bold">
+    Handled
+  </text><text x="600" y="520" fill="#07182D" font-family="Arial, Helvetica, sans-serif" font-size="160" font-weight="bold">
+    Home
+  </text></svg>

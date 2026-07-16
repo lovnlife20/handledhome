@@ -1,6 +1,6 @@
 
 # update-schema.ps1
-Set-Location "C:\Users\aprus\Claude\handledhome"
+Set-Location "D:\.claude\handledhome"
 
 $AREA = '[{"@type":"City","name":"Moon Township"},{"@type":"City","name":"Coraopolis"},{"@type":"City","name":"Oakdale"},{"@type":"City","name":"Sewickley"},{"@type":"City","name":"Robinson Township"},{"@type":"City","name":"Aliquippa"},{"@type":"City","name":"Ambridge"},{"@type":"City","name":"Cranberry Township"},{"@type":"City","name":"Wexford"},{"@type":"City","name":"Beaver"},{"@type":"City","name":"Monaca"},{"@type":"City","name":"Mt. Lebanon"},{"@type":"City","name":"Pittsburgh"}]'
 

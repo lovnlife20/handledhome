@@ -1,4 +1,4 @@
-$dir = "C:\Users\aprus\Claude\handledhome"
+$dir = "D:\.claude\handledhome"
 $enc = [System.Text.Encoding]::UTF8
 
 # Collect all HTML files, skip all-services.html (already has new nav)

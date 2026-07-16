@@ -1225,3 +1225,281 @@ details.nav-mobile-services > a:last-child { border-bottom: none; }
   }
 
 }
+
+/* =========================================================
+   NEW DESIGN SYSTEM ("nh") — navy/orange redesign
+   Everything below is scoped under body.nh so unconverted
+   pages (plain <body>) are completely unaffected. Pages opt in
+   by adding class="nh" to <body> as they're converted.
+========================================================= */
+
+:root {
+  --nh-navy: #07182D;
+  --nh-navy-dark: #051220;
+  --nh-orange: #E97824;
+  --nh-orange-dark: #c9631a;
+  --nh-blue: #1F5F99;
+  --nh-bg: #FCFCFC;
+  --nh-alt-bg: #E8EEF3;
+  --nh-text: #4A5560;
+  --nh-heading: #07182D;
+  --nh-border: #E2DFD8;
+  --nh-on-navy: #FCFCFC;
+  --nh-on-navy-muted: #C7CDD6;
+  --nh-font: 'Archivo', Arial, Helvetica, sans-serif;
+}
+
+body.nh {
+  font-family: var(--nh-font);
+  background: var(--nh-bg);
+  color: var(--nh-text);
+}
+
+body.nh h1, body.nh h2, body.nh h3 {
+  font-family: var(--nh-font);
+  font-weight: 800;
+  letter-spacing: -0.01em;
+}
+
+/* Nav */
+body.nh .nav {
+  background: rgba(252,252,252,0.94);
+  backdrop-filter: blur(8px);
+  border-bottom: 1px solid var(--nh-border);
+  box-shadow: none;
+}
+body.nh .nav-logo img { height: 40px; }
+body.nh .nav-links a {
+  color: var(--nh-heading);
+  font-weight: 700;
+  font-size: 13px;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+body.nh .nav-links a:hover { color: var(--nh-orange); }
+body.nh .nav-phone { color: var(--nh-heading); font-weight: 700; }
+body.nh .nav-phone:hover { color: var(--nh-orange); }
+body.nh .nav-cta,
+body.nh .nav-mobile-cta {
+  background: var(--nh-orange);
+  color: var(--nh-navy) !important;
+  border-radius: 0;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+body.nh .nav-cta:hover,
+body.nh .nav-mobile-cta:hover { background: var(--nh-orange-dark); }
+body.nh .nav-mobile-menu { background: var(--nh-navy); }
+body.nh .nav-mobile-menu a { color: var(--nh-on-navy-muted); }
+body.nh .nav-mobile-menu a:hover { color: var(--nh-on-navy); }
+body.nh .nav-hamburger { color: var(--nh-heading); }
+@media (max-width: 1080px) {
+  body.nh .nav-links { display: none; }
+  body.nh .nav-actions .nav-phone { display: none; }
+  body.nh .nav-hamburger { display: block; }
+}
+
+/* Hero */
+body.nh .hero-card {
+  background: var(--nh-navy);
+  border-radius: 0;
+  box-shadow: none;
+  border: none;
+  text-align: left;
+  padding: 90px 48px;
+}
+body.nh .eyebrow {
+  color: var(--nh-orange);
+  font-size: 13px;
+  letter-spacing: 0.16em;
+}
+body.nh .hero-card h1 {
+  color: var(--nh-on-navy);
+  text-align: left;
+  margin: 0 0 20px;
+  max-width: 800px;
+}
+body.nh .hero-card p {
+  color: var(--nh-on-navy-muted);
+  text-align: left;
+  margin: 0 0 8px;
+  max-width: 620px;
+}
+body.nh .hero-tagline { color: var(--nh-orange); text-align: left; }
+body.nh .hero-trust-line { color: var(--nh-on-navy-muted); text-align: left; }
+body.nh .hero-trust { justify-content: flex-start; color: var(--nh-on-navy); }
+body.nh .buttons { justify-content: flex-start; }
+
+/* Buttons */
+body.nh .buttons a {
+  border-radius: 0;
+  text-transform: uppercase;
+  font-size: 14px;
+  letter-spacing: 0.04em;
+  padding: 17px 32px;
+}
+body.nh .call { background: var(--nh-orange); color: var(--nh-navy); }
+body.nh .call:hover { background: var(--nh-orange-dark); }
+body.nh .email { background: transparent; color: var(--nh-on-navy); border: 1px solid rgba(255,255,255,0.3); }
+body.nh .email:hover { background: rgba(255,255,255,0.08); }
+
+/* Sections / cards */
+body.nh .section h2 { color: var(--nh-heading); }
+body.nh .muted-center { color: var(--nh-text); }
+body.nh .section.nh-alt {
+  background: var(--nh-alt-bg);
+  padding: 60px 40px;
+  border-radius: 4px;
+}
+body.nh .box {
+  background: #fff;
+  border-radius: 4px;
+  box-shadow: none;
+  border: 1px solid var(--nh-border);
+}
+body.nh .box h3 { color: var(--nh-heading); }
+body.nh .box a { color: var(--nh-orange); }
+body.nh .services-footer-cta {
+  background: var(--nh-alt-bg);
+  border-color: var(--nh-border);
+  border-left-color: var(--nh-orange);
+  border-radius: 0;
+  color: var(--nh-text);
+}
+body.nh .services-footer-cta a { color: var(--nh-orange); }
+
+/* Contact form */
+body.nh .contact-form input,
+body.nh .contact-form textarea {
+  border-radius: 0;
+  border-color: var(--nh-border);
+  font-family: var(--nh-font);
+}
+body.nh .contact-form button {
+  background: var(--nh-orange);
+  color: var(--nh-navy);
+  border-radius: 0;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+body.nh .contact-form button:hover { background: var(--nh-orange-dark); }
+
+/* CTA band */
+body.nh .cta { background: var(--nh-navy); border-radius: 0; }
+body.nh .cta h2 { color: var(--nh-on-navy); }
+
+/* Footer */
+body.nh .footer {
+  background: var(--nh-navy-dark);
+  color: var(--nh-on-navy-muted);
+  text-align: left;
+  border-top: none;
+}
+body.nh .nh-footer-inner {
+  display: grid;
+  grid-template-columns: 1.4fr 1fr 1fr;
+  gap: 40px;
+  padding-bottom: 36px;
+  border-bottom: 1px solid rgba(255,255,255,0.08);
+}
+body.nh .nh-footer-brand img.footer-logo {
+  height: 44px;
+  width: auto;
+  margin-bottom: 14px;
+  filter: brightness(0) invert(1);
+}
+body.nh .nh-footer-brand p {
+  font-size: 14px;
+  color: var(--nh-on-navy-muted);
+  max-width: 280px;
+  margin: 0;
+}
+body.nh .nh-footer-heading {
+  font-size: 12.5px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--nh-on-navy);
+  margin-bottom: 16px;
+}
+body.nh .nh-footer-col address { font-style: normal; font-size: 14.5px; line-height: 2.1; }
+body.nh .nh-footer-col address a { color: var(--nh-on-navy-muted); }
+body.nh .nh-footer-col address a:hover { color: var(--nh-orange); }
+body.nh .nh-footer-col nav {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  flex-wrap: nowrap;
+  gap: 10px;
+  margin: 0;
+  font-size: 14.5px;
+}
+body.nh .nh-footer-col nav a { color: var(--nh-on-navy-muted); font-weight: 400; }
+body.nh .nh-footer-col nav a:hover { color: var(--nh-orange); }
+body.nh .nh-footer-col nav a.footer-cta { color: var(--nh-orange); font-weight: 700; }
+body.nh .nh-footer-towns-wrap { grid-column: 1 / -1; padding-top: 28px; }
+body.nh .footer-towns { display: flex; flex-wrap: wrap; gap: 8px 18px; }
+body.nh .footer-towns a { font-size: 12.5px; font-weight: 400; color: var(--nh-on-navy-muted); }
+body.nh .footer-towns a:hover { color: var(--nh-orange); }
+body.nh .nh-footer-fine { grid-column: 1 / -1; font-size: 12.5px; color: #5C6672; padding-top: 18px; line-height: 1.6; }
+body.nh .nh-footer-copyright { grid-column: 1 / -1; font-size: 12.5px; color: #5C6672; padding-top: 10px; }
+@media (max-width: 700px) {
+  body.nh .nh-footer-inner { grid-template-columns: 1fr; }
+}
+
+/* Quote modal (injected on converted pages only) */
+body.nh .nh-modal-overlay {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(7,24,45,0.6);
+  z-index: 1000;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+}
+body.nh .nh-modal-overlay.open { display: flex; }
+body.nh .nh-modal-card {
+  background: #fff;
+  max-width: 480px;
+  width: 100%;
+  padding: 40px;
+  position: relative;
+  border-radius: 4px;
+}
+body.nh .nh-modal-close {
+  position: absolute;
+  top: 16px;
+  right: 20px;
+  cursor: pointer;
+  font-size: 22px;
+  color: var(--nh-text);
+  background: none;
+  border: none;
+}
+body.nh .nh-modal-card h3 {
+  font-size: 22px;
+  margin: 0 0 20px;
+  color: var(--nh-heading);
+}
+body.nh .nh-modal-card form { display: flex; flex-direction: column; gap: 14px; }
+body.nh .nh-modal-card input,
+body.nh .nh-modal-card textarea {
+  padding: 13px 14px;
+  border: 1px solid var(--nh-border);
+  font-family: var(--nh-font);
+  font-size: 15px;
+}
+body.nh .nh-modal-card textarea { resize: vertical; }
+body.nh .nh-modal-card button[type="submit"] {
+  background: var(--nh-orange);
+  color: var(--nh-navy);
+  border: none;
+  padding: 15px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  cursor: pointer;
+}
+body.nh .nh-modal-card button[type="submit"]:hover { background: var(--nh-orange-dark); }
