@@ -1758,6 +1758,34 @@ body.nh .contact-btn-text:hover { background: var(--nh-orange); color: var(--nh-
 body.nh .contact-btn-email { background: var(--nh-blue); color: #fff; }
 body.nh .contact-btn-email:hover { background: var(--nh-navy); }
 
+/* Contact page: simple two-column info + form */
+body.nh .contact-grid {
+  display: grid;
+  grid-template-columns: 1fr 1.3fr;
+  gap: 64px;
+  align-items: start;
+}
+body.nh .contact-info-heading {
+  font-size: 12.5px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--nh-text);
+  margin-bottom: 18px;
+}
+body.nh .contact-info address {
+  font-style: normal;
+  font-size: 16px;
+  line-height: 2.2;
+  color: var(--nh-heading);
+}
+body.nh .contact-info address a { color: inherit; }
+body.nh .contact-info address a:hover { color: var(--nh-orange); }
+body.nh .contact-grid .contact-form { margin: 0; max-width: none; }
+@media (max-width: 800px) {
+  body.nh .contact-grid { grid-template-columns: 1fr; gap: 40px; }
+}
+
 /* Floating mobile call button (previously unstyled) */
 body.nh .floating-call { display: none; }
 @media (max-width: 700px) {

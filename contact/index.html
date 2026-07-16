@@ -34,7 +34,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="../style.css?v=56">
+<link rel="stylesheet" href="../style.css?v=58">
 
 </head>
 
@@ -82,126 +82,77 @@
   <div class="hero-card hero-lg">
 
     <p class="eyebrow">
-      Contact Handled Home
+      Get In Touch
     </p>
 
     <h1>
-      Get a Free Estimate
+      Let's get it handled.
     </h1>
 
     <p>
-      Fill out the form below, call, or text us directly.
-      We serve Moon Township, Coraopolis, Sewickley, Robinson, Aliquippa,
-      Cranberry Township, and nearby Pittsburgh communities.
+      Tell us what's going on — we'll follow up within one business day.
     </p>
-
-    <div class="hero-trust">
-      <span>&#10004; Licensed and Insured</span>
-      <span>&#10004; Fast Response</span>
-      <span>&#10004; Free Estimates</span>
-      <span>&#10004; PA Contractor PA217831</span>
-    </div>
-
-  </div>
-
-  <div class="section">
-
-    <div class="contact-methods">
-
-      <div class="contact-method">
-        <div class="contact-method-label">Call or Text</div>
-        <a href="tel:14123535341" class="contact-method-primary">412-353-5341</a>
-        <p class="contact-method-note">Call or text anytime. Texting photos of your project is the fastest way to get an accurate estimate.</p>
-        <div class="contact-method-actions">
-          <a href="tel:14123535341" class="contact-btn contact-btn-call">Call</a>
-          <a href="sms:+14123535341?&body=Hi%20Handled%20Home%2C%20I%27d%20like%20to%20get%20an%20estimate." class="contact-btn contact-btn-text">Text</a>
-        </div>
-      </div>
-
-      <div class="contact-method">
-        <div class="contact-method-label">Email</div>
-        <a href="mailto:info@handledhome.net" class="contact-method-email-addr">info@handledhome.net</a>
-        <p class="contact-method-note">Include photos and a brief description and we'll get back to you quickly.</p>
-        <div class="contact-method-actions">
-          <a href="mailto:info@handledhome.net" class="contact-btn contact-btn-email">Send Email</a>
-        </div>
-      </div>
-
-    </div>
 
   </div>
 
   <div id="contact" class="section">
 
-    <h2>Send a Message</h2>
+    <div class="contact-grid">
 
-    <p class="muted-center">
-      Describe your project below and we'll follow up to schedule an estimate.
-      Photos are always helpful — feel free to text them to
-      <a href="tel:14123535341">412-353-5341</a>.
-    </p>
+      <div class="contact-info">
+        <div class="contact-info-heading">Contact</div>
+        <address>
+          <div><a href="tel:14123535341">412-353-5341</a></div>
+          <div><a href="mailto:info@handledhome.net">info@handledhome.net</a></div>
+          <div>Moon Township, PA</div>
+        </address>
+      </div>
 
-    <form class="contact-form"
-      action="https://api.web3forms.com/submit"
-      method="POST">
+      <form class="contact-form"
+        action="https://api.web3forms.com/submit"
+        method="POST">
 
-      <input type="hidden"
-        name="access_key"
-        value="1bc639e8-2922-410a-841d-aa1ca1fb2a68">
+        <input type="hidden"
+          name="access_key"
+          value="1bc639e8-2922-410a-841d-aa1ca1fb2a68">
 
-      <input type="hidden"
-        name="subject"
-        value="New Estimate Request - Handled Home Contact Page">
+        <input type="hidden"
+          name="subject"
+          value="New Estimate Request - Handled Home Contact Page">
 
-      <input type="hidden"
-        name="redirect"
-        value="https://handledhome.net/thank-you.html">
+        <input type="hidden"
+          name="redirect"
+          value="https://handledhome.net/thank-you.html">
 
-      <input type="text"
-        name="name"
-        placeholder="Your Name"
-        required>
+        <input type="text"
+          name="name"
+          placeholder="Name"
+          required>
 
-      <input type="tel"
-        name="phone"
-        placeholder="Phone Number"
-        required>
+        <input type="tel"
+          name="phone"
+          placeholder="Phone"
+          required>
 
-      <input type="email"
-        name="email"
-        placeholder="Email Address">
+        <input type="email"
+          name="email"
+          placeholder="Email">
 
-      <input type="text"
-        name="service"
-        placeholder="What do you need help with?">
+        <input type="text"
+          name="address"
+          placeholder="Address">
 
-      <input type="text"
-        name="address"
-        placeholder="Job Address (street, city) &mdash; optional">
+        <textarea
+          name="message"
+          rows="4"
+          placeholder="What needs handling?"></textarea>
 
-      <textarea
-        name="message"
-        rows="5"
-        placeholder="Any additional details about your project (optional)"></textarea>
+        <button type="submit">
+          Submit
+        </button>
 
-      <button type="submit">
-        Send Request
-      </button>
+      </form>
 
-    </form>
-
-  </div>
-
-  <div class="cta">
-
-    <h2>Prefer to Call?</h2>
-
-    <p style="color:rgba(255,255,255,0.8); margin-bottom:24px;">
-      We're available by phone and text. Call or text photos of your project for the fastest response.
-    </p>
-
-    <div class="buttons">
-      <a href="tel:14123535341" class="call">Call or text 412-353-5341</a>
     </div>
 
   </div>
