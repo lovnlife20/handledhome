@@ -1427,8 +1427,8 @@ body.nh .section.nh-alt {
 body.nh .box {
   background: #fff;
   border-radius: 4px;
-  box-shadow: none;
-  border: 1px solid var(--nh-border);
+  box-shadow: 0 1px 4px rgba(7,24,45,0.08);
+  border: 1px solid #D3CFC5;
 }
 body.nh .box h3 { color: var(--nh-heading); }
 body.nh .box a { color: var(--nh-orange); }
@@ -1451,9 +1451,12 @@ body.nh .contact-form textarea {
 body.nh .contact-form button {
   background: var(--nh-orange);
   color: var(--nh-navy);
+  border: none;
   border-radius: 0;
   text-transform: uppercase;
   letter-spacing: 0.04em;
+  -webkit-appearance: none;
+  appearance: none;
 }
 body.nh .contact-form button:hover { background: var(--nh-orange-dark); }
 
@@ -1599,6 +1602,8 @@ body.nh .nh-modal-card button[type="submit"] {
   background: var(--nh-orange);
   color: var(--nh-navy);
   border: none;
+  -webkit-appearance: none;
+  appearance: none;
   padding: 15px;
   font-weight: 700;
   text-transform: uppercase;
