@@ -1324,6 +1324,17 @@ body.nh .hero-card h1 {
   max-width: 800px;
   font-size: clamp(38px, 5vw, 76px);
 }
+body.nh .hero-seo-subhead {
+  font-family: var(--nh-font);
+  font-size: 14px;
+  font-weight: 500;
+  letter-spacing: normal;
+  text-transform: none;
+  color: var(--nh-on-navy-muted);
+  text-align: left;
+  margin: 0 0 20px;
+  max-width: 620px;
+}
 body.nh .hero-card p {
   color: var(--nh-on-navy-muted);
   text-align: left;
