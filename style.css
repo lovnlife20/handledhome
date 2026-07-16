@@ -1595,3 +1595,90 @@ body.nh .helper-quote { color: var(--nh-heading); }
 /* Hero phone number (town pages) */
 body.nh .hero-phone { color: var(--nh-orange); text-align: left; }
 body.nh .hero-phone a { color: var(--nh-orange); }
+
+/* Blog toolbar / search / filters */
+body.nh .blog-search input {
+  border-radius: 0;
+  border-color: var(--nh-border);
+  font-family: var(--nh-font);
+}
+body.nh .blog-search input:focus {
+  outline-color: var(--nh-orange);
+  border-color: var(--nh-orange);
+}
+body.nh .blog-search svg { color: var(--nh-text); }
+body.nh .filter-pill {
+  background: var(--nh-alt-bg);
+  color: var(--nh-heading);
+  border-radius: 0;
+  font-family: var(--nh-font);
+}
+body.nh .filter-pill:hover { background: var(--nh-border); }
+body.nh .filter-pill.active { background: var(--nh-navy); color: var(--nh-on-navy); }
+body.nh .blog-no-results { color: var(--nh-text); }
+body.nh .blog-no-results a { color: var(--nh-blue); }
+
+/* Blog grid / cards */
+body.nh .blog-card {
+  background: #fff;
+  border-radius: 4px;
+  box-shadow: none;
+  border: 1px solid var(--nh-border);
+}
+body.nh .blog-card h3 { color: var(--nh-heading); }
+body.nh .blog-card p { color: var(--nh-text); }
+body.nh .blog-card a.read-more { color: var(--nh-orange); }
+body.nh .post-tag {
+  background: var(--nh-alt-bg);
+  color: var(--nh-blue);
+  border-radius: 0;
+}
+
+/* Blog post detail */
+body.nh .blog-post h1 { color: var(--nh-heading); }
+body.nh .blog-post h2 { color: var(--nh-heading); }
+body.nh .blog-breadcrumb { color: var(--nh-text); }
+body.nh .blog-breadcrumb a { color: var(--nh-blue); }
+body.nh .post-date { color: var(--nh-text); }
+body.nh .tip-box strong { color: var(--nh-heading); }
+
+/* Contact method cards (contact page) */
+body.nh .contact-method {
+  background: #fff;
+  border: 1px solid var(--nh-border);
+  border-radius: 4px;
+}
+body.nh .contact-method-primary { color: var(--nh-heading); }
+body.nh .contact-method-primary:hover { color: var(--nh-orange); }
+body.nh .contact-method-email-addr { color: var(--nh-heading); }
+body.nh .contact-method-email-addr:hover { color: var(--nh-orange); }
+body.nh .contact-method-label { color: var(--nh-text); }
+body.nh .contact-method-note { color: var(--nh-text); }
+body.nh .contact-btn { border-radius: 0; }
+body.nh .contact-btn-call { background: var(--nh-orange); color: var(--nh-navy); }
+body.nh .contact-btn-call:hover { background: var(--nh-orange-dark); }
+body.nh .contact-btn-text { border-color: var(--nh-orange); color: var(--nh-orange); }
+body.nh .contact-btn-text:hover { background: var(--nh-orange); color: var(--nh-navy); }
+body.nh .contact-btn-email { background: var(--nh-blue); color: #fff; }
+body.nh .contact-btn-email:hover { background: var(--nh-navy); }
+
+/* Floating mobile call button (previously unstyled) */
+body.nh .floating-call { display: none; }
+@media (max-width: 700px) {
+  body.nh .floating-call {
+    display: block;
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: var(--nh-orange);
+    color: var(--nh-navy);
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    font-size: 14px;
+    padding: 14px 32px;
+    z-index: 500;
+    box-shadow: 0 4px 16px rgba(7,24,45,0.25);
+  }
+}
