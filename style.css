@@ -1318,8 +1318,17 @@ body.nh .nav-phone { white-space: nowrap; }
   body.nh .nav-phone { font-size: 12px; }
   body.nh .nav-cta { padding: 10px 14px; font-size: 12px; }
 }
-@media (max-width: 800px) {
+@media (max-width: 900px) {
   body.nh .nav-actions .nav-phone { display: none; }
+}
+@media (max-width: 760px) {
+  body.nh .nav-logo img { height: 48px; }
+  body.nh .nav-inner { height: 80px; padding: 0 16px; }
+  body.nh .nav-mobile-menu { top: 80px; }
+  body.nh .nav-links { gap: 10px; }
+  body.nh .nav-links a { font-size: 10.5px; }
+  body.nh .nav-actions { gap: 10px; }
+  body.nh .nav-cta { padding: 9px 12px; font-size: 11px; }
 }
 
 /* Hero */
