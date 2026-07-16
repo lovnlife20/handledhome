@@ -1591,3 +1591,7 @@ body.nh .helper-box {
   background: var(--nh-alt-bg);
 }
 body.nh .helper-quote { color: var(--nh-heading); }
+
+/* Hero phone number (town pages) */
+body.nh .hero-phone { color: var(--nh-orange); text-align: left; }
+body.nh .hero-phone a { color: var(--nh-orange); }
