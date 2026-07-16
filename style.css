@@ -1268,7 +1268,10 @@ body.nh .nav {
   border-bottom: 1px solid var(--nh-border);
   box-shadow: none;
 }
-body.nh .nav-logo img { height: 40px; }
+body.nh .nav-inner { height: 96px; }
+body.nh .nav-logo img { height: 68px; }
+body.nh .nav-mobile-menu { top: 96px; }
+body.nh #contact { scroll-margin-top: 170px; }
 body.nh .nav-links a {
   color: var(--nh-heading);
   font-weight: 700;
@@ -1326,10 +1329,32 @@ body.nh .hero-card p {
   margin: 0 0 8px;
   max-width: 620px;
 }
-body.nh .hero-tagline { color: var(--nh-orange); text-align: left; }
-body.nh .hero-trust-line { color: var(--nh-on-navy-muted); text-align: left; }
+body.nh .hero-tagline { color: var(--nh-orange); text-align: left; margin: 0 0 24px !important; }
+body.nh .hero-trust-line { color: var(--nh-on-navy-muted); text-align: left; margin: 0 0 20px !important; }
 body.nh .hero-trust { justify-content: flex-start; color: var(--nh-on-navy); }
 body.nh .buttons { justify-content: flex-start; }
+
+/* Trust strip (homepage) */
+body.nh .trust-strip {
+  background: var(--nh-alt-bg);
+  padding: 40px;
+  display: flex;
+  flex-wrap: wrap;
+}
+body.nh .trust-strip-item {
+  flex: 1 1 200px;
+  padding: 0 28px;
+  border-left: 2px solid var(--nh-orange);
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--nh-heading);
+}
+@media (max-width: 850px) {
+  body.nh .trust-strip { padding: 24px; }
+  body.nh .trust-strip-item { flex: 1 1 45%; margin-bottom: 12px; }
+}
 
 /* Buttons */
 body.nh .buttons a {
@@ -1404,7 +1429,7 @@ body.nh .nh-footer-inner {
   border-bottom: 1px solid rgba(255,255,255,0.08);
 }
 body.nh .nh-footer-brand img.footer-logo {
-  height: 44px;
+  height: 56px;
   width: auto;
   margin-bottom: 14px;
   filter: brightness(0) invert(1);
