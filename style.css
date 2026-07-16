@@ -1503,3 +1503,83 @@ body.nh .nh-modal-card button[type="submit"] {
   cursor: pointer;
 }
 body.nh .nh-modal-card button[type="submit"]:hover { background: var(--nh-orange-dark); }
+
+/* Service icon cards (svc-grid / svc-card) */
+body.nh .svc-card {
+  background: #fff;
+  border-radius: 4px;
+  box-shadow: none;
+  border: 1px solid var(--nh-border);
+  transition: border-color 0.18s ease;
+}
+body.nh .svc-card:hover {
+  box-shadow: none;
+  transform: none;
+  border-color: var(--nh-orange);
+}
+body.nh .svc-icon { color: var(--nh-orange); }
+body.nh .svc-card h3 { color: var(--nh-heading); }
+body.nh .svc-link { color: var(--nh-orange); }
+body.nh .svc-link:hover { color: var(--nh-orange-dark); }
+
+/* FAQ */
+body.nh .faq-item { border-color: var(--nh-border); }
+body.nh .faq-item h3 { color: var(--nh-heading); }
+body.nh .faq-item p { color: var(--nh-text); }
+
+/* Text notes */
+body.nh .text-note { color: var(--nh-text); }
+body.nh .text-note a { color: var(--nh-blue); }
+
+/* Callout boxes */
+body.nh .callus-box {
+  background: var(--nh-alt-bg);
+  border-left-color: var(--nh-orange);
+  border-radius: 0;
+}
+body.nh .callus-box strong { color: var(--nh-heading); }
+body.nh .tip-box {
+  background: var(--nh-alt-bg);
+  border-radius: 0;
+}
+
+/* Photo galleries -- work-grid-2/work-grid-3 (figure-based) */
+body.nh .work-grid-2 img,
+body.nh .work-grid-3 img { border-radius: 0; }
+body.nh .work-grid-2 figcaption,
+body.nh .work-grid-3 figcaption { color: var(--nh-text); }
+
+/* Photo galleries -- work-grid/work-card (div-based; previously undefined/unstyled) */
+body.nh .work-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+  margin-top: 20px;
+}
+body.nh .work-card {
+  background: #fff;
+  border: 1px solid var(--nh-border);
+  border-radius: 4px;
+  overflow: hidden;
+}
+body.nh .work-card img {
+  width: 100%;
+  aspect-ratio: 4/3;
+  object-fit: cover;
+  display: block;
+}
+body.nh .work-caption {
+  padding: 12px 14px;
+  font-size: 13px;
+  color: var(--nh-text);
+  line-height: 1.5;
+}
+body.nh .work-caption strong {
+  display: block;
+  color: var(--nh-heading);
+  font-size: 14px;
+  margin-bottom: 2px;
+}
+@media (max-width: 600px) {
+  body.nh .work-grid { grid-template-columns: 1fr; }
+}
