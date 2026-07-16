@@ -1344,7 +1344,7 @@ body.nh .hero-card p {
 body.nh .hero-tagline { color: var(--nh-orange); text-align: left; margin: 0 0 24px !important; }
 body.nh .hero-trust-line { color: var(--nh-on-navy-muted); text-align: left; margin: 0 0 20px !important; }
 body.nh .hero-trust { justify-content: flex-start; color: var(--nh-on-navy); }
-body.nh .buttons { justify-content: flex-start; }
+body.nh .hero-card .buttons { justify-content: flex-start; }
 
 /* Trust strip (homepage) */
 body.nh .trust-strip {
@@ -1425,6 +1425,30 @@ body.nh .contact-form button:hover { background: var(--nh-orange-dark); }
 /* CTA band */
 body.nh .cta { background: var(--nh-navy); border-radius: 0; }
 body.nh .cta h2 { color: var(--nh-on-navy); }
+body.nh .services-cta-band {
+  padding: 48px 30px;
+  border-top: 1px solid #16283C;
+}
+body.nh .services-cta-band h2 { font-size: 30px; }
+body.nh .services-cta-band p { color: var(--nh-on-navy-muted); margin-bottom: 0; }
+
+/* Plain 2-column service list (all-services.html) */
+body.nh .svc-plain-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 8px 48px;
+}
+body.nh .svc-plain-item {
+  padding: 24px 0;
+  border-bottom: 1px solid var(--nh-border);
+}
+body.nh .svc-plain-item h3 { margin: 0 0 8px; font-size: 20px; }
+body.nh .svc-plain-item h3 a { color: var(--nh-heading); text-decoration: none; }
+body.nh .svc-plain-item h3 a:hover { color: var(--nh-orange); }
+body.nh .svc-plain-item p { margin: 0; font-size: 14.5px; color: var(--nh-text); line-height: 1.6; }
+@media (max-width: 700px) {
+  body.nh .svc-plain-grid { grid-template-columns: 1fr; }
+}
 
 /* Footer */
 body.nh .footer {
