@@ -1350,9 +1350,15 @@ body.nh .hero-card h1 {
   color: var(--nh-on-navy);
   text-align: left;
   margin: 0 0 20px;
+  max-width: 760px;
+  font-size: clamp(30px, 4vw, 46px);
+}
+body.nh .hero-card.hero-home h1 {
   max-width: 800px;
   font-size: clamp(38px, 5vw, 76px);
 }
+body.nh .hero-card.hero-index h1 { font-size: clamp(28px, 3.5vw, 40px); }
+body.nh .hero-card.hero-lg h1 { font-size: clamp(30px, 4.5vw, 50px); }
 body.nh .hero-seo-subhead {
   font-family: var(--nh-font);
   font-size: 14px;
