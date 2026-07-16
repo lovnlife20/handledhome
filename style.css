@@ -1583,3 +1583,11 @@ body.nh .work-caption strong {
 @media (max-width: 600px) {
   body.nh .work-grid { grid-template-columns: 1fr; }
 }
+
+/* Special content boxes */
+body.nh .warning-box { border-left-color: var(--nh-orange); }
+body.nh .helper-box {
+  border: 1px solid var(--nh-border);
+  background: var(--nh-alt-bg);
+}
+body.nh .helper-quote { color: var(--nh-heading); }
