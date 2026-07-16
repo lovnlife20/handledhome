@@ -1460,6 +1460,13 @@ body.nh .contact-form button:hover { background: var(--nh-orange-dark); }
 /* CTA band */
 body.nh .cta { background: var(--nh-navy); border-radius: 0; }
 body.nh .cta h2 { color: var(--nh-on-navy); }
+body.nh .cta p { color: var(--nh-on-navy-muted); }
+body.nh .footer .footer-cta-merged {
+  background: transparent;
+  padding: 56px 40px 40px;
+  border-bottom: 1px solid rgba(255,255,255,0.08);
+}
+body.nh .footer .footer-cta-merged h2 { font-size: 32px; }
 body.nh .services-cta-band {
   padding: 48px 30px;
   border-top: 1px solid #16283C;
