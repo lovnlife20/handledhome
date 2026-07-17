@@ -1373,14 +1373,14 @@ body.nh .hero-card.hero-index h1 { font-size: clamp(28px, 3.5vw, 40px); }
 body.nh .hero-card.hero-lg h1 { font-size: clamp(30px, 4.5vw, 50px); }
 body.nh .hero-seo-subhead {
   font-family: var(--nh-font);
-  font-size: 14px;
-  font-weight: 500;
+  font-size: clamp(19px, 2.4vw, 26px);
+  font-weight: 700;
   letter-spacing: normal;
   text-transform: none;
   color: var(--nh-on-navy-muted);
   text-align: left;
   margin: 0 0 20px;
-  max-width: 620px;
+  max-width: 680px;
 }
 body.nh .hero-card p {
   color: var(--nh-on-navy-muted);
