@@ -1718,10 +1718,21 @@ body.nh .work-grid {
   margin-top: 20px;
 }
 body.nh .work-card {
+  display: block;
   background: #fff;
   border: 1px solid var(--nh-border);
   border-radius: 4px;
   overflow: hidden;
+  text-decoration: none;
+  color: inherit;
+  transition: box-shadow 0.15s ease, transform 0.15s ease;
+}
+body.nh .work-card:hover {
+  box-shadow: 0 6px 18px rgba(7,24,45,0.12);
+  transform: translateY(-2px);
+}
+body.nh .work-card:hover .work-caption strong {
+  color: var(--nh-orange);
 }
 body.nh .work-card img {
   width: 100%;
