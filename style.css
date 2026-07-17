@@ -1429,6 +1429,10 @@ body.nh .buttons a {
   padding: 17px 32px;
 }
 body.nh .call { background: var(--nh-orange); color: var(--nh-navy); }
+body.nh .hero-text-us { display: none; }
+@media (max-width: 600px) {
+  body.nh .hero-text-us { display: inline-block; }
+}
 body.nh .call:hover { background: var(--nh-orange-dark); }
 body.nh .email { background: transparent; color: var(--nh-on-navy); border: 1px solid rgba(255,255,255,0.3); }
 body.nh .email:hover { background: rgba(255,255,255,0.08); }
