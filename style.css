@@ -1410,6 +1410,14 @@ body.nh .trust-strip-item {
   text-transform: uppercase;
   color: var(--nh-heading);
 }
+body.nh .trust-strip-sub {
+  display: block;
+  margin-top: 3px;
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 0.04em;
+  color: var(--nh-text);
+}
 @media (max-width: 850px) {
   body.nh .trust-strip { padding: 24px; }
   body.nh .trust-strip-item { flex: 1 1 45%; margin-bottom: 12px; }
