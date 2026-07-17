@@ -1497,26 +1497,6 @@ body.nh .contact-form button:hover { background: var(--nh-orange-dark); }
 body.nh .cta { background: var(--nh-navy); border-radius: 0; }
 body.nh .cta h2 { color: var(--nh-on-navy); }
 body.nh .cta p { color: var(--nh-on-navy-muted); }
-body.nh .footer .footer-cta-merged {
-  background: transparent;
-  max-width: 1000px;
-  margin: 0 auto;
-  padding: 28px 40px;
-  border-bottom: 1px solid rgba(255,255,255,0.08);
-  display: flex;
-  align-items: center;
-  justify-content: flex-start;
-  gap: 40px;
-  flex-wrap: wrap;
-  text-align: left;
-}
-body.nh .footer .footer-cta-merged h2 { font-size: 22px; margin: 0; }
-body.nh .footer .footer-cta-merged .buttons { margin: 0; flex-shrink: 0; }
-body.nh .footer-cta-text { flex: 1 1 auto; min-width: 260px; max-width: 600px; }
-body.nh .footer-cta-text p { margin: 8px 0 0; font-size: 14.5px; color: var(--nh-on-navy-muted); }
-@media (max-width: 600px) {
-  body.nh .footer .footer-cta-merged { flex-direction: column; align-items: flex-start; text-align: left; padding: 24px 24px; }
-}
 body.nh .services-cta-band {
   padding: 48px 30px;
   border-top: 1px solid #16283C;
