@@ -450,6 +450,13 @@ details.nav-mobile-services > a:last-child { border-bottom: none; }
   margin-top: 34px;
 }
 
+.grid-2col {
+  grid-template-columns: repeat(2, 1fr);
+}
+@media (max-width: 700px) {
+  .grid-2col { grid-template-columns: 1fr; }
+}
+
 .box {
   background: white;
   border-radius: 16px;
@@ -1330,6 +1337,11 @@ body.nh .nav-phone { white-space: nowrap; }
   body.nh .nav-actions { gap: 10px; }
   body.nh .nav-cta { padding: 9px 12px; font-size: 11px; }
 }
+@media (max-width: 600px) {
+  body.nh .nav-logo img { height: 56px; }
+  body.nh .nav-inner { height: 76px; }
+  body.nh .nav-mobile-menu { top: 76px; }
+}
 
 /* Hero */
 body.nh .hero-card {
@@ -1401,6 +1413,11 @@ body.nh .trust-strip-item {
 @media (max-width: 850px) {
   body.nh .trust-strip { padding: 24px; }
   body.nh .trust-strip-item { flex: 1 1 45%; margin-bottom: 12px; }
+}
+@media (max-width: 600px) {
+  body.nh .trust-strip { flex-direction: column; padding: 20px 24px; }
+  body.nh .trust-strip-item { flex: 1 1 auto; width: 100%; margin-bottom: 14px; }
+  body.nh .trust-strip-item:last-child { margin-bottom: 0; }
 }
 
 /* Buttons */
