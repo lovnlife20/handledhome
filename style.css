@@ -1367,7 +1367,7 @@ body.nh .hero-card h1 {
 }
 body.nh .hero-card.hero-home h1 {
   max-width: 800px;
-  font-size: clamp(38px, 5vw, 76px);
+  font-size: clamp(34px, 4.4vw, 64px);
 }
 body.nh .hero-card.hero-index h1 { font-size: clamp(28px, 3.5vw, 40px); }
 body.nh .hero-card.hero-lg h1 { font-size: clamp(30px, 4.5vw, 50px); }
