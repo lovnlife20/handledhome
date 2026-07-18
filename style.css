@@ -1076,6 +1076,16 @@ details.nav-mobile-services > a:last-child { border-bottom: none; }
   margin-bottom: 16px;
 }
 
+.blog-post ul {
+  margin: 0 0 16px;
+  padding-left: 22px;
+  line-height: 1.8;
+}
+
+.blog-post li {
+  margin-bottom: 6px;
+}
+
 .blog-post .tip-box {
   background: #f0f9f4;
   border-left: 4px solid #22c55e;
