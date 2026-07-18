@@ -36,7 +36,7 @@ main li a,
 .tip-box a,
 .faq-item a,
 .section p a,
-.blog-body a,
+.tips-body a,
 .text-note a {
   text-decoration: underline;
   text-underline-offset: 3px;
@@ -923,22 +923,22 @@ details.nav-mobile-services > a:last-child { border-bottom: none; }
 }
 
 /* =========================
-   BLOG
+   HOME REPAIR TIPS
 ========================= */
 
-.blog-toolbar {
+.tips-toolbar {
   display: flex;
   flex-direction: column;
   gap: 20px;
   margin-top: 28px;
 }
 
-.blog-search {
+.tips-search {
   position: relative;
   max-width: 480px;
 }
 
-.blog-search svg {
+.tips-search svg {
   position: absolute;
   left: 15px;
   top: 50%;
@@ -947,7 +947,7 @@ details.nav-mobile-services > a:last-child { border-bottom: none; }
   pointer-events: none;
 }
 
-.blog-search input {
+.tips-search input {
   width: 100%;
   padding: 14px 16px 14px 44px;
   border: 1.5px solid #d0dbe8;
@@ -956,13 +956,13 @@ details.nav-mobile-services > a:last-child { border-bottom: none; }
   font-family: Arial, Helvetica, sans-serif;
 }
 
-.blog-search input:focus {
+.tips-search input:focus {
   outline: 2px solid var(--blue);
   outline-offset: 1px;
   border-color: var(--blue);
 }
 
-.blog-filters {
+.tips-filters {
   display: flex;
   flex-wrap: wrap;
   gap: 10px;
@@ -992,26 +992,26 @@ details.nav-mobile-services > a:last-child { border-bottom: none; }
   color: white;
 }
 
-.blog-no-results {
+.tips-no-results {
   text-align: center;
   color: var(--muted);
   font-size: 16px;
   margin: 50px 0;
 }
 
-.blog-no-results a {
+.tips-no-results a {
   color: var(--blue);
   font-weight: 700;
 }
 
-.blog-grid {
+.tips-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
   gap: 30px;
   margin-top: 30px;
 }
 
-.blog-card {
+.tips-card {
   background: white;
   border-radius: 16px;
   padding: 30px;
@@ -1021,20 +1021,20 @@ details.nav-mobile-services > a:last-child { border-bottom: none; }
   flex-direction: column;
 }
 
-.blog-card h3 {
+.tips-card h3 {
   color: var(--blue-dark);
   margin-top: 0;
   font-size: 20px;
   line-height: 1.3;
 }
 
-.blog-card p {
+.tips-card p {
   color: var(--muted);
   flex-grow: 1;
   margin-bottom: 16px;
 }
 
-.blog-card a.read-more {
+.tips-card a.read-more {
   color: var(--orange);
   font-weight: 700;
 }
@@ -1052,41 +1052,41 @@ details.nav-mobile-services > a:last-child { border-bottom: none; }
   letter-spacing: 0.04em;
 }
 
-.blog-post {
+.tips-post {
   max-width: 800px;
   margin: 0 auto;
 }
 
-.blog-post h1 {
+.tips-post h1 {
   color: var(--blue-dark);
   font-size: clamp(28px, 4vw, 40px);
   line-height: 1.15;
   margin-bottom: 8px;
 }
 
-.blog-post h2 {
+.tips-post h2 {
   color: var(--blue-dark);
   font-size: 22px;
   margin-top: 44px;
   margin-bottom: 10px;
 }
 
-.blog-post p {
+.tips-post p {
   line-height: 1.8;
   margin-bottom: 16px;
 }
 
-.blog-post ul {
+.tips-post ul {
   margin: 0 0 16px;
   padding-left: 22px;
   line-height: 1.8;
 }
 
-.blog-post li {
+.tips-post li {
   margin-bottom: 6px;
 }
 
-.blog-post .tip-box {
+.tips-post .tip-box {
   background: #f0f9f4;
   border-left: 4px solid #22c55e;
   border-radius: 0 10px 10px 0;
@@ -1095,11 +1095,11 @@ details.nav-mobile-services > a:last-child { border-bottom: none; }
   line-height: 1.7;
 }
 
-.blog-post .tip-box strong {
+.tips-post .tip-box strong {
   color: #166534;
 }
 
-.blog-post .callus-box {
+.tips-post .callus-box {
   background: #fff7ed;
   border-left: 4px solid var(--orange);
   border-radius: 0 10px 10px 0;
@@ -1108,17 +1108,17 @@ details.nav-mobile-services > a:last-child { border-bottom: none; }
   line-height: 1.7;
 }
 
-.blog-post .callus-box strong {
+.tips-post .callus-box strong {
   color: #9a3412;
 }
 
-.blog-breadcrumb {
+.tips-breadcrumb {
   font-size: 14px;
   color: var(--muted);
   margin-bottom: 14px;
 }
 
-.blog-breadcrumb a {
+.tips-breadcrumb a {
   color: var(--blue);
   font-weight: 700;
 }
@@ -1781,17 +1781,17 @@ body.nh .helper-quote { color: var(--nh-heading); }
 body.nh .hero-phone { color: var(--nh-orange); text-align: left; }
 body.nh .hero-phone a { color: var(--nh-orange); }
 
-/* Blog toolbar / search / filters */
-body.nh .blog-search input {
+/* Tips toolbar / search / filters */
+body.nh .tips-search input {
   border-radius: 0;
   border-color: var(--nh-border);
   font-family: var(--nh-font);
 }
-body.nh .blog-search input:focus {
+body.nh .tips-search input:focus {
   outline-color: var(--nh-orange);
   border-color: var(--nh-orange);
 }
-body.nh .blog-search svg { color: var(--nh-text); }
+body.nh .tips-search svg { color: var(--nh-text); }
 body.nh .filter-pill {
   background: var(--nh-alt-bg);
   color: var(--nh-heading);
@@ -1800,30 +1800,30 @@ body.nh .filter-pill {
 }
 body.nh .filter-pill:hover { background: var(--nh-border); }
 body.nh .filter-pill.active { background: var(--nh-navy); color: var(--nh-on-navy); }
-body.nh .blog-no-results { color: var(--nh-text); }
-body.nh .blog-no-results a { color: var(--nh-blue); }
+body.nh .tips-no-results { color: var(--nh-text); }
+body.nh .tips-no-results a { color: var(--nh-blue); }
 
-/* Blog grid / cards */
-body.nh .blog-card {
+/* Tips grid / cards */
+body.nh .tips-card {
   background: #fff;
   border-radius: 4px;
   box-shadow: none;
   border: 1px solid var(--nh-border);
 }
-body.nh .blog-card h3 { color: var(--nh-heading); }
-body.nh .blog-card p { color: var(--nh-text); }
-body.nh .blog-card a.read-more { color: var(--nh-orange); }
+body.nh .tips-card h3 { color: var(--nh-heading); }
+body.nh .tips-card p { color: var(--nh-text); }
+body.nh .tips-card a.read-more { color: var(--nh-orange); }
 body.nh .post-tag {
   background: var(--nh-alt-bg);
   color: var(--nh-blue);
   border-radius: 0;
 }
 
-/* Blog post detail */
-body.nh .blog-post h1 { color: var(--nh-heading); }
-body.nh .blog-post h2 { color: var(--nh-heading); }
-body.nh .blog-breadcrumb { color: var(--nh-text); }
-body.nh .blog-breadcrumb a { color: var(--nh-blue); }
+/* Tips post detail */
+body.nh .tips-post h1 { color: var(--nh-heading); }
+body.nh .tips-post h2 { color: var(--nh-heading); }
+body.nh .tips-breadcrumb { color: var(--nh-text); }
+body.nh .tips-breadcrumb a { color: var(--nh-blue); }
 body.nh .post-date { color: var(--nh-text); }
 body.nh .tip-box strong { color: var(--nh-heading); }
 

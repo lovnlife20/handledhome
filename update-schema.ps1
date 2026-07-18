@@ -144,9 +144,9 @@ $faqNode = @'
 '@
 Set-Schema 'frequently-asked-questions.html' @((Get-LB), $faqNode)
 
-# ── BLOG POSTS ────────────────────────────────────────────────────────────────
+# ── HOME REPAIR TIPS POSTS ────────────────────────────────────────────────────
 
-Write-Output "Blog posts..."
+Write-Output "Home repair tips posts..."
 $posts = @(
   ('5-signs-your-deck-needs-repair.html','5 Signs Your Deck Needs Repair Before Summer','Walk your deck for these 5 warning signs before summer, with DIY fixes and when to call a pro.','2025-05-21'),
   ('energy-efficient-home-improvements-pittsburgh.html','Energy-Efficient Home Improvements for Pittsburgh Homeowners','Practical energy-saving upgrades for Pittsburgh homes including weatherproofing, insulation, and smart thermostats.','2025-05-21'),

@@ -20,7 +20,7 @@ $mobileMenu = '  <div class="nav-mobile-menu" id="nav-mobile-menu">
     <a href="shed-building-moon-township-pa.html">Sheds</a>
     <a href="playset-installation-moon-township-pa.html">Playsets</a>
     <a href="frequently-asked-questions.html">FAQ</a>
-    <a href="home-repair-tips.html">Blog</a>
+    <a href="home-repair-tips.html">Home Repair Tips</a>
     <a href="index.html#contact" class="nav-mobile-cta">Get Estimate</a>
   </div>'
 
