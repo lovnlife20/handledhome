@@ -40,7 +40,7 @@ $newNav = @'
     <div class="nav-links">
       <a href="/">Home</a>
       <a href="/all-services.html">Services</a>
-      <a href="/blog.html">Blog</a>
+      <a href="/home-repair-tips.html">Blog</a>
       <a href="/about-handled-home.html">About</a>
       <a href="/contact/">Contact</a>
     </div>
@@ -59,7 +59,7 @@ $newNav = @'
   <div class="nav-mobile-menu" id="nav-mobile-menu">
     <a href="/">Home</a>
     <a href="/all-services.html">Services</a>
-    <a href="/blog.html">Blog</a>
+    <a href="/home-repair-tips.html">Blog</a>
     <a href="/about-handled-home.html">About</a>
     <a href="/contact/">Contact</a>
     <a href="tel:14123535341">412-353-5341</a>
@@ -88,7 +88,7 @@ $newFooter = @'
       <nav>
         <a href="/">Home</a>
         <a href="/all-services.html">Services</a>
-        <a href="/blog.html">Home Repair Tips</a>
+        <a href="/home-repair-tips.html">Home Repair Tips</a>
         <a href="/about-handled-home.html">About</a>
         <a href="/contact/">Contact</a>
         <a href="/our-work.html">Our Work</a>

@@ -36,7 +36,7 @@ $newNav = '<nav class="nav">
           <a href="handyman-monaca-pa.html">Monaca</a>
         </div>
       </span>
-      <a href="blog.html">Blog</a>
+      <a href="home-repair-tips.html">Blog</a>
       <a href="frequently-asked-questions.html">FAQ</a>
     </div>
     <div class="nav-actions">

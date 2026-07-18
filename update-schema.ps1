@@ -122,7 +122,7 @@ foreach ($l in $locs) {
 # ── GENERIC PAGES ──────────────────────────────────────────────────────────────
 
 Write-Output "Generic pages..."
-foreach ($f in @('index.html','about-handled-home.html','our-work.html','blog.html','thank-you.html','contact/index.html')) {
+foreach ($f in @('index.html','about-handled-home.html','our-work.html','home-repair-tips.html','thank-you.html','contact/index.html')) {
   Set-Schema $f @((Get-LB))
 }
 

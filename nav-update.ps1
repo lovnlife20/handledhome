@@ -17,7 +17,7 @@ $newDesktopNav = '<nav class="desktop-nav">
             <a href="frequently-asked-questions.html">FAQ</a>
           </div>
         </div>
-        <a href="blog.html">Blog</a>
+        <a href="home-repair-tips.html">Blog</a>
         <div class="nav-dropdown">
           <a href="#" class="nav-dropdown-toggle">Areas &#9660;</a>
           <div class="nav-dropdown-menu">
@@ -47,7 +47,7 @@ $newMobileOverlay = '<div class="mobile-overlay" id="mobile-overlay">
         <a href="shed-building-moon-township-pa.html">Sheds</a>
         <a href="playset-installation-moon-township-pa.html">Playsets</a>
         <a href="frequently-asked-questions.html">FAQ</a>
-        <a href="blog.html">Blog</a>
+        <a href="home-repair-tips.html">Blog</a>
         <a href="index.html#contact" class="mobile-overlay-cta">Get Estimate</a>
       </nav>
     </div>'
