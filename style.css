@@ -1123,6 +1123,22 @@ details.nav-mobile-services > a:last-child { border-bottom: none; }
   font-weight: 700;
 }
 
+.breadcrumb {
+  font-size: 13px;
+  color: var(--muted);
+  margin: 0 0 18px;
+}
+
+.breadcrumb a {
+  color: var(--blue);
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.breadcrumb a:hover {
+  text-decoration: underline;
+}
+
 .post-date {
   color: var(--muted);
   font-size: 14px;
@@ -1824,6 +1840,8 @@ body.nh .tips-post h1 { color: var(--nh-heading); }
 body.nh .tips-post h2 { color: var(--nh-heading); }
 body.nh .tips-breadcrumb { color: var(--nh-text); }
 body.nh .tips-breadcrumb a { color: var(--nh-blue); }
+body.nh .breadcrumb { color: var(--nh-text); }
+body.nh .breadcrumb a { color: var(--nh-blue); }
 body.nh .post-date { color: var(--nh-text); }
 body.nh .tip-box strong { color: var(--nh-heading); }
 

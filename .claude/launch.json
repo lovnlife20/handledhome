@@ -3,8 +3,8 @@
   "configurations": [
     {
       "name": "handledhome",
-      "runtimeExecutable": "python",
-      "runtimeArgs": ["-m", "http.server", "8743"],
+      "runtimeExecutable": "node",
+      "runtimeArgs": [".claude/static-server.js"],
       "port": 8743
     }
   ]
