@@ -37,7 +37,8 @@
 
   document.addEventListener('submit', function (e) {
     if (typeof gtag !== 'function') return;
-    if (e.target.closest('form.contact-form')) {
+    var form = e.target.closest('form');
+    if (form && /web3forms\.com/.test(form.action)) {
       gtag('event', 'form_submit', { event_category: 'Contact', event_label: document.title, value: 1 });
     }
   });
