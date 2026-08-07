@@ -1335,13 +1335,21 @@ body.nh .nav-hamburger { color: var(--nh-heading); }
 body.nh .nav-links { display: flex; }
 body.nh .nav-actions .nav-phone { display: flex; }
 body.nh .nav-hamburger { display: none; }
-@media (max-width: 600px) {
+/* Switch to the hamburger at 1080px, not 600px. The seven-link nav needs roughly
+   1000px to fit, so between 600 and 1000 it used to overflow the viewport -- 156px
+   past the edge at 640. The base stylesheet already switched at 960 (see .nav-hamburger
+   above); the body.nh override dropped that to 600 and reintroduced the overflow. */
+@media (max-width: 1080px) {
   body.nh .nav-links { display: none; }
   body.nh .nav-actions .nav-phone { display: none; }
   body.nh .nav-hamburger { display: block; }
 }
 body.nh .nav-phone { white-space: nowrap; }
-@media (max-width: 1080px) {
+/* The 100px logo above needs ~1278px of nav content, but .nav-inner caps at 1120px,
+   so the full-size nav overflows its container and pushed the CTA off-screen on
+   1280- and 1366-wide laptops. This compact nav used to start at 1080px, which left
+   that whole band broken; it now starts at 1400px, where the full-size nav first fits. */
+@media (max-width: 1400px) {
   body.nh .nav-logo img { height: 60px; }
   body.nh .nav-inner { height: 92px; padding: 0 20px; }
   body.nh .nav-mobile-menu { top: 92px; }
