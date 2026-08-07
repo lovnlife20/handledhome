@@ -35,6 +35,30 @@ Caveats if you re-run them:
   it's often safer to do a targeted string insertion across `*.html` than to run
   a whole legacy script.
 
+### Related Services cross-links (`update-related-services.js`)
+
+Every service page ends with a **Related Services** block just above the estimate
+form, listing 4–5 related services with a short reason for each. These are
+generated, not hand-written:
+
+```
+node update-related-services.js
+```
+
+Unlike the `*.ps1` scripts above, this one resolves paths from its own location
+(`__dirname`), so it runs correctly from any working directory and needs no
+per-machine path edit.
+
+- The link map at the top of the script is the **source of truth** for which
+  service pages point at each other.
+- The generated block is wrapped in `<!-- related-services:start -->` / `:end`
+  markers. Re-running strips the old block before inserting, so it is safe to run
+  repeatedly and never stacks duplicates.
+- **Do not hand-edit the generated block** in the HTML — the next run overwrites
+  it. Edit the map in the script and re-run.
+- It uses existing `.section` / `.box` / `.services-list` classes, so it needs no
+  CSS change and no `style.css?v=` cache-buster bump.
+
 ## Editing checklist for adding a new service page
 
 1. Create the new `*-moon-township-pa.html` page (copy an existing service page as
@@ -43,4 +67,6 @@ Caveats if you re-run them:
 3. Add it to the homepage (`index.html`): service card, footer link, and the
    JSON-LD `hasOfferCatalog` + a `Service` schema entry on the new page.
 4. Add a `<url>` entry to `sitemap.xml`.
-5. Cross-link from related service pages where it makes sense.
+5. Cross-link from related service pages: add an entry for the new page in
+   `update-related-services.js`, add it as a target in a few related pages' lists
+   so it has inbound links too, then re-run the script.
