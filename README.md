@@ -59,6 +59,27 @@ per-machine path edit.
 - It uses existing `.section` / `.box` / `.services-list` classes, so it needs no
   CSS change and no `style.css?v=` cache-buster bump.
 
+### Nearby Areas cross-links (`update-nearby-areas.js`)
+
+Each `handyman-<town>-pa.html` location page ends with a **Nearby Areas We Serve**
+block linking the towns closest to it:
+
+```
+node update-nearby-areas.js
+```
+
+Same conventions as `update-related-services.js` — `__dirname`-relative, wrapped in
+`<!-- nearby-areas:start -->` / `:end` markers, idempotent, edit the map and re-run
+rather than hand-editing the HTML.
+
+Why it exists: the location pages used to be a star topology. `handyman-pittsburgh-area-pa.html`
+linked out to all 18 towns and 17 of those linked back to no other town page, so each
+town page was a dead end.
+
+**Gotcha:** these blocks contain the string `Areas We Serve`, so any script that
+searches for that string to find a *service* page's areas paragraph will also match
+location pages. Match on `>Areas We Serve<` or skip `handyman-*` files.
+
 ## Editing checklist for adding a new service page
 
 1. Create the new `*-moon-township-pa.html` page (copy an existing service page as
