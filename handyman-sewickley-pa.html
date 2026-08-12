@@ -36,7 +36,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="style.css?v=79">
+<link rel="stylesheet" href="style.css?v=80">
 
 </head>
 
@@ -381,11 +381,18 @@
 
       <input type="email"
         name="email"
-        placeholder="Email Address">
+        placeholder="Email Address"
+        required>
 
       <input type="text"
-        name="address"
-        placeholder="Job Address (street, city) &mdash; optional">
+        name="street"
+        placeholder="Street Address"
+        required>
+
+      <input type="text"
+        name="city"
+        placeholder="City"
+        required>
 
       <textarea
         name="message"
@@ -507,7 +514,7 @@
   ]
 }
 </script>
-<script src="/tracking.js?v=2" defer></script>
+<script src="/tracking.js?v=3" defer></script>
 <div class="nh-modal-overlay" id="nh-modal">
   <div class="nh-modal-card">
     <button class="nh-modal-close" id="nh-modal-close" aria-label="Close">&times;</button>
@@ -518,8 +525,9 @@
       <input type="hidden" name="redirect" value="https://handledhome.net/thank-you.html">
       <input type="text" name="name" placeholder="Name" required>
       <input type="tel" name="phone" placeholder="Phone" required>
-      <input type="email" name="email" placeholder="Email">
-      <input type="text" name="address" placeholder="Address">
+      <input type="email" name="email" placeholder="Email" required>
+      <input type="text" name="street" placeholder="Street Address" required>
+      <input type="text" name="city" placeholder="City" required>
       <textarea name="message" rows="4" placeholder="What needs handling?"></textarea>
       <button type="submit">Submit Request</button>
     </form>

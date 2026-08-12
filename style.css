@@ -1539,6 +1539,30 @@ body.nh .contact-form button {
 }
 body.nh .contact-form button:hover { background: var(--nh-orange-dark); }
 
+/* Inline confirmation shown in place of the form after a successful submit */
+body.nh .nh-form-success {
+  max-width: 650px;
+  margin: 30px auto 0;
+  padding: 26px 24px;
+  background: #fff;
+  border: 1px solid var(--nh-border);
+  border-left: 5px solid var(--nh-orange);
+  text-align: left;
+}
+body.nh .nh-form-success h3 {
+  margin: 0 0 12px;
+  font-size: 20px;
+  color: var(--nh-heading);
+}
+body.nh .nh-form-success p {
+  margin: 0 0 10px;
+  color: var(--nh-text);
+  line-height: 1.6;
+}
+body.nh .nh-form-success p:last-child { margin-bottom: 0; }
+body.nh .nh-form-success a { color: var(--nh-orange); font-weight: 700; }
+body.nh .nh-modal-card .nh-form-success { margin: 0; }
+
 /* CTA band */
 body.nh .cta { background: var(--nh-navy); border-radius: 0; }
 body.nh .cta h2 { color: var(--nh-on-navy); }
